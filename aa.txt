@@ -1,33 +1,38 @@
-Continue the existing documentation reconciliation.
+I created a GitHub PAT and stored it in the workspace .env.
+Continue from the existing reconciliation and synchronization reports.
 
-Before asking me to select a Master, prepare a concrete decision packet:
+First perform a read-only authentication and readiness check:
 
-1. Compare the application MASTER_PLAN_V1.md revision 1.1 with the
-   packaged MASTER_PLAN_V1(2).md revision 2.1 proposed.
-   Identify substantive requirement differences, accepted decisions,
-   existing implementation links and affected Plans/outputs.
+1. Preserve all worktrees and staged, unstaged, and untracked changes.
+   Confirm the current application repository, branch, HEAD, and GitHub
+   host from the actual workspace.
 
-2. Search accessible Git history, relevant branches/worktrees and PR
-   records for revision 1.6 or evidence of its adoption. Distinguish
-   screenshot-derived provenance from a tracked document.
-   Do not infer that revision 1.1 is invalid or promote 2.1 automatically.
+2. Check that .env is ignored and untracked without displaying its
+   contents. Never print, quote, log, commit, or include the PAT in reports.
 
-3. Recommend the authoritative baseline and proposed amendment path,
-   with evidence and only the specific owner decisions still needed.
-   Continue unaffected planning work.
+3. Securely load only the intended PAT variable into the environment of
+   the gh subprocess. Do not execute the entire .env as a shell script.
+   Use the correct token environment variable for the verified host.
+   Ensure an older environment token does not override the new one.
+   Do not persist credentials globally or enable credential/debug output.
 
-4. Integrate PRODUCT_ORDER_AND_BACKLOG.md and QUALITY_GATES.md.
-   Keep Priority P0–P3 separate from delivery Plans P01–P15.
-   Reuse existing quality gates and completion rules.
+4. Verify the authenticated account, repository access, current Issues
+   availability, token scopes, and access to the intended Project owner.
+   Preserve the previously selected user-owned Project destination unless
+   later evidence changes it. Check existing Projects before proposing
+   creation, so reruns cannot create duplicates.
 
-5. Reconcile the missing launcher, inventory and changed file digests.
-   Preserve intentional naming/content changes. Regenerate digests only
-   after checking and recording the actual content differences.
+5. Report any SSO or organization-policy restriction separately.
+   Do not create test Projects or issues to probe permissions. Distinguish
+   successful reads from write permissions indicated but not exercised.
 
-6. Separately report Project access and repository Issues availability,
-   including the exact authorized administrator action required.
-   Do not change permissions or expose credentials.
+6. Preserve the finding that revision 1.6 exists in Git history.
+   Keep merged revision 1.1 and proposed revision 2.1 clearly distinguished.
+   Do not silently resolve D-M1–D-M4 or promote a Master revision.
 
-Update the existing reconciliation and generation reports. Preserve all
-working changes. Do not create issues, replace the operative Master,
-implement code, merge or deploy during this reconciliation.
+Return a sanitized readiness report: account/host, repository/HEAD,
+Issues status, Project access, remaining blockers, and the next eligible
+operation from the existing synchronization manifest.
+
+Do not change GitHub resources, repository settings, application code,
+or deployments during this check.
