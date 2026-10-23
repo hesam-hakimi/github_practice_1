@@ -20,26 +20,16 @@ These are documentation and decomposition findings. They do not establish missin
 
 ## 2. Sources and version basis
 
-The DCM branch `xdoc` was resolved during this review to commit `fe5ba775bd5a7d9bf0ef0fbf3ea333eabb094b4e`. No later branch revision was returned by that check. This is a point-in-time observation, not a claim that the branch cannot subsequently change.
+This repository edition uses the English product and planning baseline supplied in this package. It preserves the coverage conclusions and proposed recommendations while replacing publication-system references with local document references. Editorial packaging does not establish operative application adoption.
 
 | Ref | Source inspected | Version / role |
 |---|---|---|
-| S1 | `AskAlpha_Product_Definition_FA_2026-10-13.docx` | Persian Product Definition, internal v1.0 proposed, 13 October. All five pages read. |
-| S2 | [PRODUCT_DEFINITION_EN.md](https://github.com/hesam-hakimi/dcm/blob/fe5ba775bd5a7d9bf0ef0fbf3ea333eabb094b4e/docs/askalpha/PRODUCT_DEFINITION_EN.md) | English v1.2 proposed, 22 October. More detailed product baseline used for clause coverage. |
-| S3 | `MASTER_PLAN_V1(2).md` | Maintained working copy, revision 2.1 proposed, 22 October. Not assumed to have replaced the operative application Master. |
-| S4 | [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md](https://github.com/hesam-hakimi/dcm/blob/fe5ba775bd5a7d9bf0ef0fbf3ea333eabb094b4e/docs/askalpha/ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) | v0.4, 22 October. Delivery Plan/output ownership, crosswalk and dependency register. |
-| S5 | `AskTD_Delivery_Plans_and_Dependencies.md` | Delivery portfolio v0.2, 22 October. Fuller Plan outcomes, acceptance and sequencing. |
+| S2 | [Product Definition](PRODUCT_DEFINITION_EN.md) | English v1.2 proposed, 22 October 2026; product-clause baseline. |
+| S3 | [Master Plan](<MASTER_PLAN_V1(2).md>) | Maintained working copy, revision 2.1 proposed, 22 October 2026; reconcile with the operative application Master. |
+| S4 | [Plan and Lineage Reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) | v0.4, 22 October 2026; output ownership, crosswalk and typed dependency register. |
+| S5 | [Delivery Portfolio](AskTD_Delivery_Plans_and_Dependencies.md) | v0.2, 22 October 2026; fuller outcomes, acceptance and sequencing. |
 
-The Product Definition located in the supplied files is the older Persian document. A separate current English Product Definition file was not located there during this search; S2 was read directly from DCM. The older Persian document and newer English document must not be treated as equivalent translations of one revision. In particular, task generation from S1 alone would omit detail now present in S2 about preferences, scheduling, administration and operating costs.
-
-Source handles for reproducibility:
-
-- S1: `libfile_5862b6833a2481918ac7e2fd4f49c0a9`, file version 1.
-- S3: `libfile_f3a37a7311108191af8469304d253bcf`, file version 1.
-- S4 maintained file: `libfile_f2101f552b0081919b676896f250c2ca`, file version 1.
-- S5: `libfile_e5e7990837308191b4d07be96d59572e`, file version 1.
-
-File-storage version numbers are distinct from the internal document revision numbers above. This review does not supersede a newer Master candidate or infer that one is absent from an inaccessible workspace.
+Source keys remain stable for this review. The document revisions above are distinct from the containing repository revision. A newer application Master candidate must be reconciled before adopting changes; this package does not prove that a newer candidate is absent.
 
 ## 3. How coverage is classified
 
@@ -54,7 +44,7 @@ The C01–C35 and REC01–REC05 identifiers below are local audit references, no
 
 | Audit ref | Product requirement and source | Existing delivery ownership | Assessment and acceptance to retain or clarify |
 |---|---|---|---|
-| C01 | Deposits-first, approved natural-language analysis without requiring SQL/table knowledge; S2 §§1, 3; S1 core journey | `P01.scope`, `P01.reference_cases`; `P05.analysis_contract`, `P05.curated_templates`, `P05.correctness_evidence` | **Refine acceptance.** Scope is covered. Demonstrate own-wording and approved-template entry through the rendered user journey, with focused clarification and approved reference answers. Business examples remain illustrative until approved. |
+| C01 | Deposits-first, approved natural-language analysis without requiring SQL/table knowledge; S2 §§1, 3 | `P01.scope`, `P01.reference_cases`; `P05.analysis_contract`, `P05.curated_templates`, `P05.correctness_evidence` | **Refine acceptance.** Scope is covered. Demonstrate own-wording and approved-template entry through the rendered user journey, with focused clarification and approved reference answers. Business examples remain illustrative until approved. |
 | C02 | Visible metric, source, as-of date, period, filters and limitations; comparisons/trends and safe unsupported outcomes; S2 §3 | `P04.semantic_bundle`; `P05.result_contract`, `P05.curated_templates`, `P05.correctness_evidence` | **Covered; retain user-visible checks.** Contract fields must reach the answer presented to the user. Include ambiguous/unsupported/insufficient-data outcomes and approved comparison behavior. |
 | C03 | Deterministic presentation where eligible; AI formatting separately approved; formatting preserves values and meaning; S2 §3, S3 §8.3 | `P05.curated_templates`, `P05.correctness_evidence`; downstream P06/P14 consumers | **Refine acceptance.** Test deterministic eligibility, approved AI fallback when applicable, and a safe outcome when neither route is eligible. If both routes are enabled, compare them to the same validated result. |
 | C04 | No invented joins, unsupported causality or analytical meaning; S2 §§3, 9; S3 §3.2 | `P04.relationship_evidence`; `P05.analysis_contract`, `P05.correctness_evidence`; `P06.context_evidence` | **Refine acceptance.** Join boundaries are explicit. Add a negative case proving simultaneous changes do not become an unsupported causal explanation. Carry the same constraint into reports. |
@@ -84,10 +74,10 @@ The C01–C35 and REC01–REC05 identifiers below are local audit references, no
 | C28 | SQL and Databricks baseline Registry, permissions, execution and readiness; S2 §9 | `P01.provider_coverage`; P02 provider routes; P04 bindings; P05 adapter behavior; `P07.provider_readiness` | **Covered strongly.** Preserve SQL App Service system-assigned managed identity and application-enforced end-user authorization. Qualify Databricks identity/connector separately, per provider and environment. P15 is further expansion. |
 | C29 | Current authorization across answers, history, context, suggestions, schedules, reuse and exports; approved model payloads; S2 §§5–9 | P02, relevant feature outputs, P07 scoped acceptance | **Covered.** Source access is distinct from permission to send data to a model. Historical successful login/SQL validation remains evidence; current regressions require current evidence. |
 | C30 | Bounded provider-neutral reuse; no blanket replication assumption; S2 §9 | `P11.reuse_policy`, `P11.reuse_evidence`; P02/P04/P05 inputs | **Conditional and covered.** Qualify selected reuse with scope, freshness, version and invalidation evidence. Source size is not an instruction to copy an entire dataset. |
-| C31 | Management reports and controlled exports; additional richer interactions; S1 later capabilities; S2 report/output boundaries | `P14.report_contract`, `P14.export_evidence`; P05 validated-result contract and P02 access | **Covered at outcome level.** Management reports and permitted Excel/PDF outputs are proposed release R4 scope. Richer interactions and additional formats remain conditional. Preserve analytical/presentation fidelity and explicitly qualify distribution, size and privacy treatment. |
-| C32 | Further provider/source/analysis expansion beyond the SQL/Databricks baseline; S1 later capabilities; S2 §9 | `P15.expansion_decision`, `P15.qualified_extension` | **Conditional and covered.** Each selected extension has its own prerequisites, scope, authorization and qualification under scoped DEP25. Do not imply that all baseline qualification must finish before any expansion planning. Baseline SQL/Databricks support must not be displaced into P15. |
-| C33 | Business correctness, trust/privacy, intended-environment reliability and support; pilot vs broader acceptance; S1 release gates; S2 §9 | `P01.reference_cases`, `P01.acceptance_owners`; `P05.correctness_evidence`; `P07.acceptance_bundle` | **Covered; evidence pending.** Passing technical tests alone does not establish business acceptance, provider qualification or production readiness. |
-| C34 | Success criteria and explicit exclusions/open decisions; S1 success and boundaries; S2 §§8–9 | P01 acceptance/scope, P07 measurement/support, P10 costs, Master decision/gate registers | **Covered; decisions pending.** Keep quality, time-to-useful-answer, adoption and cost-per-accepted-answer measures distinct. Targets, baseline, language support, business definitions and authority must be resolved explicitly. Writebacks, unrestricted joins, autonomous actions and unapproved forecasting remain outside the accepted scope. |
+| C31 | Management reports and controlled exports; additional richer interactions; S3 §§3.1, 9.3; S4 §6.14; S2 report/output boundaries | `P14.report_contract`, `P14.export_evidence`; P05 validated-result contract and P02 access | **Covered at outcome level.** Management reports and permitted Excel/PDF outputs are proposed release R4 scope. Richer interactions and additional formats remain conditional. Preserve analytical/presentation fidelity and explicitly qualify distribution, size and privacy treatment. |
+| C32 | Further provider/source/analysis expansion beyond the SQL/Databricks baseline; S2 §9 | `P15.expansion_decision`, `P15.qualified_extension` | **Conditional and covered.** Each selected extension has its own prerequisites, scope, authorization and qualification under scoped DEP25. Do not imply that all baseline qualification must finish before any expansion planning. Baseline SQL/Databricks support must not be displaced into P15. |
+| C33 | Business correctness, trust/privacy, intended-environment reliability and support; pilot vs broader acceptance; S3 §§10–11; S2 §9 | `P01.reference_cases`, `P01.acceptance_owners`; `P05.correctness_evidence`; `P07.acceptance_bundle` | **Covered; evidence pending.** Passing technical tests alone does not establish business acceptance, provider qualification or production readiness. |
+| C34 | Success criteria and explicit exclusions/open decisions; S3 §§3.2, 8.4–8.5, 13; S2 §§8–9 | P01 acceptance/scope, P07 measurement/support, P10 costs, Master decision/gate registers | **Covered; decisions pending.** Keep quality, time-to-useful-answer, adoption and cost-per-accepted-answer measures distinct. Targets, baseline, business definitions and authority must be resolved explicitly. Writebacks, unrestricted joins, autonomous actions and unapproved forecasting remain outside the accepted scope. |
 | C35 | Approved analytical content and accountable approval/lifecycle behavior; S2 §§4, 9 | `P03.policy_decision`, `P03.lifecycle_disposition`, conditional `P03.selected_enforcement`; P04 publication | **Covered; selected enforcement is conditional.** Preserve accepted trace-only behavior and distinguish classification from execution policy. Missing evidence is not invented expiry; a new enforcement policy requires an actual owner decision. Do not rebuild accepted 2F.1 work. |
 
 ## 5. Recommended corrections before task generation
@@ -137,24 +127,24 @@ The following are legitimate unresolved inputs or evidence, rather than reasons 
 | Approved Deposits definitions, calculations, edge cases, reference answers and reviewers | `P01.reference_cases`, `P01.acceptance_owners`, `P04.semantic_bundle`. Synthetic fixtures can support framework development but cannot substitute for business sign-off. |
 | Per-provider/environment identity, connector route, permissions and readiness | Applicable P02 route records and `P07.provider_readiness`. SQL evidence cannot qualify Databricks. |
 | Named business/content/security/operational approvers and release authority | P01 and Master decision/gate records. Role names are not assigned people. |
-| UI/question languages, selected richer report interactions, export treatment/size/distribution and additional formats | Product decisions and relevant P05/P09/P14 scope. Excel/PDF are already specified in P14. Persian documentation alone does not commit the application to Persian UI or queries. |
+| Selected richer report interactions, export treatment/size/distribution and additional formats | Product decisions and relevant P05/P09/P14 scope. Excel/PDF are already specified in P14. |
 | Retention/deletion periods, permitted context/model payloads and preference controls | P02/P06/P08 plus applicable Master privacy/lifecycle decisions. Retention values must not be fabricated. |
 | Scheduling stale-data policy, channels, timezone rules, recipients and owner-departure treatment | `P12.schedule_contract` with accountable policy owners. Test framework behavior against explicit synthetic policy fixtures where appropriate. |
 | Cost unit prices, currency/effective dates, allocation rules, workload baselines and approved limits | P07/P10. Preserve unknown values and distinguish estimates from reconciled observations. |
 | Performance, reliability, concurrency, freshness and support thresholds | P01/P07 and Master readiness gates. Specify owners and measurement methods before claiming acceptance. |
 | Operative application Master/ADRs, current tasks/PRs, implementation and deployment evidence | Reconcile in a connected application session before adopting proposed mapping or creating duplicate work. Missing access is not evidence of failure or absence. |
 
-The user also requested developer/project observability and future Copilot governance. Those are delivery-system requirements. They should be represented in the team execution framework, with explicit task/PR/evidence links, but their absence from the end-user Product Definition is not a product-coverage defect and does not justify an invented P16.
+The delivery framework also requires developer/project visibility and future Copilot governance. Those are delivery-system requirements. They should be represented in the team execution framework, with explicit task/PR/evidence links, but their absence from the end-user Product Definition is not a product-coverage defect and does not justify an invented P16.
 
-## 7. Preserved constraints
+## 7. Preserved constraints and review scope
 
 - Keep Master requirement/revision → engineering phase/slice → delivery Plan → named output → canonical Task/PR → acceptance evidence → release.
 - P01–P15, Master engineering phases, detailed 2F slices, provisional 2G, executive Phases 1–3 and releases R1–R4 remain separate namespaces.
 - Keep SQL and Databricks baseline scope across P01/P02/P04/P05/P07. P15 covers further expansion.
 - Preserve App Service SQL system-assigned managed identity and application-enforced end-user authorization. Qualify Databricks separately.
 - Retain historical successful login and SQL identity validation. Do not reopen those investigations without current regression evidence.
-- Preserve existing worktrees, uncommitted changes, tasks/PRs and any newer Master candidate. No source plan was edited for this review.
-- No saved prompt was executed; no issue, workflow, permission change, merge or deployment was performed.
+- Preserve existing worktrees, uncommitted changes, tasks/PRs and any newer Master candidate. The review recommendations have not been applied to the source planning baseline.
+- This coverage assessment did not execute saved prompts or create issues, dispatch workflows, change permissions, merge or deploy.
 - Keep conditional dependencies conditional. Only applicable unmet hard input dependencies should become execution blockers; shared contracts and approval gates are not interchangeable with them.
 
 ## 8. Next smallest justified activity
@@ -171,4 +161,5 @@ Acceptance evidence for that amendment:
 4. No business values, people, dates, approvals, implementation status or deployment evidence are invented.
 5. The connected-session reconciliation later links existing implementation/tasks before deciding what new work is actually needed.
 
-Only after this correction and baseline reconciliation should the Copilot task/issue-generation prompt be finalized for execution. Do not generate speculative detailed implementation tasks for all 15 Plans at once; preserve later Plans at the appropriate outcome/contract depth until their inputs and scope justify decomposition.
+Before finalizing tasks for a selected scope, reconcile its application baseline and resolve the applicable accepted output, dependency and acceptance refinements. Unadopted recommendations remain explicit decisions and do not block unrelated planning or justified framework work. Do not generate speculative detailed implementation tasks for all 15 Plans at once; preserve later Plans at the appropriate outcome/contract depth until their inputs and scope justify decomposition.
+

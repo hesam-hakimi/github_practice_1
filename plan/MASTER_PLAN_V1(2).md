@@ -3,6 +3,7 @@
 **Document ID:** `MASTER_PLAN_V1`  
 **Revision:** 2.1 — proposed consolidated update with continuity amendment  
 **Updated:** 22 October 2026  
+**Package edition:** 23 October 2026; portable references only. The proposed revision and substantive planning decisions are unchanged.  
 **Previous revision:** 2.0 proposed, 19 October 2026  
 **Status:** Proposed program reference; business commitments and release approvals remain subject to the relevant owners.  
 **Audience:** Product, Deposits business owners, architecture, engineering, security, IAM, data governance, QA, platform, operations, Finance, and implementation agents.  
@@ -67,11 +68,11 @@ Every operational assertion needs a source revision, environment, date, and rele
 
 ### 1.3 Preserved access and verification boundary of revision 2.0
 
-For revision 2.0, the product definition, quarterly roadmap, and executive one-pager were read from `hesam-hakimi/dcm`, branch `xdoc`. The observed documentation branch commit was `b4bb14453c394a3a7cd0b01fea27eb61f04a47d6`. This is not an application deployment commit. [S09–S11]
+Revision 2.0 reviewed the Product Definition and Quarterly Product Roadmap at version 1.1, dated 13 October 2026, and the executive one-pager at version 1.0. Their current package versions preserve this source history. Reviewing planning documents does not verify an application deployment. [S09–S11]
 
 During the 19 October revision 2.0 review, a read of the private application's master-plan path through the configured GitHub connection returned **404**. That does not establish repository deletion, file deletion, or PR status. Accordingly, revision 2.0 used the supplied master-plan screenshots and available reference package; this revision preserves that source basis and it makes no new private-source or runtime verification claim.
 
-The retrieved Library copies named `MASTER_PLAN_V1.md` and `MASTER_PLAN_V1(1).md` had older headings, including revision 1.1. They were not substituted for the supplied revision 1.6. The current private master may contain later edits that must be reconciled before replacement.
+Earlier reference copies of `MASTER_PLAN_V1.md` included revision 1.1. They were not substituted for the supplied revision 1.6. The operative application Master and any later candidate require repository reconciliation before replacement.
 
 ### 1.4 Traceability
 
@@ -81,13 +82,13 @@ Each delivery item must link its requirement, owner, affected contract, source r
 
 ### 1.5 Continuity amendment on 22 October 2026
 
-The owner requested a durable new-session handoff and alignment of the current documents. The documentation repository is `hesam-hakimi/dcm`, branch `xdoc`, folder `docs/askalpha/`. At the start of this review its HEAD was `71f5eae1f7a67b4909c872c8f352c50972c12849`, which added the v0.3 delivery/lineage reference and Copilot prompt on 21 October. Read current Git history for the revision containing the later continuity amendments. [S13–S16]
+The 22 October continuity amendment aligns the proposed Master, delivery portfolio, delivery/lineage reference, product documents and handoff. The delivery/lineage reference and Copilot task template were first prepared on 21 October; the amended references remain planning artifacts, not application completion evidence. [S13–S16]
 
-This revision remains a proposed Library working copy. The currently accessible connection returned 404 for the historically identified application repository on 22 October. No current application HEAD, PR merge, deployment, acceptance or operative Master adoption was verified. A 404 is an access result, not proof of deletion or regression.
+This revision remains a proposed working copy. The currently accessible connection returned 404 for the historically identified application repository on 22 October. No current application HEAD, PR merge, deployment, acceptance or operative Master adoption was verified. A 404 is an access result, not proof of deletion or regression.
 
-The historical application handoff in the documentation repository reports successful normal login and App Service SQL system-assigned managed identity validation. Preserve that dated report and any later evidence. Reopen a completed investigation only when current evidence justifies it. Unreadable screenshot attachments cannot supply missing diagnostic facts. [S15]
+The historical application handoff summarized in the [session handoff](ASKTD_SESSION_HANDOFF.md) reports successful normal login and App Service SQL system-assigned managed identity validation. Preserve that dated report and any later evidence. Reopen a completed investigation only when current evidence justifies it. Unreadable screenshot attachments cannot supply missing diagnostic facts. [S15]
 
-Start continuation with `ASKTD_SESSION_HANDOFF.md`, then the current Plan/lineage reference. A saved execution prompt is a template, not a new instruction merely because an agent reads it. The operative application documents and existing tasks must be reconciled before generating or implementing new work.
+Start continuation with the [session handoff](ASKTD_SESSION_HANDOFF.md), then the [delivery and lineage reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md). A saved execution prompt is a template, not a new instruction merely because an agent reads it. The operative application documents and existing tasks must be reconciled before generating or implementing new work.
 
 ## 2. Executive summary
 
@@ -632,7 +633,7 @@ This is a proposed work allocation, not an assignment of unconfirmed enterprise 
 
 ### 9.6 Delivery Plans and engineering lineage
 
-P01–P15 are delivery packages. They preserve the engineering namespaces above and add output-level ownership. A Plan may draw from several engineering phases, and one phase may contribute to several Plans. The complete mapping, 46 named outputs, typed dependencies, task schema and acceptance links are in `ASKTD_PLAN_AND_LINEAGE_REFERENCE.md`, version 0.4. [S13]
+P01–P15 are delivery packages. They preserve the engineering namespaces above and add output-level ownership. A Plan may draw from several engineering phases, and one phase may contribute to several Plans. The complete mapping, 46 named outputs, typed dependencies, task schema and acceptance links are in the [Delivery Plans and Master Plan Lineage](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md), version 0.4. [S13]
 
 | Plan | Outcome and main Master anchors | First release contribution |
 |---|---|---|
@@ -857,30 +858,32 @@ These are planning references, not newly instantiated repository tasks. Exact so
 
 ## Appendix C. Source register
 
+Package documents are linked locally. S01–S08, S12 and S15 identify historical or operative application evidence that is not bundled; locate the corresponding records during repository reconciliation. Their absence from this package does not establish missing implementation. Preserve current source revisions and accepted successors.
+
 | Ref | Source | Use and limitation |
 |---|---|---|
 | **S01** | User-supplied screenshots of `docs/plans/MASTER_PLAN_V1.md`, revision 1.6, sections 1–14. | Original structure, historical audit, principles, Phases 0–7, gates, and open questions. Not a fresh private-source audit. |
-| **S02** | `askalpha_Solution_Architecture_2026-09-14.md`, v1.0. | Reconciled working architecture, ownership, component roles, target/current distinctions. Read from the available Library reference. |
+| **S02** | `askalpha_Solution_Architecture_2026-09-14.md`, v1.0. | Reconciled working architecture, ownership, component roles, target/current distinctions. Historical reference; locate the operative source during repository reconciliation. |
 | **S03** | `AskTD_02_Authorization_Decision_Record_2026-09-10.md`, updated 14 September, v0.2. | Application/MSI direction, no ACL sync, unresolved enterprise input, and AUTH requirements. |
 | **S04** | `AskTD_03_Architecture_Delta_and_Agent_Handoff_2026-09-10.md`, updated 14 September, v0.3. | D01–D18, phase reconciliation, G01–G11, reported checkpoint, and continuation boundaries. |
 | **S05** | `askalpha_LLM_Usage_and_MRM_2026-09-14.md`, v1.0. | Reported 16-path/two-helper inventory, nine purposes, L01–L08 gaps, and proposed MRM boundary. Not the full underlying call-site inventory. |
 | **S06** | `AskTD_01_Deposits_MVP_Scope_and_Acceptance_2026-09-10.md`, updated 14 September, v0.2. | Bounded Deposits scope and A01–A10 acceptance. Later October product proposals extend the user-facing roadmap; approval is still required. |
 | **S07** | `AskTD_09_Phase_2F_Scope_Discovery_2026-08-26.md`, with September historical notice. | Detailed 2F sequence and 5 TB / Synapse Dedicated SQL Pools / Databricks Data Lake context. Earlier execution/expiry wording is superseded by later trace-only implementation and policy decisions. |
 | **S08** | `ARCHITECTURE_DELTA_IMPACT_REPORT.md`, operative 14 September update, U1–U7. | Incremental impact mapping and next-task limits. Its preserved September 1 assessment is historical where superseded. |
-| **S09** | `docs/askalpha/PRODUCT_DEFINITION_EN.md`, v1.1, 13 October 2026; read from `hesam-hakimi/dcm:xdoc`. | Product features, owners, templates, context/history/preferences, scheduling, monitoring, and costs. Blob: `15ec0fb039d3ff64ab02b652c7caa72025209de4`. |
-| **S10** | `docs/askalpha/QUARTERLY_PRODUCT_ROADMAP_EN.md`, v1.1, 13 October 2026; same repository/branch. | Four relative delivery quarters and acceptance. Blob: `c81b534d5fc887cab5deb714a66ffc30cb1f2b10`. |
-| **S11** | `docs/askalpha/Roadmap-onepager.md`, v1.0, prepared 13 October 2026; same repository/branch. | Proposed executive calendar, workstreams, gates, and scorecard. Blob: `b1fd243d2358bda5cfdf09120f0f10292f20e1b0`. |
+| **S09** | [AskAlpha Product Definition](PRODUCT_DEFINITION_EN.md), original reviewed v1.1, 13 October 2026; package v1.2, 22 October 2026. | Product features, owners, templates, context/history/preferences, scheduling, monitoring, and costs; later baseline and continuity clarification preserved. |
+| **S10** | [AskAlpha Quarterly Product Roadmap](QUARTERLY_PRODUCT_ROADMAP_EN.md), original reviewed v1.1, 13 October 2026; package v1.2, 22 October 2026. | Four relative delivery quarters and acceptance; dates remain proposed. |
+| **S11** | [Executive Roadmap](Roadmap-onepager.md), v1.0, prepared 13 October 2026, with 22 October continuity amendment. | Proposed executive calendar, workstreams, gates, and scorecard. |
 | **S12** | Supplied August Phase 2F.1 implementation/repair/independent-review/PR #18 screenshots and reports described in the earlier conversation. | Preserved historical report from revision 2.0; these screenshots were not newly inspected during the 22 October continuity update. No current merge or activation evidence. |
-| **S13** | ASKTD_PLAN_AND_LINEAGE_REFERENCE.md: v0.3 published in DCM commit 71f5eae1f7a67b4909c872c8f352c50972c12849; v0.4 continuity amendment dated 22 October 2026. | P01–P15, named outputs, full phase mapping, dependency types, task/evidence/release lineage and alias transition. Proposed mapping pending operative-source reconciliation. |
+| **S13** | [Delivery Plans and Master Plan Lineage](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md), original v0.3, 21 October 2026; v0.4 continuity amendment, 22 October 2026. | P01–P15, named outputs, full phase mapping, dependency types, task/evidence/release lineage and alias transition. Proposed mapping pending operative-source reconciliation. |
 | **S14** | Owner direction on SQL/Databricks baseline, application permissions and preserved system-assigned identity, consolidated in the 21 October planning reference. | Refines delivery allocation; does not establish live provider qualification or replace enterprise grant authority. |
-| **S15** | DCM historical root prompt.md, preserved at commit 71f5eae1f7a67b4909c872c8f352c50972c12849. | Reports login/SQL SAMI validation and earlier PR/workflow checkpoints. Read as historical evidence; current application state remains unverified. |
-| **S16** | ASKTD_SESSION_HANDOFF.md v1.0 and product/quarterly v1.2/onepager continuity updates, 22 October 2026. | Reading order, confirmed documentation publication, unresolved evidence, executive namespace and new-session routing. Does not activate saved execution prompts. |
+| **S15** | Historical application handoff, summarized in the [Session Handoff](ASKTD_SESSION_HANDOFF.md), 22 October 2026. Original application reports require repository reconciliation. | Reports login/SQL SAMI validation and earlier PR/workflow checkpoints. Read as historical evidence; current application state remains unverified. |
+| **S16** | [Session Handoff](ASKTD_SESSION_HANDOFF.md) v1.0 and product/quarterly v1.2/executive continuity updates, 22 October 2026. | Reading order, documentation checkpoint, unresolved evidence, executive namespace and continuation guidance. Does not activate saved execution prompts. |
 
-For the original 19 October revision 2.0 review, the documentation branch was observed at commit `b4bb14453c394a3a7cd0b01fea27eb61f04a47d6`, and the private Master read returned 404. Those are preserved historical observations. At the start of the 22 October revision 2.1 review, DCM xdoc was observed at `71f5eae1f7a67b4909c872c8f352c50972c12849`; the current application-repository lookup returned 404 through the available connection. Product documents and screenshots do not establish current private application state.
+During the 19 October revision 2.0 review, the private Master read returned 404. The 22 October revision 2.1 review also could not verify the application repository through the available connection. These are historical access observations, not proof of missing code or failure. Product documents and screenshots do not establish current application state.
 
 ## Appendix D. Adoption note for the connected engineering session
 
-**Intended application filename:** retain `docs/plans/MASTER_PLAN_V1.md` relative to the application root, after reconciling the actual repository layout and any later edits. In the supplied layout, the application root is nested under `kmai-td-genie/`.
+**Intended application filename:** retain `docs/plans/MASTER_PLAN_V1.md` relative to the application root, after reconciling the actual repository layout and any later edits. The historical layout included a nested application root; resolve the actual root during repository reconciliation rather than assuming that layout.
 
 This file is a proposed replacement draft, not an already committed private-branch edit. Update the existing master at its actual path; do not create a replacement application, reset a branch, overwrite active user changes, or treat this plan as authorization for broad code changes. Keep the engineering artifact language English.
 
@@ -889,9 +892,9 @@ Before adoption, verify the live source baseline and reference locations. After 
 
 ## Appendix E. Continuation checkpoint and update scope
 
-### E.1 Confirmed documentation work
+### E.1 Documentation baseline
 
-The P01–P15 reference and Copilot artifact-generation prompt were published in `hesam-hakimi/dcm`, branch `xdoc`, under `docs/askalpha/`, in commit `71f5eae1f7a67b4909c872c8f352c50972c12849`. Their initial publication contained exactly those two additions. The 22 October continuity package aligns this proposed Master, the portfolio and bilingual guides with reference v0.4, product/roadmap v1.2 and a dedicated session handoff. Consult the containing Git revision and Library version history for the saved update; no application completion is implied.
+The 21 October baseline introduced the [P01–P15 reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) and [Copilot artifact-generation template](ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md). The 22 October continuity update aligns this proposed Master, the [portfolio](AskTD_Delivery_Plans_and_Dependencies.md) and [English guide](AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md) with reference v0.4, product/roadmap v1.2 and the [session handoff](ASKTD_SESSION_HANDOFF.md). These are documentation changes; no application completion is implied.
 
 ### E.2 Evidence still required
 
@@ -913,4 +916,5 @@ Read the current session handoff and operative sources. Reconcile existing work 
 | Revision | Scope |
 |---|---|
 | 2.0 proposed, 19 October 2026 | Consolidated product, architecture, engineering and release planning while preserving earlier evidence |
-| 2.1 proposed, 22 October 2026 | Clarified dual-provider baseline, SAMI direction, P01–P15/executive lineage, publication checkpoint, preserved historical login report and new-session continuation |
+| 2.1 proposed, 22 October 2026 | Clarified dual-provider baseline, SAMI direction, P01–P15/executive lineage, documentation checkpoint, preserved historical login report and continuation guidance |
+

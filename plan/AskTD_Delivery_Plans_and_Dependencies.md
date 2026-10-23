@@ -2,11 +2,12 @@
 
 **Version:** 0.2  
 **Prepared:** 22 October 2026, America/Toronto  
+**Package edition:** 23 October 2026; portable references only. The proposed version and substantive planning decisions are unchanged.  
 **Original portfolio:** Version 0.1, 20 October 2026  
 **Status:** Proposed plan portfolio for review and repository reconciliation  
 **Purpose:** Turn the agreed Master Plan to Plan to Task framework into a bounded set of delivery plans, explicit output dependencies, and a practical next sequence.
 
-**Continuity note:** This bounded update preserves the original portfolio and its historical planning aliases while applying the later SQL/Databricks baseline and complete phase-lineage clarification. For the current detailed output/dependency schema, read [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md, v0.4](https://github.com/hesam-hakimi/dcm/blob/xdoc/docs/askalpha/ASKTD_PLAN_AND_LINEAGE_REFERENCE.md). Start a new session with [ASKTD_SESSION_HANDOFF.md](https://github.com/hesam-hakimi/dcm/blob/xdoc/docs/askalpha/ASKTD_SESSION_HANDOFF.md). These documents do not establish current runtime completion or adoption of the proposed Master copy. [S7–S8]
+**Continuity note:** This bounded update preserves the original portfolio and its historical planning aliases while applying the later SQL/Databricks baseline and complete phase-lineage clarification. For the current detailed output/dependency schema, read [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md, v0.4](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md). Start a new session with [ASKTD_SESSION_HANDOFF.md](ASKTD_SESSION_HANDOFF.md). These documents do not establish current runtime completion or adoption of the proposed Master copy. [S7–S8]
 
 ## 1. Portfolio decision
 
@@ -16,7 +17,7 @@ A dependency names the specific output a consumer needs. It does not mean that t
 
 P01 to P15 are candidate planning keys in this draft. They are not existing GitHub issue numbers, newly assigned engineering phases, or verified implementation statuses. During repository reconciliation, retain existing plan/task identities and link these candidates to them. Assign a new stable issue key only where no owning item exists.
 
-The original portfolio used the 19 October Master Plan revision 2.0 proposal [S1], the 13 October product documents [S2–S3], and the September authorization/alignment records [S4–S5]. The user approved the planning framework in the source conversation [S6]. This v0.2 update applies the later provider-baseline and continuity clarification in S7–S8 while preserving the original source history. The live private master, including the previously reported untracked MASTER_PLAN_V2.md, still requires reconciliation in the connected development workspace before this portfolio becomes the execution baseline. No new source, deployment, approval, or completion status is asserted here.
+The original portfolio used the 19 October Master Plan revision 2.0 proposal [S1], the 13 October product documents [S2–S3], and the September authorization/alignment records [S4–S5]. The owner accepted the planning framework [S6]. This v0.2 update applies the later provider-baseline and continuity clarification in S7–S8 while preserving the original source history. The live private master, including the previously reported untracked MASTER_PLAN_V2.md, still requires reconciliation in the connected development workspace before this portfolio becomes the execution baseline. No new source, deployment, approval, or completion status is asserted here.
 
 ### Preserve the current foundation
 
@@ -609,21 +610,23 @@ Complete synthetic/integration evidence, then qualify the actual authorized rout
 
 ## 13. Source register
 
-**S1 — Master Product and Delivery Plan.** Original reviewed file: MASTER_PLAN_V1(2).md; document ID MASTER_PLAN_V1; revision 2.0 proposed consolidated update; 19 October 2026. The 22 October continuity refresh advances the available Library copy to revision 2.1 proposed and adds continuation context while preserving that historical basis. Relevant sections: §1 authority/evidence; §§3–8 product/architecture/contracts; §9 delivery; §§10–11 acceptance; §§13–14 decisions/continuation; Appendix B D01–D18; Appendix D adoption, plus the new continuity appendix. Neither proposal establishes adoption by the current private application repository; resolve the operative revision through S8.
+Package documents are linked locally. S4–S5 identify application reference evidence that is not bundled; locate their operative versions or accepted successors during repository reconciliation. S6 records owner direction, not a claim of current implementation.
 
-**S2 — Product Definition.** Original reviewed [PRODUCT_DEFINITION_EN.md](https://github.com/hesam-hakimi/dcm/blob/71f5eae1f7a67b4909c872c8f352c50972c12849/docs/askalpha/PRODUCT_DEFINITION_EN.md), version 1.1, 13 October 2026. The current xdoc copy is version 1.2 with the 22 October continuity/baseline clarification; the original source pin remains provenance. Retrieved file blob SHA: 15ec0fb039d3ff64ab02b652c7caa72025209de4. Repository/branch: hesam-hakimi/dcm, xdoc. The blob SHA identifies the document content, not an application deployment.
+**S1 — Master Product and Delivery Plan.** [MASTER_PLAN_V1(2).md](<MASTER_PLAN_V1(2).md>), document ID MASTER_PLAN_V1; original reviewed revision 2.0 proposed consolidated update, 19 October 2026; current revision 2.1 proposed, 22 October 2026. Relevant sections: §1 authority/evidence; §§3–8 product/architecture/contracts; §9 delivery; §§10–11 acceptance; §§13–14 decisions/continuation; Appendix B D01–D18; Appendix D adoption; Appendix E continuity. Neither proposal establishes adoption by the application repository; resolve the operative revision through S8.
 
-**S3 — Quarterly Product Roadmap.** Original reviewed [QUARTERLY_PRODUCT_ROADMAP_EN.md](https://github.com/hesam-hakimi/dcm/blob/71f5eae1f7a67b4909c872c8f352c50972c12849/docs/askalpha/QUARTERLY_PRODUCT_ROADMAP_EN.md), version 1.1, 13 October 2026. The current xdoc copy is version 1.2 with the 22 October continuity/baseline clarification; the original source pin remains provenance. Retrieved file blob SHA: c81b534d5fc887cab5deb714a66ffc30cb1f2b10. Four delivery quarters from the agreed team start; dates and capacity remain proposed.
+**S2 — Product Definition.** [AskAlpha Product Definition](PRODUCT_DEFINITION_EN.md), original reviewed version 1.1, 13 October 2026; package version 1.2, 22 October 2026, with baseline-provider and continuity clarification. The document revision identifies planning content, not an application deployment.
+
+**S3 — Quarterly Product Roadmap.** [AskAlpha Quarterly Product Roadmap](QUARTERLY_PRODUCT_ROADMAP_EN.md), original reviewed version 1.1, 13 October 2026; package version 1.2, 22 October 2026, with baseline-provider and continuity clarification. Four delivery quarters from the agreed team start; dates and capacity remain proposed.
 
 **S4 — Authorization Decision Record.** AskTD_02_Authorization_Decision_Record_2026-09-10.md; updated 14 September 2026, version 0.2. Application effective-scope enforcement, Managed Identity source access, no provider ACL replication, AUTH-01–AUTH-07 and explicit enterprise authority boundaries.
 
 **S5 — Phase 2F Alignment Prompt.** askalpha_Phase_2F_Alignment_Prompt_2026-09-14.md. Preserve accepted progress and user changes; reconcile the live impact matrix; distinguish historical source findings from current runtime evidence; retain detailed 2F slices and bounded continuation.
 
-**S6 — Original owner direction.** The source conversation accepted the Master Plan → Plan → Task → GitHub framework and requested plan design and dependency visibility before further execution. The existing App Service SQL SAMI/application-authorization direction and previously granted task authority remain applicable within their scope.
+**S6 — Original owner direction.** The owner accepted the Master Plan → Plan → Task → GitHub framework and requested plan design and dependency visibility before further execution. The existing App Service SQL SAMI/application-authorization direction and previously granted task authority remain applicable within their scope.
 
-**S7 — Current delivery and lineage reference.** [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md](https://github.com/hesam-hakimi/dcm/blob/xdoc/docs/askalpha/ASKTD_PLAN_AND_LINEAGE_REFERENCE.md), v0.4 continuity update, 22 October 2026. Use its full phase crosswalk, named outputs, typed dependencies and task contract for new planning artifacts. Its source mappings remain subject to operative repository reconciliation.
+**S7 — Current delivery and lineage reference.** [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md), v0.4 continuity update, 22 October 2026. Use its full phase crosswalk, named outputs, typed dependencies and task contract for new planning artifacts. Its source mappings remain subject to operative repository reconciliation.
 
-**S8 — Session continuation checkpoint.** [ASKTD_SESSION_HANDOFF.md](https://github.com/hesam-hakimi/dcm/blob/xdoc/docs/askalpha/ASKTD_SESSION_HANDOFF.md), 22 October 2026. Records confirmed documentation work, publication location, unresolved runtime evidence and the next bounded activity. Publication is not evidence of implementation or release acceptance.
+**S8 — Session continuation checkpoint.** [ASKTD_SESSION_HANDOFF.md](ASKTD_SESSION_HANDOFF.md), 22 October 2026. Records the documentation baseline, unresolved runtime evidence and the next bounded activity. Documentation availability is not evidence of implementation or release acceptance.
 
 The plan grouping, candidate keys, named outputs, dependency classifications, and sequence in this portfolio are proposed delivery design derived from these sources. They require reconciliation with the actual current plan and issue records before operational adoption.
 
@@ -635,3 +638,4 @@ The plan grouping, candidate keys, named outputs, dependency classifications, an
 |---|---|---|
 | 0.1 | 20 October 2026 | Original proposed P01–P15 portfolio, output dependencies and bounded next sequence |
 | 0.2 | 22 October 2026 | Preserves the original portfolio; corrects baseline SQL/Databricks allocation, staged qualification and P15 boundaries; adds full Master phases 0–7, namespace clarification, explicit P07.feedback, legacy alias/schema transition and continuation links. No new runtime, approval or completion status is asserted |
+

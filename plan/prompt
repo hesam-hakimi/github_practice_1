@@ -1,10 +1,16 @@
-Execute the attached AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md.
+Execute the repository-local AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md
+beside this launcher. The intended installed package location is docs/roadmap/
+beneath the detected application root. Use the active repository instructions
+and source structure to identify that root; do not assume the package directory
+is the application root.
 
-Application repository: <OWNER/REPOSITORY>
-Existing GitHub Project: <PROJECT URL>
+Use the application repository and intended GitHub Project verified from the
+active session and existing records. If either target is ambiguous, complete
+the portable planning package and ask only for the missing target identifier.
 
-First reconcile the current plans, source revisions, existing issues,
-PRs and previous generation reports.
+Read the local product, Master, portfolio, lineage, coverage and guide documents
+specified by the setup prompt. Reconcile current plans, source revisions,
+existing issues, PRs and previous generation reports.
 
 Prepare the exact synchronization manifest, then perform the authorized
 non-conflicting planning changes. Reuse existing work and preserve
@@ -13,10 +19,14 @@ human-authored content.
 Cover all P01–P15, but create detailed developer tasks only where scope,
 dependencies and acceptance are sufficiently established.
 
-Apply the product-coverage findings without silently adopting proposed
-new outputs. Leave unknown developer assignments unassigned.
+Carry documented requirements and the proposed coverage findings into the
+planning review without silently adopting proposed new outputs. Leave unknown
+developer assignments unassigned.
 
-Verify the actual GitHub results and return issue/Project links,
+Verify actual GitHub results and return issue/Project references,
 remaining conflicts and the next ready tasks.
 
 Do not start application implementation or assign tasks to Copilot.
+Reading this launcher does not execute it; submit it explicitly to start the
+planning synchronization task. A PREVIEW ONLY instruction limits execution to
+preparation of the package and manifest without GitHub writes.
