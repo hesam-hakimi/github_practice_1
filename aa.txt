@@ -1,23 +1,38 @@
-Continue the existing AskTD Project configuration on the recorded private Project, owner tag5916_tdbank, number 1. Reuse its recorded node ID and preserve all existing work.
+Continue the existing AskTD reconciliation using the current synchronization manifest and generation report. Preserve completed work and reuse the recorded private Project identity. Resolve current repository revisions before relying on them.
 
-Apply only these bounded corrections:
+Do not restart the completed historical investigation.
 
-1. Disable the two Project built-in automations:
-    * Pull request merged → Done
-    * Item closed → Done
-    Preserve other automations, including Item added → Backlog. Done must follow the task’s existing Definition of Done and acceptance evidence. Do not change GitHub Actions workflow files. If the available interface cannot manage these rules, provide exact manual steps and mark them pending.
-2. Preserve the canonical evidence vocabulary:
-    unknown, designed, implemented, verified, qualified.
-    Document that evidence maturity applies to a named scope and requires its canonical evidence reference. It does not independently establish product or release acceptance. Do not require live-provider qualification for every synthetic or documentation task.
-3. Correct the current “Acceptance gaps” view:
-    * Rename it to accurately describe its evidence-maturity filter.
-    * Document whether Backlog is intentionally excluded.
-    * Add or reuse a view showing items with an unset evidence-maturity field.
-    * Do not classify every “verified” item as a gap. Qualification requirements depend on the item’s acceptance criteria.
-    * Retain scope-specific acceptance gaps in the canonical acceptance matrix.
+1. Confirm the remaining automation correction
+    Read back the two recorded built-in Project workflows:
 
-Record the exact operations before writes, read back supported changes, and update the existing manifest, generation report, and affected digests. Distinguish schema verification from validation against real items.
+* Pull request merged → Done
+* Item closed → Done
 
-Do not create placeholder items, Issues, another Project, or new application code. Keep Issues-dependent operations pending.
+Record completion only if both are disabled. Otherwise retain “Pending manual Project UI action.” Do not delete workflows or repeat the API capability investigation. Preserve the other four workflows.
 
-Finally, present the existing D-M1–D-M4 decision packet as four concise rows: decision, recommended option, supporting evidence, and affected work. Preserve merged Master 1.1, tracked revision 1.6, and proposed 2.1 without promoting any revision. Do not restart the completed historical investigation.
+2. Record these limited planning decisions
+
+* D-M1: Use revision 2.1, explicitly marked proposed and unmerged, as a planning scope reference. Preserve the operative merged baseline, accepted ADRs, owner decisions, and completed work. Proposed scope does not become approved implementation scope or Ready work merely through this citation.
+* D-M2: Preserve the existing MASTER_PLAN_V2.md path on asktd_v2. Record its Document ID mismatch and existing aliases without renaming files.
+* D-M4: Retain revision 1.1 sections 8.3–8.4 and QUALITY_GATES.md as the existing Ready/Done governance reference. Record the required reconciliation into the proposed Master before any promotion; do not create a parallel standard.
+
+3. Prepare the missing D-M3 evidence
+    Read Phase 8 from the already identified revision 1.1 Git object. Produce a requirement-by-requirement crosswalk containing:
+
+* Exact source revision and section.
+* Original requirement and intended outcome.
+* Existing coverage in later Master revisions, accepted ADRs, and implementation records.
+* Proposed owning Plan and canonical named output.
+* Applicable prerequisite and required acceptance evidence.
+* Any remaining owner decision.
+
+Do not assume that all Phase 8 requirements belong to P14/P15. Preserve Phase 8 as a historical engineering namespace. Keep baseline SQL and Databricks obligations in P01/P02/P04/P05/P07; P15 covers further expansion.
+
+Reuse existing output identities and aliases. Mark uncovered requirements or proposed new outputs explicitly; do not silently adopt them or retire requirements. Restrict any planning hold to the affected work.
+
+4. Update the existing records
+    Update the existing decision packet, synchronization manifest, generation report, and affected package digests. Preserve all worktrees, staged/unstaged/untracked changes, and newer Master candidates.
+
+Keep engineering documentation in English. Do not promote a Master revision, create issues or placeholder items, change application code or permissions, dispatch workflows, merge, or deploy in this pass.
+
+Return the Phase 8 crosswalk, the remaining specific decisions, and the next eligible manifest operation with its prerequisites and acceptance evidence. Distinguish direct observations from historical reports and proposals.
