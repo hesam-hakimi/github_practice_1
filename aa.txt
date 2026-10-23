@@ -1,67 +1,23 @@
-Continue the existing AskTD synchronization with operation 23:
-configure fields and views on the existing private Project.
+Continue the existing AskTD Project configuration on the recorded private Project, owner tag5916_tdbank, number 1. Reuse its recorded node ID and preserve all existing work.
 
-Target:
-- Owner: tag5916_tdbank
-- Project number: 1
-- Title: AskTD Delivery Planning
-- Resolve and verify its node ID from the existing synchronization manifest.
-Do not create another Project.
+Apply only these bounded corrections:
 
-Read the current repository-local setup prompt, synchronization manifest,
-generation report, PRODUCT_ORDER_AND_BACKLOG.md, and QUALITY_GATES.md.
-Preserve later accepted decisions and all existing working changes.
+1. Disable the two Project built-in automations:
+    * Pull request merged → Done
+    * Item closed → Done
+    Preserve other automations, including Item added → Backlog. Done must follow the task’s existing Definition of Done and acceptance evidence. Do not change GitHub Actions workflow files. If the available interface cannot manage these rules, provide exact manual steps and mark them pending.
+2. Preserve the canonical evidence vocabulary:
+    unknown, designed, implemented, verified, qualified.
+    Document that evidence maturity applies to a named scope and requires its canonical evidence reference. It does not independently establish product or release acceptance. Do not require live-provider qualification for every synthetic or documentation task.
+3. Correct the current “Acceptance gaps” view:
+    * Rename it to accurately describe its evidence-maturity filter.
+    * Document whether Backlog is intentionally excluded.
+    * Add or reuse a view showing items with an unset evidence-maturity field.
+    * Do not classify every “verified” item as a gap. Qualification requirements depend on the item’s acceptance criteria.
+    * Retain scope-specific acceptance gaps in the canonical acceptance matrix.
 
-Use this field model, reusing compatible existing fields and stable IDs:
+Record the exact operations before writes, read back supported changes, and update the existing manifest, generation report, and affected digests. Distinguish schema verification from validation against real items.
 
-1. Status:
-   Backlog, Ready, In progress, Review, Done.
-   Map the existing Status field; do not create a second workflow field.
-   Reuse existing DoR/DoD and quality gates.
+Do not create placeholder items, Issues, another Project, or new application code. Keep Issues-dependent operations pending.
 
-2. Plan:
-   Single select P01–P15. Keep engineering phases separate.
-
-3. Priority:
-   Single select P0–P3, preserving the repository's existing meanings.
-   Leave priority unset until justified.
-
-4. Target release:
-   Single select R1–R4 for the primary target.
-   Preserve additional release contributions in the canonical register.
-
-5. Acceptance/evidence:
-   Reuse an accepted evidence-state vocabulary if one exists.
-   Otherwise use: Not assessed, Evidence pending, Review pending,
-   Accepted, Rework required.
-   These describe evidence for the item's stated scope; they do not
-   replace acceptance criteria or establish product/release acceptance.
-
-6. Evidence reference:
-   Text pointing to the canonical scoped evidence record.
-   Reuse an equivalent field if present.
-
-Reuse native Assignees, Reviewers, Repository, Linked pull requests,
-Parent issue and Sub-issue progress wherever available.
-Keep full output, phase, provider and environment mappings in the
-canonical register and task bodies. Do not invent dates or assignments.
-
-Configure supported views for Plan/release coverage, Ready work,
-Review queue and acceptance gaps. For blocked/decision-needed work
-and provider readiness, use existing supported representations; record
-exact pending configuration if prerequisites are unavailable.
-
-Preserve typed H/C/G/O dependencies. Native blockers must represent
-actual applicable prerequisites, not every relationship or whole Plans.
-
-Record exact field/view operations before applying them. Preserve
-unrelated fields and inspect existing automation for conflicts.
-Do not change automation in this step.
-
-Read back field IDs, types, options, and view configurations.
-Update the existing reports and affected digests. Distinguish verified
-schema configuration from content validation: the Project is currently empty.
-
-Keep Issue creation and unresolved D-M1–D-M4 decisions pending.
-Do not create placeholder items, promote a Master revision, change
-repository permissions, assign coding agents, or modify application code.
+Finally, present the existing D-M1–D-M4 decision packet as four concise rows: decision, recommended option, supporting evidence, and affected work. Preserve merged Master 1.1, tracked revision 1.6, and proposed 2.1 without promoting any revision. Do not restart the completed historical investigation.
