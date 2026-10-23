@@ -1,0 +1,33 @@
+Continue the existing documentation reconciliation.
+
+Before asking me to select a Master, prepare a concrete decision packet:
+
+1. Compare the application MASTER_PLAN_V1.md revision 1.1 with the
+   packaged MASTER_PLAN_V1(2).md revision 2.1 proposed.
+   Identify substantive requirement differences, accepted decisions,
+   existing implementation links and affected Plans/outputs.
+
+2. Search accessible Git history, relevant branches/worktrees and PR
+   records for revision 1.6 or evidence of its adoption. Distinguish
+   screenshot-derived provenance from a tracked document.
+   Do not infer that revision 1.1 is invalid or promote 2.1 automatically.
+
+3. Recommend the authoritative baseline and proposed amendment path,
+   with evidence and only the specific owner decisions still needed.
+   Continue unaffected planning work.
+
+4. Integrate PRODUCT_ORDER_AND_BACKLOG.md and QUALITY_GATES.md.
+   Keep Priority P0–P3 separate from delivery Plans P01–P15.
+   Reuse existing quality gates and completion rules.
+
+5. Reconcile the missing launcher, inventory and changed file digests.
+   Preserve intentional naming/content changes. Regenerate digests only
+   after checking and recording the actual content differences.
+
+6. Separately report Project access and repository Issues availability,
+   including the exact authorized administrator action required.
+   Do not change permissions or expose credentials.
+
+Update the existing reconciliation and generation reports. Preserve all
+working changes. Do not create issues, replace the operative Master,
+implement code, merge or deploy during this reconciliation.
