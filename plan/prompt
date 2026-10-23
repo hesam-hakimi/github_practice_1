@@ -1,0 +1,22 @@
+Execute the attached AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md.
+
+Application repository: <OWNER/REPOSITORY>
+Existing GitHub Project: <PROJECT URL>
+
+First reconcile the current plans, source revisions, existing issues,
+PRs and previous generation reports.
+
+Prepare the exact synchronization manifest, then perform the authorized
+non-conflicting planning changes. Reuse existing work and preserve
+human-authored content.
+
+Cover all P01–P15, but create detailed developer tasks only where scope,
+dependencies and acceptance are sufficiently established.
+
+Apply the product-coverage findings without silently adopting proposed
+new outputs. Leave unknown developer assignments unassigned.
+
+Verify the actual GitHub results and return issue/Project links,
+remaining conflicts and the next ready tasks.
+
+Do not start application implementation or assign tasks to Copilot.
