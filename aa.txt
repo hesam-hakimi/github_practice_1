@@ -1,38 +1,30 @@
-I created a GitHub PAT and stored it in the workspace .env.
-Continue from the existing reconciliation and synchronization reports.
+Continue the existing AskTD synchronization.
 
-First perform a read-only authentication and readiness check:
+Proceed with the previously authorized manifest operation 25:
+create or reuse the private user-owned Project:
+- Owner: tag5916_tdbank
+- Title: AskTD Delivery Planning
 
-1. Preserve all worktrees and staged, unstaged, and untracked changes.
-   Confirm the current application repository, branch, HEAD, and GitHub
-   host from the actual workspace.
+Read the current manifest and generation report first. Verify the
+authenticated account and exact destination. Recheck existing Projects,
+including closed Projects and any recorded Project ID, immediately before
+creation. Reuse the intended Project if it already exists. If matches are
+ambiguous, report them instead of creating another Project.
 
-2. Check that .env is ignored and untracked without displaying its
-   contents. Never print, quote, log, commit, or include the PAT in reports.
+Create the Project only if no intended match exists. Verify its owner,
+title, visibility, Project number, and node ID after creation. If the
+request times out or its outcome is uncertain, reconcile the actual
+Project list before retrying.
 
-3. Securely load only the intended PAT variable into the environment of
-   the gh subprocess. Do not execute the entire .env as a shell script.
-   Use the correct token environment variable for the verified host.
-   Ensure an older environment token does not override the new one.
-   Do not persist credentials globally or enable credential/debug output.
+Record the verified result and stable identifiers in the existing
+manifest and generation report. Update affected package digests.
 
-4. Verify the authenticated account, repository access, current Issues
-   availability, token scopes, and access to the intended Project owner.
-   Preserve the previously selected user-owned Project destination unless
-   later evidence changes it. Check existing Projects before proposing
-   creation, so reruns cannot create duplicates.
+Keep Issue-dependent operations pending while repository Issues remain
+disabled. Preserve unresolved D-M1–D-M4 decisions and distinguish merged
+Master 1.1 from proposed 2.1.
 
-5. Report any SSO or organization-policy restriction separately.
-   Do not create test Projects or issues to probe permissions. Distinguish
-   successful reads from write permissions indicated but not exercised.
+Do not create Issues or substitute draft tasks in this step. Do not change
+repository settings, application code, credentials, or Git history.
+Preserve all existing work and never expose token values.
 
-6. Preserve the finding that revision 1.6 exists in Git history.
-   Keep merged revision 1.1 and proposed revision 2.1 clearly distinguished.
-   Do not silently resolve D-M1–D-M4 or promote a Master revision.
-
-Return a sanitized readiness report: account/host, repository/HEAD,
-Issues status, Project access, remaining blockers, and the next eligible
-operation from the existing synchronization manifest.
-
-Do not change GitHub resources, repository settings, application code,
-or deployments during this check.
+Return the verified Project identity and remaining blockers.
