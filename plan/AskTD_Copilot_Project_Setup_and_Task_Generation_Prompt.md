@@ -42,6 +42,8 @@ Read the current local versions below. Resolve these paths relative to this pack
 8. `AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md` for the English product and delivery explanation.
 9. `ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md` for the accepted technology selection, required telemetry and proposed task-level migration decomposition.
 
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
+
 Also inspect repository instructions, the operative application Master, ADRs, task/status indexes, newer Master candidates, relevant source/CI/deployment evidence, open and closed issues/PRs, Project fields/views, labels/milestones and earlier generation/sync reports. Do not assume a prior generation prompt was never run.
 
 Record repository/root, branch/HEAD, worktree state and exact source revisions. Preserve staged, unstaged, untracked and other-worktree changes. Never reset, clean, stash or commit unrelated work. Do not assume the default branch includes unmerged work. Distinguish historical reports, directly verified evidence and unknown state. Classify each output as satisfied, partial, missing, unknown or superseded; unknown is not missing.

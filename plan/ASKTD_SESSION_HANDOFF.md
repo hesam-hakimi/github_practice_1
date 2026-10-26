@@ -11,6 +11,8 @@ The owner selected LangGraph primarily to support future complex analytical grap
 
 The next migration activity is existing-work/ADR reconciliation under `P05.analysis_contract`, followed by coordinated graph and P07 telemetry contracts. Reuse current team Tasks/PRs. The plan adds task-level candidates, not new delivery Plans or named outputs. This publication does not execute any saved prompt or verify a deployment.
 
+A separate 26 October owner request adds [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) for an R1 source/connection/authentication diagnostic interface. P07.support_contract owns the UI; existing P02 routes/scope/enforcement and scoped P04/P05 inputs provide safe backend behavior. CONN-01–CONN-05 are local candidates to reconcile, not created Issues. Next diagnostic activity is existing-work and permission/result/probe-contract reconciliation under P02.scope_contract. Preserve the 15/46/25 register, SQL SAMI, separate Databricks qualification and Master proposed status. This documentation session does not verify current application UI or live connections.
+
 ## 1. Product and planning objective
 
 AskTD, called AskAlpha in the product documents, is a conversational analytics application for approved business data. Deposits is the initial business focus. Users ask a question, clarify its meaning, receive a validated answer and explore the result within their current access. Later releases add saved work, owner templates, recurring reports and controlled exports.

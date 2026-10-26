@@ -54,6 +54,8 @@ Use the repository selected for this session if it is clearly the application ta
 
 Read ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md as the 26 October owner direction: LangGraph is selected for future complex graphs and LangSmith telemetry is mandatory. Reconcile current migration Tasks/ADRs/PRs and use its task-level candidates only after duplicate matching. They add no Plan/output IDs. Preserve current controls and the proposed Master's adoption status.
 
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
+
 ### Step 2 — Preserve the planning and architecture decisions
 
 Apply these rules from the reference:

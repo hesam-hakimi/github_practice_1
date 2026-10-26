@@ -270,6 +270,8 @@ These Plans retain the existing project foundation and add only work justified b
 
 ### P07. Monitoring, support and acceptance evidence
 
+**26 October addition — connection health in the UI:** An authorized operator will be able to select a permitted source/environment, inspect the configured authentication mode and last observed results, and initiate an approved check without a terminal. The protected backend uses the relevant application runtime and workload identity. Network availability, workload permissions, the current user’s access and qualification are different facts. Stale or unknown evidence must remain visible. P07 owns this interface and P02 its access/route contracts; see [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md). This describes the requested capability, not verified application implementation.
+
 **Purpose and scope:** Make the selected pilot observable, supportable and measurable from the first usable workflow. Define safe events and support needs early, then collect evidence from the integrated routes.
 
 **Deliverables:** Separate audit, trace and usage contracts; actual attempts and available cost measurements; support/runbook ownership; provider readiness; and release evidence. `P07.feedback` gives users a safe way to report an inaccurate answer, with permitted answer/run correlation, controlled access and a clear review/support route.

@@ -532,6 +532,8 @@ As features ship, add history/preference access events, template publication/rol
 
 Agree p50/p95 latency, cold/warm behavior, concurrency, freshness, recovery, availability, and cost targets for each released workload. Do not invent numeric SLOs or imply that a successful workflow measures them. Basic monitoring cannot wait for completion of the entire enterprise observability phase.
 
+The 26 October owner-requested connection-health capability is specified in [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md). Include its minimum UI in R1: authorized source/environment discovery, configured versus observed workload authentication, staged same-runtime diagnostics, current-user scope, observation age and safe support reference. Keep operational observations, evidence maturity and LangSmith collection health separate. P07.support_contract owns the interface, with P02 scope/route/enforcement contracts and selected P04.bindings/P05.adapter_behavior inputs. This scoped amendment does not promote revision 2.1 or prove implementation. Preserve the existing 46-output register.
+
 ### 8.5 Operating cost, service subscriptions, and report subscriptions
 
 | Concept | Meaning and rule |

@@ -238,6 +238,12 @@ Each request and report run should have a correlation reference so support can i
 
 Alert thresholds, support ownership, and service targets must be agreed before operational use. The existing architecture identifies enterprise monitoring and trace integrations as contracts still requiring qualification—not deployed capabilities.
 
+### Sources and connection health
+
+The 26 October owner amendment requires an in-application Sources & Connection Health view for authorized operators. It shows permitted sources and environments, the configured connection/connector and workload authentication mode, last observed connectivity/authentication/grant/probe outcomes, current-user access where applicable, observation time, safe support reference and separate qualification evidence. Operators can initiate an approved bounded read-only test through protected application APIs from the relevant runtime without running manual backend commands. Ordinary users receive a restricted availability/access explanation; operational details and probe actions require explicit capabilities.
+
+Distinguish a source outage, workload authentication failure, missing workload grant, requester denial, stale observation and unavailable checker. Configuration is not authentication evidence, and a successful probe does not establish business correctness or promote qualification. SQL retains App Service system-assigned Managed Identity; the actual Databricks route/authentication requires separate evidence. This view does not edit credentials, grants or authentication modes. Follow [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) for P02/P07 ownership, scoped P04/P05 dependencies and acceptance. Current application implementation is unverified.
+
 ### Operating costs and subscription costs are different
 
 **Operating cost** is what it costs to run AskAlpha: hosting, model usage, query compute, storage, notifications, monitoring, and support.

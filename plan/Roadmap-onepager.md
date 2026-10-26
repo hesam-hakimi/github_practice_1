@@ -93,6 +93,8 @@ The application maintains the active analysis context—such as region, month, m
 
 **Acceptance evidence:** Business-approved results; enabled-path access and payload checks; working correlation, health monitoring, basic alerts, support, and estimated usage costs. Without approved real-data access, label the result a synthetic demonstration, not an operational pilot.
 
+The 26 October owner amendment makes basic connection diagnostics visible in the R1 experience: permitted source/environment and authentication details, bounded Test connection, dated results and safe support references. See [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md). Existing executive phase/release mappings and conditional dates remain unchanged; this is planned capability, not current deployment evidence.
+
 **Deferred:** Persistent chat history, preference settings, self-service template editing, and scheduled delivery.
 
 ### Q2 2027 — Make the product useful every day

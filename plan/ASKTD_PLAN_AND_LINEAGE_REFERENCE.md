@@ -328,13 +328,15 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P02.scope_contract, P02.sql_route, P02.databricks_route, P02.enforcement_evidence.
 
-**Work:** Define logical resources, actions, row/dimension scope and column restrictions. Map these to qualified provider behavior. Record identity, native grants, network, connection and denial evidence separately. Preserve current login and proven guards.
+**Work:** Define logical resources, actions, row/dimension scope and column restrictions. Map these to qualified provider behavior. Record identity, native grants, network, connection and denial evidence separately. Supply protected, scope-safe diagnostic contracts for the P07 Sources & Connection Health UI, using the actual provider/runtime route. Preserve current login and proven guards.
 
 **Inputs:** P01.scope/provider_coverage; approved grant authority and source treatment. Agree the logical resource/binding contract jointly with P04; this is not a circular completion dependency.
 
-**Acceptance:** Allowed and denied paths, unresolved scope, revocation, missing workload grants and concurrent-user isolation have appropriate evidence. Changing provider cannot widen access or substitute an unqualified route.
+**Acceptance:** Allowed and denied paths, unresolved scope, revocation, missing workload grants and concurrent-user isolation have appropriate evidence. Changing provider cannot widen access or substitute an unqualified route. Diagnostic viewing/probing is server-authorized; denied or unresolved probe permission produces zero protected source attempts. Distinguish configured identity from observed authentication and native grants.
 
 **Lead:** Backend/integrations with IAM, platform/data owners and QA. Provider-user ACL replication and unrelated identity migration are excluded.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §§3–7 defines the requested P07 interface and P02 contracts. Reconcile actual components before generating CONN candidates; these aliases create no new Plan/output IDs.
 
 ### 6.3 P03 — Recipe policy and lifecycle disposition
 
@@ -368,6 +370,9 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Lead:** Product/semantics and engineering with business/data owners and QA. A competing enterprise catalog or mass onboarding is outside the first slice.
 
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §6 uses selected P04.bindings for safe source/environment/probe references; full Registry completion is not required.
+
+
 ### 6.5 P05 — Validated answers through both execution routes
 
 **Outcome:** An authorized question produces a correct, bounded, contextualized answer or a supported safe failure.
@@ -383,6 +388,9 @@ All Plans below define intended outcomes. Their current implementation status is
 **Acceptance:** Verify provider dialect/parameters/types/null/date behavior and execution bounds against comparable cases. The result preserves values, signs, units, periods, grain, user scope, warnings, versions, source/binding and freshness. Model-assisted presentation requires its own approved payload/behavior. Unsupported operations fail safely.
 
 **Lead:** Backend and UX with semantics, QA and relevant model/security owners. Full authoring UI, scheduling and a new cache platform are outside this Plan.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §6 reuses selected P05.adapter_behavior for bounded read-only probes, safe errors, cancellation and timeout; no full graph cutover prerequisite.
+
 
 ### 6.6 P06 — Clarification and bounded session follow-ups
 
@@ -408,13 +416,15 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P07.event_contract, P07.metering, P07.support_contract, P07.feedback, P07.provider_readiness, P07.acceptance_bundle.
 
-**Work:** Define safe audit, trace and usage events early. Reuse the actual model-call inventory and qualified evidence. Record actual attempts and available costs, failure categories, support references, runbooks and accountable acceptance owners. Provide a safe way to report an inaccurate answer, with permitted answer/run correlation, controlled access and a clear review/support route; P07.feedback supplies that bounded feedback contract and evidence.
+**Work:** Define safe audit, trace and usage events early. Reuse the actual model-call inventory and qualified evidence. Record actual attempts and available costs, failure categories, support references, runbooks and accountable acceptance owners. Provide a safe way to report an inaccurate answer, with permitted answer/run correlation, controlled access and a clear review/support route; P07.feedback supplies that bounded feedback contract and evidence. P07.support_contract also owns the authorized Sources & Connection Health UI, with safe observations under P07.event_contract and separate provider/environment qualification under P07.provider_readiness.
 
 **Inputs:** P01 scope/acceptance owners and P02 access design for early contracts. Actual observations from P02/P05/P06 for integrated evidence. Applicable enterprise decisions remain explicit.
 
-**Acceptance:** Distinguish design, implementation, adapter verification and environment qualification per provider. Missing metering is unknown, not zero. Targets come from the agreed workload. Record scope, exceptions and decision evidence.
+**Acceptance:** Distinguish design, implementation, adapter verification and environment qualification per provider. Missing metering is unknown, not zero. Targets come from the agreed workload. Record scope, exceptions and decision evidence. An authorized operator can inspect source/runtime/authentication details and run an approved diagnostic through the UI; distinguish denial, outage, stale/unknown observations and checker failure without promoting evidence maturity.
 
 **LangSmith requirement:** Required collection covers eligible migrated graph/node/model/tool transitions and actual attempts. Follow the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) §5 for payload minimization, trace read-back, collection health, failure behavior and environment qualification. Keep audit and authoritative usage records distinct. An SDK, mock exporter or alternate sink does not complete this requirement.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) owns the detailed acceptance matrix and CONN task candidates under existing P02/P07 outputs. Minimum visibility is R1 scope; advanced P10 administration is not a prerequisite. LangSmith collection health remains a separate signal.
 
 **Lead:** QA/operations with engineering and relevant decision owners. Synthetic demonstration, pilot, Broad Beta and production are separate acceptance scopes.
 

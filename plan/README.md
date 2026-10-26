@@ -3,7 +3,7 @@
 This directory contains the English product, architecture-to-delivery mapping and execution-planning reference package. It is designed to reside at `docs/roadmap/` in the application repository. All document links are relative to this directory.
 
 **Package edition:** 26 October 2026\
-**Planning baseline:** Master revision 2.1 proposed; delivery portfolio v0.2; lineage reference v0.4; product and quarterly roadmap v1.2, with the scoped 26 October LangGraph/LangSmith owner amendment.\
+**Planning baseline:** Master revision 2.1 proposed; delivery portfolio v0.2; lineage reference v0.4; product and quarterly roadmap v1.2, with scoped 26 October LangGraph/LangSmith and Sources & Connection Health owner amendments.\
 **Adoption status:** Reconcile with the operative application Master, ADRs, existing tasks and any later accepted changes before adopting proposed mappings.
 
 ## Start here
@@ -14,6 +14,8 @@ This directory contains the English product, architecture-to-delivery mapping an
 4. Read the [Master Plan](<MASTER_PLAN_V1(2).md>), [Delivery Portfolio](AskTD_Delivery_Plans_and_Dependencies.md) and [Plan and Lineage Reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) together for engineering scope, output ownership and dependencies.
 5. Review the [Planning Handoff](ASKTD_SESSION_HANDOFF.md) and [Product-to-Plan Coverage Review](AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md) before generating new work.
 6. Read the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for the selected orchestration migration, mandatory telemetry, staged scope and task-level dependencies. Reconcile current team implementation before generating duplicate work.
+
+7. Read the [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) for the R1 diagnostic interface, P02/P07 ownership, five local task candidates and live-versus-synthetic acceptance.
 
 ## Document catalogue
 
@@ -34,6 +36,7 @@ This directory contains the English product, architecture-to-delivery mapping an
 | [Framework Development Continuation](AskTD_Framework_Development_Continuation_2026-10-22.md) | Separate template for explicitly requested bounded framework implementation. |
 | [Planning Launcher](prompt) | Short instruction for explicitly starting the Project setup task. |
 | [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) | Owner-selected LangGraph for future complex graphs, required LangSmith collection, existing-output ownership, staged Tasks and acceptance. |
+| [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) | Required source/authentication/health UI, protected diagnostics, scoped dependencies and acceptance. |
 | [Package Manifest](PACKAGE_MANIFEST.md) | Included revisions, editorial treatment and integrity inventory. |
 
 ## Planning model

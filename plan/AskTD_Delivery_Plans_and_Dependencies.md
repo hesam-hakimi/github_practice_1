@@ -140,6 +140,8 @@ Release numbers preserve the product roadmap [S3]. They do not establish calenda
 
 ### P02 — Application access and governed source route
 
+**26 October connection-health amendment:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) supplies the P02 scope/route/enforcement contracts for the P07 UI. Preserve legacy aliases below; canonical ownership is P02.scope_contract, P02.sql_route, P02.databricks_route and P02.enforcement_evidence. Diagnostics use current server-side authorization and the real route/runtime; no credential editing or broader-identity fallback.
+
 **Outcome:** The selected analytical route retrieves only permitted data through the approved workload identity and serving endpoint.
 
 **Scope:** Reconcile the actual login, effective-scope resolution, approved entitlement input, workload identity, approved objects/views, query bounds, network/serving route, freshness, and safe failure behavior. Preserve the existing App Service SQL SAMI direction and valid application-authorization work. Define compatible logical access behavior for SQL and Databricks, with provider-specific route/identity/grant qualification. Examine current enabled-path evidence before proposing changes.
@@ -256,6 +258,8 @@ Grouping these outcomes in this portfolio does not merge their engineering ident
 **Traceability:** S1 §§3.5, 8.2, 10; September D05/D06/D18; A02/A05/A07/A08; AUTH-05.
 
 ### P07 — Pilot monitoring, support, metering, and acceptance evidence
+
+**26 October connection-health amendment:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) makes in-application source/connection/authentication visibility and bounded Test connection acceptance explicit under P07.support_contract, P07.event_contract, P07.provider_readiness and P07.acceptance_bundle. Keep observation freshness, user scope and qualification separate. The legacy aliases below remain; no new canonical output is introduced.
 
 **Outcome:** The selected pilot has meaningful operational evidence, accountable support, and a complete acceptance packet.
 

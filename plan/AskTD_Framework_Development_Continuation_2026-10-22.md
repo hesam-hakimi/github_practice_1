@@ -40,6 +40,8 @@ Read the current repository-local documentation package beside this file. Its in
 9. AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md.
 10. ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md, including current team-work reconciliation, staged migration and task-level dependencies.
 
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
+
 The maintained MASTER_PLAN_V1(2).md revision 2.1 is proposed until reconciled with the operative Master and any newer candidate. The portfolio v0.2 and English guide v0.3 are supporting references. Coverage recommendations remain proposed; they do not authorize new outputs, business policy or implementation scope without the applicable decision. The package does not establish the current application revision or deployment.
 
 Historical application access was unavailable during the documentation review; this proves neither missing code nor failure. If the actual application cannot be accessed now, return the exact access/baseline limitation and available report. Do not create a substitute application.
