@@ -4,10 +4,14 @@
 **Version:** 0.4  
 **Prepared:** 21 October 2026, America/Toronto  
 **Updated:** 22 October 2026, America/Toronto  
-**Package edition:** 23 October 2026; portable references only. The proposed mapping, version and substantive decisions are unchanged.  
+**Package edition:** 26 October 2026; v0.4 baseline plus the scoped LangGraph/LangSmith owner amendment. The 46-output register and existing 25 portfolio dependencies are unchanged.\
 **Language:** English  
 **Purpose:** Give GitHub Copilot a self-contained reference for generating coherent planning artifacts, with traceability from the Master Plan to engineering phases, delivery plans, named outputs, tasks, evidence and releases.  
 **Status:** Owner-requested planning reference. The delivery crosswalk is proposed until reconciled with the operative repository records. This file does not establish implementation, merge, deployment, approval or release status.
+
+## 26 October 2026 technology amendment
+
+Apply the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md): LangGraph is selected for future complex graphs, and LangSmith telemetry is mandatory for migrated scope. Its task-level dependency candidates use existing P05/P06/P07 outputs and supplement the portfolio dependency register. Reconcile current team Tasks/ADRs before creating work; the amendment neither adopts the full proposed Master nor creates new Plan/output IDs.
 
 ## 1. How to use this reference
 
@@ -372,7 +376,7 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P05.analysis_contract, P05.result_contract, P05.adapter_behavior, P05.curated_templates, P05.correctness_evidence.
 
-**Work:** Integrate approved semantics/recipes, current permissions, provider-aware validation, bounded execution and explicit presentation. Preserve established frameworks and relevant model-helper boundaries.
+**Work:** Integrate approved semantics/recipes, current permissions, provider-aware validation, bounded execution and explicit presentation. Implement the owner-selected LangGraph migration through versioned node/state/edge contracts while preserving existing controls, provider contracts and relevant model-helper boundaries. Use the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for staged parity and complex-graph evidence; framework selection does not authorize unrelated product expansion.
 
 **Inputs:** Selected P04 bundle/bindings, P02 scope/source contracts, P01 reference cases and P07 event contract. New P03 enforcement applies only to a route that adopts it.
 
@@ -388,7 +392,7 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P06.context_contract, P06.followup_behavior, P06.context_evidence.
 
-**Work:** Keep application-owned metric/recipe versions, periods, filters, units, grouping, source/binding references and clarification state. Handle topic changes and concurrent sessions.
+**Work:** Keep application-owned metric/recipe versions, periods, filters, units, grouping, source/binding references and clarification state. Handle topic changes and concurrent sessions. For the selected LangGraph route, specify interruption/resume, reauthorization, state-version compatibility and checkpoint isolation/retention; execution checkpoints do not create P08 saved-history scope.
 
 **Inputs:** P04 identities, P05 analysis/result contracts, P02 current-access behavior and P07 event contract.
 
@@ -409,6 +413,8 @@ All Plans below define intended outcomes. Their current implementation status is
 **Inputs:** P01 scope/acceptance owners and P02 access design for early contracts. Actual observations from P02/P05/P06 for integrated evidence. Applicable enterprise decisions remain explicit.
 
 **Acceptance:** Distinguish design, implementation, adapter verification and environment qualification per provider. Missing metering is unknown, not zero. Targets come from the agreed workload. Record scope, exceptions and decision evidence.
+
+**LangSmith requirement:** Required collection covers eligible migrated graph/node/model/tool transitions and actual attempts. Follow the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) §5 for payload minimization, trace read-back, collection health, failure behavior and environment qualification. Keep audit and authoritative usage records distinct. An SDK, mock exporter or alternate sink does not complete this requirement.
 
 **Lead:** QA/operations with engineering and relevant decision owners. Synthetic demonstration, pilot, Broad Beta and production are separate acceptance scopes.
 
@@ -666,7 +672,7 @@ This is proposed Plan coverage of the Master's Appendix B. Preserve the existing
 | D12 MRM/call inventory | §8.2 | P07 inventory/evidence and P05 model boundaries; external decision owner remains explicit |
 | D13 Conditional integrations | §§3.2, 4.2, 9.1 | P15; preserve neutral P02/P04/P05 baseline interfaces |
 | D14 Operating ownership/economics | §§8.4–8.5, 11, 13 | P07/P10 and feature-specific operations such as P12 |
-| D15 Framework/gateway | §§4.2, 8.2 | P05 preserves established framework and qualifies relevant helpers; no implied migration |
+| D15 Framework/gateway | §§4.2, 8.2; 26 October amendment | P05 owns the explicitly selected LangGraph migration; P07 owns required LangSmith telemetry. Preserve current controls and qualify relevant helpers; no unrelated migration is implied |
 | D16 Streaming/optional ingestion | §§3.2, 4.2 | P05 complete-response contract; P15 only for explicitly selected optional ingestion |
 | D17 Protected API/storage roles | §§4.2–4.3, 8.1 | P02/P05 protected backend; P07 evidence stores; P08/P12 stores when enabled |
 | D18 Payload/history qualification | §§3.5, 8.2–8.3, 14.2 | P05 input/error/result/output/renderer, P06 context, P08 history and P07 traces |
@@ -881,6 +887,7 @@ The platform constraints above retain the 21 October planning assumptions. Verif
 | 0.2 guide | Added beginner explanation and explicit SQL/Databricks Registry/access baseline |
 | 0.3 reference | Adds full original-phase and detailed-2F crosswalk, mapping classifications, named output lineage, delta/gate coverage, task contract and Copilot/GitHub artifact contract |
 | 0.4 continuity | Adds source/repository roles, continuation entry point, historical login evidence, executive namespace and legacy-alias transition; aligns current Master, portfolio, guides and product-document revisions |
+| 26 October 2026 scoped amendment | Records LangGraph and mandatory LangSmith under existing P05/P06/P07 outputs; keeps the output and portfolio dependency registers intact and adds linked task-level migration dependencies |
 
 This version is a handoff reference. Adoption, exact repository anchors and current implementation evidence must be recorded by the connected engineering session.
 

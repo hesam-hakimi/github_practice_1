@@ -1,7 +1,8 @@
 # AskTD new conversation prompt
 
 **Version:** 1.0  
-**Prepared:** 22 October 2026, America/Toronto  
+**Prepared:** 22 October 2026, America/Toronto
+**Amended:** 26 October 2026; scoped LangGraph/LangSmith continuation\
 **Use:** Submit the prompt below in a session that can read this repository-local package. It restores context and starts read-only baseline reconciliation. The separate planning and implementation prompts require explicit submission for their respective tasks.
 
 ## Copyable prompt
@@ -25,6 +26,7 @@ Read in this order:
 5. AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md and
    ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md as task templates only
 6. Roadmap-onepager.md for the executive presentation namespace
+7. ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md for the 26 October owner decision
 
 Use the current local package and record its actual repository revision when
 available. A documentation revision is not an application or deployment
@@ -36,6 +38,14 @@ application Master, ADRs, tasks and any later draft before adopting a proposed
 mapping. Coverage findings and any proposed new output remain recommendations
 until accepted. If a source is unavailable, identify it precisely and continue
 with available evidence; do not claim to have read or verified it.
+
+The owner selected LangGraph for orchestration, primarily for future complex
+graphs, and made LangSmith telemetry collection mandatory. Reconcile current
+team migration work before creating Tasks. This narrow decision supersedes
+earlier framework-preservation/exclusion wording for the selected migration,
+not the complete Master adoption boundary. Keep P05/P06/P07 ownership, typed
+dependencies, safe payloads and actual LangSmith qualification evidence explicit.
+Reading the migration plan does not execute implementation or synchronization.
 
 Our accepted planning model is:
 Master requirement/revision → engineering phase/slice → delivery Plan

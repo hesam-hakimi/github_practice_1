@@ -7,6 +7,8 @@
 **Status:** Proposed plan portfolio for review and repository reconciliation  
 **Purpose:** Turn the agreed Master Plan to Plan to Task framework into a bounded set of delivery plans, explicit output dependencies, and a practical next sequence.
 
+**26 October 2026 amendment:** Apply the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md). The owner selected LangGraph for complex-graph extensibility and requires LangSmith telemetry. This narrowly changes P05/P06/P07 implementation scope while preserving v0.2 history, P01–P15 and the canonical output register. Reconcile existing team migration work before creating Tasks.
+
 **Continuity note:** This bounded update preserves the original portfolio and its historical planning aliases while applying the later SQL/Databricks baseline and complete phase-lineage clarification. For the current detailed output/dependency schema, read [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md, v0.4](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md). Start a new session with [ASKTD_SESSION_HANDOFF.md](ASKTD_SESSION_HANDOFF.md). These documents do not establish current runtime completion or adoption of the proposed Master copy. [S7–S8]
 
 ## 1. Portfolio decision
@@ -223,7 +225,9 @@ Grouping these outcomes in this portfolio does not merge their engineering ident
 
 **Conditional routes:** AI formatting requires the specific model/payload/presentation disposition. It is not required for an eligible deterministic route. Retained generated-code visualization needs its own qualified isolation boundary.
 
-**Exclusions:** Full owner authoring UI, persistent history, scheduler, new cache platform, broad framework migration, or unrelated source integrations.
+**Migration scope:** The bounded LangGraph migration is now included by explicit owner direction. Use existing canonical outputs `P05.analysis_contract`, `P05.result_contract`, `P05.adapter_behavior`, `P05.curated_templates` and `P05.correctness_evidence`; the older output aliases above retain their documented mapping. Require a parity slice, versioned graph contracts, bounded complex-graph proof and scoped rollback readiness.
+
+**Exclusions:** Full owner authoring UI, persistent history, scheduler, new cache platform, framework/hosting changes outside the selected LangGraph migration, or unrelated source integrations.
 
 **Proposed lead:** Backend and UX engineering with QA, semantics owners, and applicable security/privacy/model owners.
 
@@ -242,6 +246,8 @@ Grouping these outcomes in this portfolio does not merge their engineering ident
 **Dependencies:** P04 semantic references, P05 result/execution contracts, and P02 effective-scope behavior. Context/UX design can begin before the full live source route is accepted.
 
 **Acceptance:** Supported follow-ups preserve the intended analysis; ambiguous ones clarify rather than guess. Protected context is reauthorized before use or model transmission. Concurrent sessions cannot overwrite or disclose one another's state. Summaries preserve material dates, filters, units, warnings, and provenance.
+
+**Graph continuity amendment:** P06 owns the selected LangGraph clarification/resume and state-isolation contract under its existing canonical context outputs. Qualify durable checkpoints separately from synthetic/in-memory tests; reauthorize resumed work.
 
 **Exclusions:** Persistent conversation history, automatic preference learning, shared history, and schedules.
 
@@ -265,7 +271,7 @@ Grouping these outcomes in this portfolio does not merge their engineering ident
 
 **Acceptance:** Operations can distinguish success, denial, unresolved access, source/model failure, and invalid output; trace a safe correlation reference; and identify actual attempts and measurable cost assumptions. Workload and numerical targets are agreed rather than invented. The evidence packet distinguishes synthetic demonstration, operational pilot, Broad Beta, and production. Record SQL and Databricks capability/environment readiness separately; a successful route does not qualify the other provider. Feedback capture and review must not expose protected answers or another user's activity.
 
-**Enterprise integration:** An approved interim telemetry route may satisfy a scoped contract. Unavailable enterprise integration does not make zero durable evidence acceptable.
+**Enterprise integration:** LangSmith collection is required for migrated scope under the 26 October amendment. An approved interim route can support development and existing record obligations, but cannot close LangSmith qualification. Require permitted payloads, actual ingestion/read-back and collection-failure evidence per selected environment; keep audit, usage and data-provider qualification distinct. Unavailable integration remains an explicit gate, not an optional feature.
 
 **Exclusions:** Implementing every pictured monitoring/event product, formal chargeback, blanket production certification, or repeated full tests for documentation-only edits.
 
@@ -493,7 +499,7 @@ Later handoffs also use provider **Phase 3** where the original Master uses **Ph
 | D12 Model inventory and MRM | P05/P07 |
 | D13 Conditional integrations | P15; no automatic pilot dependency |
 | D14 Ownership and economics | P01/P07/P10; applicable scheduling/expansion scope |
-| D15 Framework and gateway reconciliation | P05/P07/P15; preserve existing framework until a distinct decision |
+| D15 Framework and gateway reconciliation | P05/P07 for the selected LangGraph and required LangSmith amendment; P06 for context continuity. Preserve controls and historical evidence; P15 remains further expansion |
 | D16 Complete responses and optional ingestion | Constraint on P05/P15; not a mandatory new implementation plan |
 | D17 Protected APIs and storage purposes | P02/P05/P07/P08/P10/P12/P14/P15 |
 | D18 Error/result/history/output/trace boundaries | P05/P06/P07/P08 and later protected feature routes |
@@ -545,7 +551,7 @@ The source records list the dependencies below. Their current resolution must be
 | G06 | Model/use-case ownership and assessment scope | P05/P07 | Blocks the affected model use or acceptance claim. |
 | G07 | Application/build/run/support ownership and funding | P07/P10 | Blocks the corresponding operational handover or commitment. |
 | G08 | Business reference questions/calculations and acceptance ownership | P01/P04/P07 | Blocks business acceptance of those analytical outcomes. |
-| G09 | Supported observability path, permitted content, retention and durability | P07 | Blocks unqualified telemetry integration; an accepted interim evidence path must still satisfy the needed contract. |
+| G09 | Supported observability path, permitted content, retention and durability | P07 | Blocks unqualified telemetry integration. Migrated scope requires LangSmith qualification; interim evidence alone cannot close that requirement. |
 | G10 | Separate pilot-to-production decision | All released plans | Blocks production release, not unrelated planning or synthetic work. |
 | G11 | Diagram/runtime/framework/gateway disposition | P05/P07/P15 | Blocks only the selected unresolved integration/change. |
 
@@ -638,4 +644,5 @@ The plan grouping, candidate keys, named outputs, dependency classifications, an
 |---|---|---|
 | 0.1 | 20 October 2026 | Original proposed P01–P15 portfolio, output dependencies and bounded next sequence |
 | 0.2 | 22 October 2026 | Preserves the original portfolio; corrects baseline SQL/Databricks allocation, staged qualification and P15 boundaries; adds full Master phases 0–7, namespace clarification, explicit P07.feedback, legacy alias/schema transition and continuation links. No new runtime, approval or completion status is asserted |
+| Scoped amendment | 26 October 2026 | Includes owner-selected LangGraph migration and mandatory LangSmith under existing outputs, with linked task-level dependencies and staged acceptance. No implementation completion is asserted |
 

@@ -2,8 +2,8 @@
 
 **Document ID:** `MASTER_PLAN_V1`  
 **Revision:** 2.1 — proposed consolidated update with continuity amendment  
-**Updated:** 22 October 2026  
-**Package edition:** 23 October 2026; portable references only. The proposed revision and substantive planning decisions are unchanged.  
+**Updated:** 26 October 2026; scoped owner-directed technology amendment\
+**Package edition:** 26 October 2026. Revision 2.1 remains proposed; the separate owner-directed LangGraph/LangSmith amendment below changes only its stated technology scope.\
 **Previous revision:** 2.0 proposed, 19 October 2026  
 **Status:** Proposed program reference; business commitments and release approvals remain subject to the relevant owners.  
 **Audience:** Product, Deposits business owners, architecture, engineering, security, IAM, data governance, QA, platform, operations, Finance, and implementation agents.  
@@ -21,6 +21,10 @@ This draft updates the revision 1.6 shown in the supplied screenshots. It incorp
 **Changes and evidence:** Appendices A and C.  
 **Adoption in the development branch:** Appendix D.  
 **Delivery Plan lineage and session continuity:** Section 9.6 and Appendix E.
+
+## 26 October 2026 owner-directed technology amendment
+
+The owner selected LangGraph for orchestration, primarily to support future complex analytical graphs, and made LangSmith telemetry collection mandatory for the migrated scope. Apply the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for staged delivery, task-level dependencies and acceptance. This supersedes earlier preserve-framework-only wording within that bounded migration. Preserve application behavior and controls, reconcile the team's current work, and record the decision in the operative ADR convention. The complete Master remains proposed; implementation and enterprise/environment qualification remain unverified. [S17]
 
 ## What changed in this revision
 
@@ -265,14 +269,14 @@ Branch recorded in the review:
 | Layer | Retained direction | Qualification / expansion boundary |
 |---|---|---|
 | User interface and API | React/Vite and Python/FastAPI; browser uses protected backend APIs. | Preserve the existing approved boundary; do not split services solely to match a drawing. |
-| Orchestration | Preserve existing working orchestration and source-neutral contracts. | Framework migration requires a separate decision and measured benefit. |
+| Orchestration | Owner-selected LangGraph migration for future complex, stateful analytical graphs; preserve source-neutral contracts and working behavior. | Follow the scoped migration plan and current ADR/task reconciliation; measure parity, extensibility and overhead. Selection is not implementation or cutover evidence. |
 | Identity | Entra user authentication; application authorization; approved workload identity for sources. | Confirm registration topology, groups, token audiences, grants, networking, and revocation. |
 | Semantics | Canonical Registry and approved recipes. | Enterprise metadata sources feed a controlled runtime representation, not competing definitions. |
 | Query execution | Preserve the approved SQL route and qualify the required SQL/Databricks adapter scope separately. | Interim and target routes must be named and authorized; no assumed SQL Warehouse or serverless availability. |
 | Model access | Approved Azure OpenAI use through the applicable enterprise contract. | Both actual helpers require gateway, identity, payload, schema, and retry qualification. |
 | Retrieval | Existing narrow Azure AI Search metadata-grounding path where used. | Not the business-semantic authority or analytical engine; broader document ingestion is conditional. |
 | Persistence | Purpose-specific application storage for released capabilities. | History, preferences, schedules, results, telemetry, and source data have different lifecycles; select stores explicitly. |
-| Telemetry | A qualified enterprise adapter or accepted interim arrangement. | AIOBS, ADLS transport, OTel/LangSmith, Dynatrace, and enterprise libraries are not assumed active. |
+| Telemetry | LangSmith collection is required for migrated application/agent execution telemetry; audit and usage records retain their own contracts. | Qualify the permitted payload, endpoint, access, retention and failure behavior per environment. Other sinks or mocked export do not complete the LangSmith requirement. Other enterprise telemetry products are not assumed active. |
 | Cache and delivery | Bounded eligible reuse; complete-response MVP experience. | Redis, distributed cache, and streaming are separate decisions. |
 
 The older master records SSE endpoints; the later working MVP direction is complete responses. Preserve any existing supported endpoint unless a real compatibility issue requires change. Endpoint existence does not establish a streaming requirement, and neither streaming nor caching requires Redis by implication. [S01, S02]
@@ -484,7 +488,7 @@ Cache eligible small results, aggregates, plans, matches, and permitted response
 
 Correlate request, session, query, model attempt, report run, and delivery identifiers as appropriate. Each stream has an agreed schema, owner, access policy, retention, failure behavior, and deletion treatment. Do not store full prompts, SQL, results, or exception payloads by default.
 
-AIOBS, ADLS transport, OTel/LangSmith, Event Hubs, a durable outbox, and enterprise monitoring products require qualification. Select an approved integration or accepted interim route; do not add every pictured service. Where event transport is selected, prove replay, idempotency, failure handling, and delivery reconciliation.
+LangSmith telemetry collection is mandatory for the migrated scope under the 26 October owner decision; follow the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) §5. Actual collection needs permitted-data and environment qualification, including read-back evidence. An interim local route can support development but cannot close the mandatory integration. AIOBS, ADLS transport, OTel bridges, Event Hubs, an outbox and other monitoring products remain separate choices. Do not add every pictured service. Where event transport is selected, prove replay, idempotency, failure handling and delivery reconciliation. [S17]
 
 ### 8.2 LLM inventory and model-use controls
 
@@ -674,7 +678,7 @@ Retain the September A01–A10 acceptance model. All rows below require evidence
 | **A05 — Clarification** | Ambiguous and unsupported requests are handled safely across all enabled routes, including template and recipe fast paths. |
 | **A06 — Lifecycle compatibility** | Dependency and approval evidence behaves as approved; 2F.1 remains trace-only unless a separate policy change is accepted. Known limitations are explicit. |
 | **A07 — Presentation and payload** | Numeric/semantic fidelity, warnings, source/as-of preservation, and no unapproved model transmission. |
-| **A08 — Model and evidence coverage** | Enabled-call inventory, input/output boundaries, current-turn history controls, safe correlation, and durable telemetry or accepted interim evidence. |
+| **A08 — Model and evidence coverage** | Enabled-call inventory, input/output boundaries, current-turn history controls, safe correlation, and durable telemetry or accepted interim evidence; migrated scopes additionally require qualified LangSmith collection under S17, not interim-only completion. |
 | **A09 — Operations and value** | Agreed workload, latency/concurrency/freshness, failure behavior, cost measures, manual-effort comparison, and support. |
 | **A10 — Scoped approval** | Applicable privacy, data, architecture, security, MRM, pilot, and operational approvals, with conditions and review dates. |
 
@@ -719,7 +723,7 @@ Preserve the accepted and working boundaries below when updating code, diagrams,
 
 - Keep documentation status separate from private implementation and deployed operation; label illustrative data and every unverified claim.
 - Preserve accepted work, current user changes, and later task authority. Historical SHAs and old “next step” instructions are not reset targets.
-- Keep the UI behind protected APIs and preserve the supported application boundary; do not migrate frameworks from diagram labels.
+- Keep the UI behind protected APIs and preserve the supported application boundary. Execute only the bounded owner-selected LangGraph migration under S17 when implementation is authorized; diagram labels do not authorize unrelated framework or hosting changes.
 - Use approved Managed Identity source access and application-enforced effective user scope. Do not introduce provider user-ACL synchronization, unsupported authentication, or privilege-expanding fallback.
 - Use stable group identifiers and approved entitlement sources. Metadata, templates, preferences, service plans, and model output do not grant access.
 - Keep enterprise semantic ownership distinct from the Registry's runtime representation. Templates reference definitions; recipes remain dependency-scoped.
@@ -851,7 +855,7 @@ These are planning references, not newly instantiated repository tasks. Exact so
 | D12 — MRM and call inventory | §8.2 | Existing stable inventory; G06 assessment and owner decision. |
 | D13 — Conditional integrations | §§3.2, 4.2, 9.1 | Provider-neutral discovery; no automatic Genie/Collibra dependency. |
 | D14 — Operating ownership and economics | §§8.4–8.5, 11, 13 | Support, workload, budgets, showback, later approved chargeback. |
-| D15 — Framework and gateway | §§4.2, 8.2 | Preserve AG2 evidence; separately qualify both model helpers. |
+| D15 — Framework and gateway | §§4.2, 8.2; S17 amendment | Preserve historical AG2 evidence; reconcile the owner-selected LangGraph migration and separately qualify relevant model helpers. |
 | D16 — Streaming and optional ingestion | §§3.2, 4.2 | Complete-response direction; optional services not mandatory. |
 | D17 — Protected API and storage roles | §§4.2–4.3, 8.1 | Backend boundary and purpose-specific stores. |
 | D18 — Model payload and history qualification | §§3.5, 8.2–8.3, 14.2 | Separate error, result, history, input, output, renderer, and trace closure. |
@@ -878,6 +882,7 @@ Package documents are linked locally. S01–S08, S12 and S15 identify historical
 | **S14** | Owner direction on SQL/Databricks baseline, application permissions and preserved system-assigned identity, consolidated in the 21 October planning reference. | Refines delivery allocation; does not establish live provider qualification or replace enterprise grant authority. |
 | **S15** | Historical application handoff, summarized in the [Session Handoff](ASKTD_SESSION_HANDOFF.md), 22 October 2026. Original application reports require repository reconciliation. | Reports login/SQL SAMI validation and earlier PR/workflow checkpoints. Read as historical evidence; current application state remains unverified. |
 | **S16** | [Session Handoff](ASKTD_SESSION_HANDOFF.md) v1.0 and product/quarterly v1.2/executive continuity updates, 22 October 2026. | Reading order, documentation checkpoint, unresolved evidence, executive namespace and continuation guidance. Does not activate saved execution prompts. |
+| **S17** | [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md), v1.0, 26 October 2026; explicit owner direction. | LangGraph selected for complex-graph extensibility; LangSmith telemetry mandatory. Scoped amendment, with current application adoption/qualification evidence still required. |
 
 During the 19 October revision 2.0 review, the private Master read returned 404. The 22 October revision 2.1 review also could not verify the application repository through the available connection. These are historical access observations, not proof of missing code or failure. Product documents and screenshots do not establish current application state.
 
@@ -917,4 +922,5 @@ Read the current session handoff and operative sources. Reconcile existing work 
 |---|---|
 | 2.0 proposed, 19 October 2026 | Consolidated product, architecture, engineering and release planning while preserving earlier evidence |
 | 2.1 proposed, 22 October 2026 | Clarified dual-provider baseline, SAMI direction, P01–P15/executive lineage, documentation checkpoint, preserved historical login report and continuation guidance |
+| 26 October 2026 scoped amendment to proposed 2.1 | Records owner-selected LangGraph and mandatory LangSmith, with delivery under existing P05/P06/P07 outputs. Does not promote the whole Master or assert implementation. |
 

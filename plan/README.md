@@ -2,8 +2,8 @@
 
 This directory contains the English product, architecture-to-delivery mapping and execution-planning reference package. It is designed to reside at `docs/roadmap/` in the application repository. All document links are relative to this directory.
 
-**Package edition:** 23 October 2026  
-**Planning baseline:** Master revision 2.1 proposed; delivery portfolio v0.2; lineage reference v0.4; product and quarterly roadmap v1.2.  
+**Package edition:** 26 October 2026\
+**Planning baseline:** Master revision 2.1 proposed; delivery portfolio v0.2; lineage reference v0.4; product and quarterly roadmap v1.2, with the scoped 26 October LangGraph/LangSmith owner amendment.\
 **Adoption status:** Reconcile with the operative application Master, ADRs, existing tasks and any later accepted changes before adopting proposed mappings.
 
 ## Start here
@@ -13,6 +13,7 @@ This directory contains the English product, architecture-to-delivery mapping an
 3. Use the [English Product Guide](AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md) for a practical explanation of the system and planning model.
 4. Read the [Master Plan](<MASTER_PLAN_V1(2).md>), [Delivery Portfolio](AskTD_Delivery_Plans_and_Dependencies.md) and [Plan and Lineage Reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) together for engineering scope, output ownership and dependencies.
 5. Review the [Planning Handoff](ASKTD_SESSION_HANDOFF.md) and [Product-to-Plan Coverage Review](AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md) before generating new work.
+6. Read the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for the selected orchestration migration, mandatory telemetry, staged scope and task-level dependencies. Reconcile current team implementation before generating duplicate work.
 
 ## Document catalogue
 
@@ -32,6 +33,7 @@ This directory contains the English product, architecture-to-delivery mapping an
 | [Artifact-generation Specification](ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md) | Supporting artifact, lineage and synchronization requirements. |
 | [Framework Development Continuation](AskTD_Framework_Development_Continuation_2026-10-22.md) | Separate template for explicitly requested bounded framework implementation. |
 | [Planning Launcher](prompt) | Short instruction for explicitly starting the Project setup task. |
+| [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) | Owner-selected LangGraph for future complex graphs, required LangSmith collection, existing-output ownership, staged Tasks and acceptance. |
 | [Package Manifest](PACKAGE_MANIFEST.md) | Included revisions, editorial treatment and integrity inventory. |
 
 ## Planning model
@@ -63,3 +65,4 @@ No document requires an external web link or a personal repository to understand
 - Retain historical successful login/SQL validation. Investigate a current regression only when current evidence supports it.
 - Document existence, issue closure, PR merge and passing technical tests are not interchangeable with business acceptance or release qualification.
 - Unknown inputs and evidence remain explicit. Do not invent business definitions, owners, dates, approvals or completion.
+- LangGraph migration is selected under P05/P06; LangSmith telemetry is required under P07. This scoped owner amendment does not promote the entire proposed Master or prove application/environment readiness. Preserve audit separation, payload controls and source/provider contracts.

@@ -2,8 +2,14 @@
 
 **Document ID:** ASKTD-SESSION-HANDOFF  
 **Baseline revision:** 1.0, 22 October 2026  
-**Repository edition:** 23 October 2026  
+**Repository edition:** 26 October 2026; scoped technology amendment\
 **Status:** Documentation checkpoint; application implementation, merge, deployment and release acceptance require current evidence.
+
+## 26 October 2026 continuation amendment
+
+The owner selected LangGraph primarily to support future complex analytical graphs and requires LangSmith telemetry collection. Read the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) with the current Master, portfolio and lineage reference. It narrowly supersedes prior framework-migration exclusion wording while preserving established controls and the Master 2.1 proposed status. The owner reports a migration request to the team; its implementation/ADR/PR status and LangSmith environment qualification remain unverified here.
+
+The next migration activity is existing-work/ADR reconciliation under `P05.analysis_contract`, followed by coordinated graph and P07 telemetry contracts. Reuse current team Tasks/PRs. The plan adds task-level candidates, not new delivery Plans or named outputs. This publication does not execute any saved prompt or verify a deployment.
 
 ## 1. Product and planning objective
 
@@ -64,6 +70,7 @@ The planning record does not establish whether a prior artifact-generation promp
 8. **Preserve active work and newer candidates.** Inspect staged/unstaged/untracked changes, other worktrees, unmerged branches and any later Master such as `MASTER_PLAN_V2.md` if present. Do not reset, delete or replace them by assumption.
 9. **Separate document state, work state and evidence maturity.** Draft/reviewed/adopted, implementation progress and designed/implemented/verified/qualified are different facts. Unknown is not missing, failed or complete.
 10. **Saved prompts are task templates.** Reading a prompt does not execute it. Continuation, planning synchronization and implementation are separate scopes governed by the active request.
+11. **LangGraph and LangSmith are selected within the migration scope.** Apply the 26 October amendment under P05/P06/P07. Future graph complexity is the primary rationale; LangSmith collection is mandatory, with permitted-data/environment qualification and retained audit controls.
 
 ### Identifier namespaces
 
