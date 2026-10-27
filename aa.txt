@@ -1,38 +1,85 @@
-Continue the existing AskTD reconciliation using the current synchronization manifest and generation report. Preserve completed work and reuse the recorded private Project identity. Resolve current repository revisions before relying on them.
+Continue the existing AskTD work in this application repository.
+Complete Phase A before executing Phase B.
 
-Do not restart the completed historical investigation.
+PHASE A — Install missing planning files and reconcile outdated copies
 
-1. Confirm the remaining automation correction
-    Read back the two recorded built-in Project workflows:
+Import source:
+- Repository: hesam-hakimi/github_practice_1
+- Branch: docs/asktd-langgraph-langsmith-plan-20261026
+- Folder: plan/
+- Last verified HEAD: dadff5d91a97f6473b0064eebf57b131e2d0d90d
 
-* Pull request merged → Done
-* Item closed → Done
+Resolve the current source branch HEAD first and pin that revision
+for this import. Do not silently substitute master: it may lack
+the latest amendments.
 
-Record completion only if both are disabled. Otherwise retain “Pending manual Project UI action.” Do not delete workflows or repeat the API capability investigation. Preserve the other four workflows.
+1. Read applicable repository instructions and inspect the current
+   application branch, worktrees and working changes. Locate the
+   existing canonical planning package, normally docs/roadmap/.
+   Reuse its accepted location; do not create a competing package.
 
-2. Record these limited planning decisions
+2. Read the source PACKAGE_MANIFEST.md and compare its complete
+   inventory with the installed package, including the HTML.
+   Classify each file as:
+   missing, identical, demonstrably outdated, locally newer,
+   or divergent/conflicted.
 
-* D-M1: Use revision 2.1, explicitly marked proposed and unmerged, as a planning scope reference. Preserve the operative merged baseline, accepted ADRs, owner decisions, and completed work. Proposed scope does not become approved implementation scope or Ready work merely through this citation.
-* D-M2: Preserve the existing MASTER_PLAN_V2.md path on asktd_v2. Record its Document ID mismatch and existing aliases without renaming files.
-* D-M4: Retain revision 1.1 sections 8.3–8.4 and QUALITY_GATES.md as the existing Ready/Done governance reference. Record the required reconciliation into the proposed Master before any promotion; do not create a parallel standard.
+   Use content, Git history and provenance. A different hash or
+   timestamp alone does not establish which version is authoritative.
 
-3. Prepare the missing D-M3 evidence
-    Read Phase 8 from the already identified revision 1.1 Git object. Produce a requirement-by-requirement crosswalk containing:
+3. Copy missing files. Update demonstrably outdated files.
+   Reconcile compatible local changes while preserving team work.
+   Preserve newer Master candidates and application-generated
+   synchronization manifests, generation reports and task records.
+   Do not blindly replace the folder, delete destination-only files,
+   reset, clean, stash or stage/commit unrelated work.
 
-* Exact source revision and section.
-* Original requirement and intended outcome.
-* Existing coverage in later Master revisions, accepted ADRs, and implementation records.
-* Proposed owning Plan and canonical named output.
-* Applicable prerequisite and required acceptance evidence.
-* Any remaining owner decision.
+4. Ensure the installed package includes the current:
+   - ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md
+   - ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md
+   - ASKTD_SOURCE_CONNECTION_HEALTH_UI.md
+   - ASKTD_INTERACTIVE_ARCHITECTURE.html
+   and their canonical supporting documents.
 
-Do not assume that all Phase 8 requirements belong to P14/P15. Preserve Phase 8 as a historical engineering namespace. Keep baseline SQL and Databricks obligations in P01/P02/P04/P05/P07; P15 covers further expansion.
+   Keep documentation in English with relative internal links.
+   Do not add personal-repository links to professional documents.
+   Importing documents does not promote a proposed Master or prove
+   that application features are implemented.
 
-Reuse existing output identities and aliases. Mark uncovered requirements or proposed new outputs explicitly; do not silently adopt them or retire requirements. Restrict any planning hold to the affected work.
+5. Reconcile the installed README and package manifest without
+   losing application-specific entries. Validate local links,
+   inventory and checksums. Preserve the HTML's declared source
+   snapshot; do not claim it refreshed automatically.
 
-4. Update the existing records
-    Update the existing decision packet, synchronization manifest, generation report, and affected package digests. Preserve all worktrees, staged/unstaged/untracked changes, and newer Master candidates.
+6. Record the pinned source revision and a concise file-by-file
+   import result. Finish independent imports despite scoped
+   conflicts. If a required source is inaccessible or a conflict
+   prevents reliable execution, identify the exact missing input
+   and pause only the dependent work.
 
-Keep engineering documentation in English. Do not promote a Master revision, create issues or placeholder items, change application code or permissions, dispatch workflows, merge, or deploy in this pass.
+Reading copied prompts during Phase A does not execute them.
 
-Return the Phase 8 crosswalk, the remaining specific decisions, and the next eligible manifest operation with its prerequisites and acceptance evidence. Distinguish direct observations from historical reports and proposals.
+PHASE B — Resume the existing planning synchronization
+
+Once the required package is reconciled and validated, explicitly
+execute the installed ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md
+as this task. Continue without another routine confirmation.
+
+Read the maintained synchronization manifest and generation report
+first. Reuse the recorded AskTD Delivery Planning Project, existing
+Tasks and PRs. Reconcile the LangGraph/LangSmith and connection-health
+amendments before generating remaining work.
+
+Complete the authorized planning operations and human assignments
+where an approved mapping and eligible GitHub logins exist.
+Do not invent owners or create a duplicate Project.
+
+Return:
+- Files added, updated, preserved and conflicted.
+- Verified repository, branch and source revisions.
+- Actual planning operations and read-back results.
+- Ready work by owner or role.
+- Scoped blockers and their next actions.
+
+Do not start application implementation, assign a coding agent,
+change permissions, merge, deploy or dispatch workflows.
