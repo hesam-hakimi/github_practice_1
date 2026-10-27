@@ -1,63 +1,50 @@
-Continue from the completed import. Preserve the reconciled package
-at docs/plans/roadmap/, existing Project identity and all local work.
-Do not repeat the import or the completed historical investigation.
+Continue from the completed local planning backlog. Do not repeat
+the import, historical investigation or migration search.
 
-Finish the planning backlog before starting migration implementation.
+First correct these specific reporting ambiguities:
 
-1. Clarify publication state
-Report the current branch/HEAD and whether the imported changes are
-only local, committed, or pushed. Distinguish filesystem changes from
-remote GitHub writes. Do not stage or commit unrelated work.
+1. The disposition counts total 47, while the register contains
+   46 outputs: 3 + 23 + 14 + 6 + 1 = 47.
+   Reconcile by canonical output ID.
+   If conditional/scoped decision is an overlapping flag, report it
+   separately from mutually exclusive primary dispositions.
+   Do not change classifications merely to force the total.
 
-2. Complete portfolio coverage
-Use the existing canonical register to show the disposition of all
-P01–P15 and 46 outputs: existing/completed work, partial work,
-remaining work, unknown evidence, or scoped decisions.
+2. Clarify whether the two prepared payloads are a subset of the
+   13 MIG/CONN task definitions. Report unique identities.
+   Distinguish eligible-to-draft work from formally Ready work under
+   the existing repository criteria. Preserve existing status values.
 
-Link each remaining output to an existing Task or a justified pending
-Task definition. Keep later work at suitable outcome/contract depth.
-Do not automatically create one Issue per output or per candidate.
+3. Confirm that every canonical output has a traceable disposition
+   and an existing-work reference, remaining-work definition or
+   explicit evidence gap. Do not manufacture additional Issues.
 
-3. Correct dependency handling
-An unmet hard prerequisite prevents the dependent activity from
-starting; it does not automatically prevent defining its backlog item.
+Then publish this documentation-only work.
 
-For MIG-01–08 and CONN-01–05, record the actual prerequisite output,
-satisfaction evidence, and affected activity. Separate drafting,
-implementation, environment qualification and release gates.
-Do not mark everything Ready or impose whole-Plan blocking.
+I authorize a scoped documentation commit, push and pull request
+in the verified application repository. Reuse a suitable existing
+documentation PR if one exists; otherwise create a dedicated branch
+and PR against the verified intended integration branch.
 
-Before concluding migration work is absent, inspect relevant existing
-team branches, worktrees and open/closed PRs without modifying them.
-If any are inaccessible, qualify the conclusion to the inspected scope.
+Inspect the current diff and base first. Preserve all worktrees and
+staged, unstaged and untracked changes. Include only the reconciled
+planning package and its maintained planning reports. Do not blindly
+stage the directory or carry unrelated historical commits into the PR.
+If isolation is needed, use a separate worktree without altering the
+original working tree.
 
-4. Prepare actionable planning records
-Complete justified pending Task payloads with:
-- Accountable Plan and named outputs.
-- Existing-work match and bounded remaining scope.
-- Typed dependencies and parent relationship.
-- Owner/reviewer roles.
-- Acceptance criteria and evidence location.
-- Release contribution, status and scoped blockers.
+Validate links, manifest hashes, the 46 unique output IDs, task
+identity counts and effective dependency consistency. Preserve the
+HTML snapshot and existing Master adoption distinctions.
 
-Preserve prepared MIG-01 and CONN-01 payloads; extend the existing
-planning records rather than creating a parallel tracker.
+Read back the pushed commit and PR. Report:
+- Corrected output and unique Task counts.
+- Files included and validation results.
+- Commit, branch and PR identity.
+- What remains local or blocked.
+- The exact remaining admin and team-roster actions.
 
-5. Synchronize where supported
-If Issues remain disabled, preserve exact pending payloads and report
-the repository-admin action required. Continue independent planning.
-Do not create draft Project substitutes or another Project.
-
-Before any later submission, recheck duplicates, prerequisites and
-current target state; do not submit old payloads blindly.
-
-Assign humans only from an approved mapping and verified eligible
-GitHub logins. Otherwise retain role ownership and request the exact
-missing mapping.
-
-Return portfolio coverage, remaining Task definitions, dependency
-validation, ready work by role, and blockers with their next actions.
-Distinguish prepared locally from actually created remotely.
-
-Do not implement application code, change permissions, assign a coding
-agent, merge, deploy or dispatch workflows.
+Issues being disabled does not block publishing the documentation PR.
+Keep Issue creation pending and reuse the existing Project.
+Do not merge, implement application code, change permissions,
+assign a coding agent, deploy or dispatch workflows.
