@@ -1,222 +1,124 @@
-Edit the selected “ROADMAP · ASKTD” slide now using the replacement content and layout below. Produce an executive-ready version of this same slide.
+Repair the selected AskTD slide. The current result has overlapping text, excessive wrapping and a crowded lower section.
 
-The audience is senior leadership. The slide must clearly communicate the delivery sequence, the conditions for proceeding, and the decisions leadership needs to make.
+Rebuild the content layout of this ONE slide using the exact short copy below. Preserve substantive details in speaker notes before replacing the visible content.
 
-Keep this as ONE slide. Preserve the existing slide dimensions, TD green branding, theme font and “Internal planning document” designation. Use editable PowerPoint text and shapes.
+Layout
 
-1. Replace the title and headline
+Restore the original slide’s dark-green title banner with a white title. Keep the existing TD theme and slide dimensions.
 
-Title:
+Use three clearly separated areas:
+
+1. HEADER AND STATUS: approximately the top 20%.
+2. ROADMAP: approximately 27–55% of the slide height.
+3. LEADERSHIP DECISIONS: approximately 64–94%.
+
+Maintain approximately 4% outer margins and visible space between areas.
+
+The roadmap must have five equal-width columns, with generous gutters. Each column contains only:
+
+* Period
+* Bold milestone
+* One short supporting phrase
+
+Replace the current table and its text boxes. Remove the “Business outcome” and “Required evidence” rows from the canvas.
+
+Keep the three phase labels as small, single-line headings:
+
+* EARN TRUST above Q1–Q2
+* PROVE VALUE above Q3–Q4
+* WITH OVERSIGHT above FY28+
+
+Use three wider columns for leadership decisions, grouped by November, December and January.
+
+Exact visible text
+
+TITLE
 AskTD delivery roadmap
 
-Headline:
-Q2 FY27 pilot target, subject to semantic readiness and required approvals
+STATUS
+AMBER
+Delivery targets depend on semantic readiness and required approvals.
 
-Keep the headline prominent and readable. It should communicate the central delivery message immediately.
-
-2. Simplify the current-status strip
-
-Retain the AMBER status.
-
-Use these three short status statements:
-
-Reported complete: PoC validation and PIA / ABP / ARB
-In progress: Deposits readiness
-Open: DAC / MRM / ownership
-
-Present these in a compact, clearly aligned status strip. “Reported complete” preserves the source slide’s status without implying that all approvals cover pilot or production use.
-
-3. Rebuild the roadmap around outcomes and acceptance evidence
-
-Remove the separate ASK / UNDERSTAND / EXPLAIN / RECOMMEND / ACT progression chevrons. The milestone sequence below communicates the progression.
-
-Replace the four dense operational workstream rows with two rows:
-
-* Business outcome
-* Required evidence
-
-Keep five equal-width milestone columns and the three phase bands:
-
-PHASE 1 — EARN TRUST
-Spans Q1 and Q2 FY27.
-
-PHASE 2 — PROVE REPEATABLE VALUE
-Spans Q3 and Q4 FY27.
-
-PHASE 3 — ENABLE BOUNDED ACTION
-Spans FY28+.
-
-Label the timeline “Planning targets”.
-
-Use this exact milestone content:
-
-Column 1
-
-Period:
+ROADMAP COLUMN 1
 Q1 FY27
 Nov–Jan
-
-Milestone:
 Deposits readiness
+Scope, definitions and owners
 
-Business outcome:
-Agree pilot questions, users and reference answers.
-
-Required evidence:
-Named owners, approved definitions and source readiness.
-
-Column 2
-
-Period:
+ROADMAP COLUMN 2
 Q2 FY27
 Feb–Apr
+Governed pilot
+Validated answers for approved users
 
-Milestone:
-Governed Deposits pilot
-
-Business outcome:
-Validated answers, tables and charts for approved users.
-
-Required evidence:
-Correctness, access controls and required pilot approvals.
-
-Column 3
-
-Period:
+ROADMAP COLUMN 3
 Q3 FY27
 May–Jul
-
-Milestone:
 Bounded production
+Monitoring, support and recovery
 
-Business outcome:
-Launch approved use cases with monitoring and support.
-
-Required evidence:
-Production approval, support ownership and recovery readiness.
-
-Column 4
-
-Period:
+ROADMAP COLUMN 4
 Q4 FY27
 Aug–Oct
-
-Milestone:
 Approved domain scale
+Expand where benefits are demonstrated
 
-Business outcome:
-Expand where adoption and benefits are demonstrated.
-
-Required evidence:
-Domain approval and demonstrated reliability and value.
-
-Column 5
-
-Period:
+ROADMAP COLUMN 5
 FY28+
-
-Milestone:
 Analytics with oversight
+Analyze, recommend and hand off
 
-Business outcome:
-Analyze, recommend and hand off within approved limits.
+LOWER SECTION TITLE
+Leadership decisions
 
-Required evidence:
-Approved oversight, escalation and boundaries for any action.
+NOVEMBER 2026
+Confirm semantic ownership and funding
+Approve metrics, rules and mappings
 
-Treat “Required evidence” as conditions to be satisfied, not as completed gates. Required pilot approvals must precede pilot use.
+DECEMBER 2026
+Confirm secure platform, access and environments
 
-4. Make success measures apply across the roadmap
+JANUARY 2027
+Agree pilot scope, references and acceptance
+Commit SMEs and delivery capacity
+Confirm model-risk and control approval path
 
-Replace the current arrangement that places a different success measure under each quarter with one shared horizontal line beneath the timeline.
+Typography and spacing
 
-Label:
-Success measures across all stages
+Use approximately:
 
-Text:
-Answer quality • Adoption • Control readiness • Reliability and latency • Cost and value
+* 30–32 pt for the title
+* 20 pt for milestone headings
+* 18 pt for supporting text and leadership requests
+* 16 pt for dates and phase labels
 
-Use simple spacing or subtle separators consistent with the presentation theme. This line must make clear that controls, quality and operational performance are assessed throughout delivery.
+Use left-aligned text within each column. Align corresponding elements across all five roadmap columns.
 
-Do not add numerical targets that are absent from the source material.
+Give every text box sufficient height. Disable shrinking text to fit. Keep milestone headings to two lines at most and supporting phrases to two lines at most.
 
-5. Replace the six small leadership-ask boxes with three deadline groups
+Use a white body, dark-green headings and subtle dividers. Keep the amber indicator small. Avoid heavy boxes around every item.
 
-Heading:
-Leadership decisions and commitments
+Only the supplied copy and mandatory template markings should remain visible. Move the success-measures line, detailed evidence conditions, approval history and risk explanations into speaker notes.
 
-Use three clean, aligned groups. Preserve all six underlying requests.
+Preserve in speaker notes
 
-By November 2026
+Retain:
 
-* Confirm semantic ownership and funding.
-* Approve metrics, calculation rules and data mappings.
+* The source-reported PoC and PIA / ABP / ARB completion.
+* Deposits readiness in progress and DAC / MRM / ownership open.
+* The reported unavailable enterprise ontology and incomplete taxonomy.
+* Approved definitions, mappings and reference answers required for the pilot.
+* Required pilot approvals before pilot use.
+* Production acceptance, support and recovery requirements.
+* All six original leadership requests and their deadlines.
+* Success measures across all stages.
+* The distinction between agreeing an approval path and completing approvals.
+* The current FY28+ scope of analysis, recommendations and human hand-off.
 
-By December 2026
+Keep all dates as conditional planning targets.
 
-* Confirm secure platform, source access and environment readiness.
+Final check
 
-By January 2027
+Inspect the edited slide at presentation size before returning it. Correct every overlap, clipped line and inconsistent alignment. Keep a clear gap between the roadmap and leadership decisions.
 
-* Agree pilot scope, reference answers and acceptance criteria.
-* Commit business SMEs and delivery capacity.
-* Confirm the model-risk and control approval path.
-
-Emphasize the dates and action verbs. These remain requested decisions and commitments.
-
-“Confirm the approval path” must not be rewritten as “complete all approvals”.
-
-6. Keep the critical dependency visible
-
-Use one concise risk statement near the bottom:
-
-Reported semantic risk: enterprise ontology unavailable and taxonomy incomplete for many products.
-
-Add a short timing qualification:
-
-Delivery dates remain conditional on readiness, approvals and capacity.
-
-Keep these readable. Avoid a dense paragraph in the footer.
-
-7. Add concise speaker notes
-
-Move the supporting detail from the existing operational rows into speaker notes. Retain the following explanations:
-
-* Semantic ownership and funding cover ontology, taxonomy and the enterprise semantic layer.
-* The pilot requires approved definitions, calculations, mappings and reference answers for its selected Deposits scope.
-* Enterprise-wide semantic completeness and an approved pilot semantic subset are separate questions. The permitted pilot scope needs an explicit business and control decision.
-* PIA, ABP and ARB completion is reported in the source slide. Applicable scope and conditions must be confirmed for each release. PoC completion does not establish production approval.
-* Control readiness applies before pilot use and continues through production and expansion.
-* Production acceptance includes monitoring, support, recovery and accountable operational ownership.
-* FY28+ currently describes analysis, recommendations and human hand-off within approved limits. Actions that change systems or business state require separately defined scope and approval.
-* Success measures apply throughout delivery. Their definitions, baselines and targets require agreement.
-* All fiscal dates remain planning targets subject to dependencies and committed delivery capacity.
-
-Keep notes useful for presenting the slide. Exclude editing instructions and technical implementation inventories.
-
-8. Apply an executive visual treatment
-
-Use a clear hierarchy:
-
-1. Title and delivery headline
-2. AMBER status and current position
-3. Five milestone columns with outcomes and required evidence
-4. Leadership decisions and deadlines
-
-Use dark green for the title and phase bands, restrained lighter green accents, and white or very light backgrounds for the roadmap body. Keep amber specific to the status indicator.
-
-Use a flat, aligned layout with thin dividers and generous spacing. Replace the heavy collection of small boxes with a coherent roadmap and three simple leadership-decision groups.
-
-Aim for approximately 250–280 visible words. Use a title around 30–34 pt and readable body text around 17–18 pt where the existing slide dimensions permit. Keep supporting labels visually subordinate.
-
-If the slide is crowded, shorten repeated labels and move supporting explanation into notes while preserving the specified decisions, dates, conditions and risks.
-
-Keep fiscal labels exactly as supplied. Preserve the distinction between planned delivery, reported completion and required approvals. Do not introduce new features, named owners, budgets or delivery commitments.
-
-9. Finish the edit
-
-Apply these changes to the selected slide and show the revised slide.
-
-Inspect it at presentation size for text wrapping, alignment, contrast and spacing. Ensure the five columns align, the phase bands span the correct periods, and the January decisions remain readable.
-
-The finished slide should let an executive identify the Q2 pilot target, the open dependencies and the leadership decisions within a few seconds.
+Apply the edit and show the revised slide.
