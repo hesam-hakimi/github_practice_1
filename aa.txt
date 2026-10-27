@@ -1,85 +1,86 @@
-Continue the existing AskTD work in this application repository.
-Complete Phase A before executing Phase B.
+Continue the existing task. The latest report rechecked the previous
+application/Project state, but it does not demonstrate completion of
+the requested planning-package import.
 
-PHASE A — Install missing planning files and reconcile outdated copies
+Complete the missing import and reconciliation work now, then resume
+planning synchronization. Do not repeat the completed Master-history
+investigation or return only another unchanged-blockers report.
 
-Import source:
-- Repository: hesam-hakimi/github_practice_1
-- Branch: docs/asktd-langgraph-langsmith-plan-20261026
-- Folder: plan/
-- Last verified HEAD: dadff5d91a97f6473b0064eebf57b131e2d0d90d
+1. RESOLVE AND IMPORT THE DOCUMENTATION SOURCE
 
-Resolve the current source branch HEAD first and pin that revision
-for this import. Do not silently substitute master: it may lack
-the latest amendments.
+Source repository: hesam-hakimi/github_practice_1
+Source branch: docs/asktd-langgraph-langsmith-plan-20261026
+Source directory: plan/
+Last independently verified source HEAD:
+dadff5d91a97f6473b0064eebf57b131e2d0d90d
 
-1. Read applicable repository instructions and inspect the current
-   application branch, worktrees and working changes. Locate the
-   existing canonical planning package, normally docs/roadmap/.
-   Reuse its accepted location; do not create a competing package.
+Resolve the current source HEAD and pin it for this import.
+Resolving the application repository's origin/main is not a substitute.
+Do not silently use the documentation repository's master branch.
 
-2. Read the source PACKAGE_MANIFEST.md and compare its complete
-   inventory with the installed package, including the HTML.
-   Classify each file as:
-   missing, identical, demonstrably outdated, locally newer,
-   or divergent/conflicted.
+Read the source PACKAGE_MANIFEST.md and compare its entire inventory
+with the application's existing canonical planning directory, normally
+docs/roadmap/. Locate the actual accepted directory before writing.
 
-   Use content, Git history and provenance. A different hash or
-   timestamp alone does not establish which version is authoritative.
+For every source file, record:
+- Source and destination paths.
+- Source revision/hash and existing destination hash, if present.
+- Missing / identical / outdated / locally newer / divergent.
+- Action taken or exact unresolved conflict.
 
-3. Copy missing files. Update demonstrably outdated files.
-   Reconcile compatible local changes while preserving team work.
-   Preserve newer Master candidates and application-generated
-   synchronization manifests, generation reports and task records.
-   Do not blindly replace the folder, delete destination-only files,
-   reset, clean, stash or stage/commit unrelated work.
+Copy missing files and update demonstrably outdated copies.
+Reconcile compatible changes. Preserve local edits, newer Master
+candidates, application-specific documents, synchronization reports
+and existing task records. Different content alone does not mean old.
 
-4. Ensure the installed package includes the current:
-   - ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md
-   - ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md
-   - ASKTD_SOURCE_CONNECTION_HEALTH_UI.md
-   - ASKTD_INTERACTIVE_ARCHITECTURE.html
-   and their canonical supporting documents.
+Do not replace the whole directory, delete destination-only files,
+switch/reset worktrees, or commit unrelated changes. Treat the attached
+README as context; inspect actual repository files rather than deciding
+authority from line counts.
 
-   Keep documentation in English with relative internal links.
-   Do not add personal-repository links to professional documents.
-   Importing documents does not promote a proposed Master or prove
-   that application features are implemented.
+Explicitly verify installation of:
+- ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md
+- ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md
+- ASKTD_SOURCE_CONNECTION_HEALTH_UI.md
+- ASKTD_INTERACTIVE_ARCHITECTURE.html
 
-5. Reconcile the installed README and package manifest without
-   losing application-specific entries. Validate local links,
-   inventory and checksums. Preserve the HTML's declared source
-   snapshot; do not claim it refreshed automatically.
+Reconcile the remaining package files, internal references and manifest.
+Preserve application-specific inventory entries. Validate checksums and
+links, and preserve the HTML's declared embedded-source snapshot.
 
-6. Record the pinned source revision and a concise file-by-file
-   import result. Finish independent imports despite scoped
-   conflicts. If a required source is inaccessible or a conflict
-   prevents reliable execution, identify the exact missing input
-   and pause only the dependent work.
+If the source cannot be accessed, report the exact failed repository,
+ref or path and request only the missing source package. Do not claim
+the import completed or silently proceed with an older package.
 
-Reading copied prompts during Phase A does not execute them.
+2. EXECUTE THE INSTALLED CONTINUATION
 
-PHASE B — Resume the existing planning synchronization
+After validating the required package, explicitly execute
+ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md in the application repository.
 
-Once the required package is reconciled and validated, explicitly
-execute the installed ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md
-as this task. Continue without another routine confirmation.
+Reuse the existing Project and maintained synchronization records.
+Reconcile all P01–P15 coverage, MIG-01–MIG-08 and CONN-01–CONN-05
+against existing Tasks, PRs and implementation evidence.
 
-Read the maintained synchronization manifest and generation report
-first. Reuse the recorded AskTD Delivery Planning Project, existing
-Tasks and PRs. Reconcile the LangGraph/LangSmith and connection-health
-amendments before generating remaining work.
+If Issues are still disabled:
+- Complete the reconciled planning documents and exact pending
+  Issue payloads within the existing planning system.
+- Include Plan/output ownership, typed dependencies, acceptance
+  evidence, reviewer/owner roles and existing-work matches.
+- Record remote Issue creation as blocked by the repository setting.
+- Do not create another Project or draft Project substitutes.
 
-Complete the authorized planning operations and human assignments
-where an approved mapping and eligible GitHub logins exist.
-Do not invent owners or create a duplicate Project.
+Keep D-M3 holds limited to their affected requirements and actual
+dependent work. Assess other Tasks individually against the existing
+Ready criteria. Do not invent personal assignments or dates.
 
-Return:
-- Files added, updated, preserved and conflicted.
-- Verified repository, branch and source revisions.
-- Actual planning operations and read-back results.
-- Ready work by owner or role.
-- Scoped blockers and their next actions.
+Preserve the pending decision to disable the two Done automation rules.
+Their pending UI action does not prevent documentation reconciliation
+or preparation of task payloads.
 
-Do not start application implementation, assign a coding agent,
-change permissions, merge, deploy or dispatch workflows.
+Finish with the file-import table, amendment-to-task mapping, actual
+remote results, and scoped blockers with the responsible role and next
+action. Complete independent authorized work without another routine
+confirmation.
+
+Do not implement application features, change permissions or
+credentials, assign a coding agent, merge, deploy or dispatch workflows.
