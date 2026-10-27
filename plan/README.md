@@ -16,6 +16,17 @@ This directory contains the English product, architecture-to-delivery mapping an
 6. Read the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for the selected orchestration migration, mandatory telemetry, staged scope and task-level dependencies. Reconcile current team implementation before generating duplicate work.
 
 7. Read the [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) for the R1 diagnostic interface, P02/P07 ownership, five local task candidates and live-versus-synthetic acceptance.
+8. Open the [Interactive Architecture Walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) for the clickable question-to-answer flow, agent interactions, all P01–P15 Plans and the synthetic connection-health interface.
+
+## Interactive architecture walkthrough
+
+Download `ASKTD_INTERACTIVE_ARCHITECTURE.html` and open it in a browser. It is one self-contained English HTML file with embedded styles, scripts and reference snapshots; no server, installation or external request is required. Keep it beside these documents when copying this package into `docs/roadmap/`.
+
+The walkthrough includes the 22-node flowchart and 15 predefined question routes, agent call/return and shared-state explanations, the complete 15-Plan/46-output/25-dependency portfolio, eight LangGraph/LangSmith migration candidates, six complex-graph scenarios and ten connection-health fixtures. Select **Architecture & plan → All Plans** for the portfolio and **Connection health** for the diagnostic prototype.
+
+The five embedded source documents match documentation revision `461d7f85006502bb4fdf0fd31574300ce61b7357`. **Sources & integrity** displays their exact text, hashes and recorded review status. The HTML is an explanatory snapshot, not a separate planning authority or an automatically refreshed dashboard. When a source changes, reconcile the teaching interpretation, refresh the embedded source manifest and regenerate the HTML together; do not manually change its displayed Plan counts or promote proposed decisions.
+
+All examples, graph executions, source attempts and connection checks are simulated. This page does not call the application, data providers, models or LangSmith and does not establish deployed functionality, real authorization, provider qualification or release acceptance.
 
 ## Document catalogue
 
@@ -37,6 +48,7 @@ This directory contains the English product, architecture-to-delivery mapping an
 | [Planning Launcher](prompt) | Short instruction for explicitly starting the Project setup task. |
 | [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) | Owner-selected LangGraph for future complex graphs, required LangSmith collection, existing-output ownership, staged Tasks and acceptance. |
 | [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) | Required source/authentication/health UI, protected diagnostics, scoped dependencies and acceptance. |
+| [Interactive Architecture Walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) | Self-contained English teaching page with the complete portfolio, request flow, agent interactions, migration and diagnostic simulations. |
 | [Package Manifest](PACKAGE_MANIFEST.md) | Included revisions, editorial treatment and integrity inventory. |
 
 ## Planning model
