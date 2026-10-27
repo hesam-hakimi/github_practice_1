@@ -1,8 +1,8 @@
 # AskTD / AskAlpha — Documentation Package Manifest
 
-**Package edition:** 26 October 2026\
+**Package edition:** 27 October 2026\
 **Intended application location:** `docs/roadmap/`  
-**Contents:** 17 Markdown documents, including this manifest, one plain-text launcher and one self-contained HTML walkthrough.
+**Contents:** 18 Markdown documents, including this manifest, one plain-text launcher and one self-contained HTML walkthrough.
 
 ## Scope and editorial treatment
 
@@ -11,6 +11,8 @@ This package assembles the current English product and delivery-planning documen
 The same-day owner request makes Sources & Connection Health an explicit R1 in-application capability. [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) refines existing P02/P07 outputs and selected P04/P05 inputs, with five local candidates and twelve acceptance scenarios. Updated product, roadmap, guide, coverage, lineage and continuation references describe this scoped addition; implementation remains unverified.
 
 The [Interactive Architecture Walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) is the existing English teaching page, packaged unchanged as a single offline-capable file. Its five embedded reference documents match documentation revision `461d7f85006502bb4fdf0fd31574300ce61b7357`. It includes the complete portfolio, clickable request flow, agent interactions, LangGraph/LangSmith migration and connection-health simulation. Its source snapshots do not automatically refresh or create a second planning authority; synthetic demonstrations do not establish application or environment acceptance.
+
+The 27 October [Planning Synchronization Continuation](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) resumes the existing canonical setup process. The handoff now distinguishes the owner's historical connected-session Project reports from directly checked documentation and current unknowns. The continuation preserves Project identity, existing work and scoped decisions, reconciles MIG/CONN candidates, and defines verified human allocation. Publishing this template does not execute it or establish current Issue/Project capability.
 
 All links remain within this directory. External publication locations, personal repository references and storage-system identifiers have been removed. The English guide is provided as repository-native Markdown. Historical runtime evidence remains explicitly historical; supporting application records must be reconciled in the application workspace where required.
 
@@ -25,8 +27,9 @@ The existing Master, portfolio, coverage review and launcher filenames are retai
 | [ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) | 1.0, 26 October 2026 | Owner-selected technology direction, staged migration, mandatory telemetry, existing-output ownership, eight task candidates and acceptance. |
 | [ASKTD_SOURCE_CONNECTION_HEALTH_UI.md](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) | 1.0, 26 October 2026 | Owner-requested in-application diagnostics; existing-output ownership, scoped candidates and acceptance. |
 | [ASKTD_NEW_SESSION_PROMPT.md](ASKTD_NEW_SESSION_PROMPT.md) | 1.0; repository edition | Read-only continuation using the local package. Includes the scoped 26 October amendment. |
+| [ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) | 1.0, 27 October 2026 | Wrapper for the canonical planning setup; historical checkpoint, amendment reconciliation, existing Project reuse and verified human allocation. |
 | [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) | 0.4, 22 October 2026 | Full crosswalk, output and dependency reference; local references. Includes the scoped 26 October amendment. |
-| [ASKTD_SESSION_HANDOFF.md](ASKTD_SESSION_HANDOFF.md) | 1.0 baseline; 23 October repository edition | Repository-oriented handoff preserving accepted decisions, historical evidence and unresolved application status. Includes the scoped 26 October amendment. |
+| [ASKTD_SESSION_HANDOFF.md](ASKTD_SESSION_HANDOFF.md) | 1.0 baseline; 27 October repository edition | Repository-oriented handoff preserving the scoped amendments, reported connected-session checkpoint, existing Project and current evidence limits. |
 | [AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md) | 23 October 2026; repository edition | Canonical issue/task/Project planning template with local source resolution. Includes the scoped 26 October amendment. |
 | [AskTD_Delivery_Plans_and_Dependencies.md](AskTD_Delivery_Plans_and_Dependencies.md) | 0.2, 22 October 2026 | Full delivery portfolio; local references. Includes the scoped 26 October amendment. |
 | [AskTD_Framework_Development_Continuation_2026-10-22.md](AskTD_Framework_Development_Continuation_2026-10-22.md) | 22 October 2026; repository edition | Separate, explicitly submitted framework implementation template. Includes the scoped 26 October amendment. |
@@ -35,7 +38,7 @@ The existing Master, portfolio, coverage review and launcher filenames are retai
 | [MASTER_PLAN_V1(2).md](<MASTER_PLAN_V1(2).md>) | 2.1 proposed, 22 October 2026 | Full maintained working copy; local references and clarified unbundled evidence. Includes the scoped 26 October amendment. |
 | [PRODUCT_DEFINITION_EN.md](PRODUCT_DEFINITION_EN.md) | 1.2 proposed, 22 October 2026 | Full English product baseline with the 26 October connection-health amendment. |
 | [QUARTERLY_PRODUCT_ROADMAP_EN.md](QUARTERLY_PRODUCT_ROADMAP_EN.md) | 1.2 proposed, 22 October 2026 | Full relative-release roadmap with the R1 connection-health amendment. |
-| [README.md](README.md) | 26 October 2026 package edition | Package navigation, integration, authority rules and standalone HTML usage. Includes the scoped 26 October amendments. |
+| [README.md](README.md) | 27 October 2026 package edition | Package navigation, integration, authority rules, standalone HTML usage and planning-continuation entry point. |
 | [Roadmap-onepager.md](Roadmap-onepager.md) | 1.0 plus 22 October continuity amendment | Full executive roadmap; local provenance and normalized Markdown. |
 | [prompt](prompt) | 23 October 2026; repository edition | Short launcher for the canonical Project setup prompt. |
 
@@ -57,8 +60,9 @@ The following SHA-256 values identify the UTF-8 files in this package edition. T
 | `ASKTD_INTERACTIVE_ARCHITECTURE.html` | 798492 | `bb2b05238060a314853b13e55e6451e82f540370ffccfefad1b12de0a94fccf3` |
 | `ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md` | 21888 | `8281a7b68ea4163471fa77a6968df0db9bf46c087c896facc872c0b3083eb989` |
 | `ASKTD_NEW_SESSION_PROMPT.md` | 6978 | `c1e79e5fefff3a647eec835ecf519466985aac1d2222ab8467581fa43df1ef82` |
+| `ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md` | 14839 | `dd0bc10e207bd9af965184a9219bd96808de303d3e6252370f8c9cf68c1ecb05` |
 | `ASKTD_PLAN_AND_LINEAGE_REFERENCE.md` | 76495 | `84f6ee71bfc92383e9afaeaa5f33e1c3936918dac6c29fd8681760f7c67a696b` |
-| `ASKTD_SESSION_HANDOFF.md` | 14819 | `8a0025de4c95732a7f414cc5b9d96eca5dd3131e11c1e64f0d83254a2a4f9cf8` |
+| `ASKTD_SESSION_HANDOFF.md` | 18518 | `4a5c151b13d024e1d68db7950760e21d5da50fba36cee775f53ff8f8fc953018` |
 | `ASKTD_SOURCE_CONNECTION_HEALTH_UI.md` | 18682 | `8a5a455efe441af50ba415e483344d235ed9186e74ecb02be7eb6756f217e666` |
 | `AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md` | 22584 | `119a55a5270a8cc7db9c030a7df807a99df1b4b4adf294f2ff447db3e02aa9f9` |
 | `AskTD_Delivery_Plans_and_Dependencies.md` | 64933 | `e633f705c152fd464ef4131cb8ca8d4fc1af376b13bf1804ad3bf7a54f7c4dd7` |
@@ -68,6 +72,6 @@ The following SHA-256 values identify the UTF-8 files in this package edition. T
 | `MASTER_PLAN_V1(2).md` | 99680 | `691d5d0e6caaa39e1f1626ead6685602f969837e6dcbcfd5c0df383cc7293657` |
 | `PRODUCT_DEFINITION_EN.md` | 20376 | `183b7959fc743a3354be4a8f7def73edf42dc3429b7a976cdcd60b5af07ef347` |
 | `QUARTERLY_PRODUCT_ROADMAP_EN.md` | 13231 | `b5325ae88a184472768303517b984fc010b501b5a7bed4a571147f85bd93d499` |
-| `README.md` | 9677 | `7ad74b49bd7c43732eebdec3bdcf31562cb52436ea5ceb035ea69044a641cec3` |
+| `README.md` | 10223 | `80cb7efd51a37aca53c315bcfa13c86f6349ac192275440c4597be90683ee779` |
 | `Roadmap-onepager.md` | 32709 | `3ab4f6ff21452dec818bcc42ebba03650d523a9dc0b1dd263e94e7e6362a08a6` |
 | `prompt` | 1677 | `ebea11f30d12af4e84f062c25137a91be9edabdadb36798dcff38e5330572f7d` |

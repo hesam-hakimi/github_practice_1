@@ -2,8 +2,22 @@
 
 **Document ID:** ASKTD-SESSION-HANDOFF  
 **Baseline revision:** 1.0, 22 October 2026  
-**Repository edition:** 26 October 2026; scoped technology amendment\
+**Repository edition:** 27 October 2026; planning synchronization continuity\
 **Status:** Documentation checkpoint; application implementation, merge, deployment and release acceptance require current evidence.
+
+## 27 October 2026 planning continuation checkpoint
+
+The owner now wants to resume team planning, task allocation and Project management using the updated package. Use the [planning synchronization continuation prompt](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) as a wrapper for the existing canonical setup prompt, not a separate generator.
+
+**Directly checked in the documentation session:** the latest package checkpoint before this continuation was `cf716fbb5c402d001d84c3e4e54e0d9a41b748dc` on `docs/asktd-langgraph-langsmith-plan-20261026`; its documentation PR was open/unmerged and the branch was three commits ahead of its default branch, zero behind. It includes the LangGraph/LangSmith amendment, Sources & Connection Health and the standalone interactive HTML. Resolve later revisions before relying on these values. The five canonical documents embedded in the HTML remain pinned at `461d7f85006502bb4fdf0fd31574300ce61b7357`; the page is synthetic teaching material.
+
+**Historically reported by the owner's connected-session screenshots:** a private Project named **AskTD Delivery Planning** was created and configured with 18 fields and five views. At the last supplied checkpoint it had zero items, repository Issues were disabled, and six built-in Project workflows remained present; the requested disable operations for **Item closed → Done** and **Pull request merged → Done** were still pending. Reuse the exact Project identity recorded in the maintained application sync reports. These observations do not establish today's permissions, item counts or automation state.
+
+The same reports established the Master 1.1 → 1.6 → 2.x lineage, recorded D-M1/D-M2/D-M4 rulings and later reported PR #18 merged with documentation paths reorganized. Preserve these findings rather than repeat the completed history investigation. D-M3 retained scoped decisions for Power BI integration, interactive chart actions and dashboard coverage; the reported crosswalk had five covered, two partial and one uncovered requirement. No new output was adopted. Carry forward the actual current report and any later accepted decisions; do not treat these holds as blanket blockers for unrelated work or confuse presence on a branch with operative adoption.
+
+**Still unverified here:** current application source, accepted Master, team migration progress, Issue capability, Project state and human assignment mapping. Application repository access returned 404 again in this documentation session. This is an access limitation, not evidence of missing code or failed work. The connected session must read the maintained `ASKTD_SYNC_MANIFEST_2026-10-23.md` and `ASKTD_GENERATION_REPORT_2026-10-23.md`, or their successors, and verify actual targets before writes. Their current contents matter more than their historical filenames.
+
+Next, reconcile the amendment candidates and all P01–P15 outputs with existing Tasks/PRs; update only justified remaining work and supported Project operations. Match MIG-01–MIG-08 and CONN-01–CONN-05 before allocating canonical IDs. Use a verified owner-approved roster for human assignments; otherwise finish role-owned planning and request only the missing logins/responsibility mapping. This document update does not create Issues, assign developers or execute Project synchronization.
 
 ## 26 October 2026 continuation amendment
 
@@ -58,7 +72,7 @@ Earlier reports discussed lifecycle/PR/check/deployment work, dirty worktrees, u
 
 During the 22 October documentation session, access to the historically identified application repository returned 404. This establishes an access limitation for that review, not missing code, a deleted repository or a regression. A later report that a connection problem was resolved does not by itself verify application behavior or deployment.
 
-The planning record does not establish whether a prior artifact-generation prompt created Plan/Task issues or configured a Project. Inspect current files, issue identities, Project configuration and generation reports before creating work. Unverified execution is not evidence that the task was never run.
+The original documentation baseline did not establish whether a prior artifact-generation prompt had run. The later owner-supplied reports summarized in the 27 October checkpoint establish historical Project creation/configuration and an Issue-creation blocker. Inspect current files, issue identities, Project configuration and maintained generation reports before creating work; do not assume either an empty current Project or that synchronization never ran.
 
 ## 5. Decisions to preserve
 
@@ -119,6 +133,7 @@ When planning synchronization is explicitly requested, use the [project setup pr
 | Activity | Entry point |
 |---|---|
 | Restore context read-only | [New-session prompt](ASKTD_NEW_SESSION_PROMPT.md). |
+| Resume the established planning run after the 26 October amendments | [Planning synchronization continuation](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md), a wrapper for the canonical setup prompt. |
 | Generate/reconcile planning artifacts and GitHub work | [Project setup prompt](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md), with the [artifact-generation specification](ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md). |
 | Continue bounded framework implementation after baseline reconciliation | [Framework continuation prompt](AskTD_Framework_Development_Continuation_2026-10-22.md). |
 
