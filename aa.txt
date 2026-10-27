@@ -1,124 +1,63 @@
-Repair the selected AskTD slide. The current result has overlapping text, excessive wrapping and a crowded lower section.
+Continue from the completed import. Preserve the reconciled package
+at docs/plans/roadmap/, existing Project identity and all local work.
+Do not repeat the import or the completed historical investigation.
 
-Rebuild the content layout of this ONE slide using the exact short copy below. Preserve substantive details in speaker notes before replacing the visible content.
+Finish the planning backlog before starting migration implementation.
 
-Layout
+1. Clarify publication state
+Report the current branch/HEAD and whether the imported changes are
+only local, committed, or pushed. Distinguish filesystem changes from
+remote GitHub writes. Do not stage or commit unrelated work.
 
-Restore the original slide’s dark-green title banner with a white title. Keep the existing TD theme and slide dimensions.
+2. Complete portfolio coverage
+Use the existing canonical register to show the disposition of all
+P01–P15 and 46 outputs: existing/completed work, partial work,
+remaining work, unknown evidence, or scoped decisions.
 
-Use three clearly separated areas:
+Link each remaining output to an existing Task or a justified pending
+Task definition. Keep later work at suitable outcome/contract depth.
+Do not automatically create one Issue per output or per candidate.
 
-1. HEADER AND STATUS: approximately the top 20%.
-2. ROADMAP: approximately 27–55% of the slide height.
-3. LEADERSHIP DECISIONS: approximately 64–94%.
+3. Correct dependency handling
+An unmet hard prerequisite prevents the dependent activity from
+starting; it does not automatically prevent defining its backlog item.
 
-Maintain approximately 4% outer margins and visible space between areas.
+For MIG-01–08 and CONN-01–05, record the actual prerequisite output,
+satisfaction evidence, and affected activity. Separate drafting,
+implementation, environment qualification and release gates.
+Do not mark everything Ready or impose whole-Plan blocking.
 
-The roadmap must have five equal-width columns, with generous gutters. Each column contains only:
+Before concluding migration work is absent, inspect relevant existing
+team branches, worktrees and open/closed PRs without modifying them.
+If any are inaccessible, qualify the conclusion to the inspected scope.
 
-* Period
-* Bold milestone
-* One short supporting phrase
+4. Prepare actionable planning records
+Complete justified pending Task payloads with:
+- Accountable Plan and named outputs.
+- Existing-work match and bounded remaining scope.
+- Typed dependencies and parent relationship.
+- Owner/reviewer roles.
+- Acceptance criteria and evidence location.
+- Release contribution, status and scoped blockers.
 
-Replace the current table and its text boxes. Remove the “Business outcome” and “Required evidence” rows from the canvas.
+Preserve prepared MIG-01 and CONN-01 payloads; extend the existing
+planning records rather than creating a parallel tracker.
 
-Keep the three phase labels as small, single-line headings:
+5. Synchronize where supported
+If Issues remain disabled, preserve exact pending payloads and report
+the repository-admin action required. Continue independent planning.
+Do not create draft Project substitutes or another Project.
 
-* EARN TRUST above Q1–Q2
-* PROVE VALUE above Q3–Q4
-* WITH OVERSIGHT above FY28+
+Before any later submission, recheck duplicates, prerequisites and
+current target state; do not submit old payloads blindly.
 
-Use three wider columns for leadership decisions, grouped by November, December and January.
+Assign humans only from an approved mapping and verified eligible
+GitHub logins. Otherwise retain role ownership and request the exact
+missing mapping.
 
-Exact visible text
+Return portfolio coverage, remaining Task definitions, dependency
+validation, ready work by role, and blockers with their next actions.
+Distinguish prepared locally from actually created remotely.
 
-TITLE
-AskTD delivery roadmap
-
-STATUS
-AMBER
-Delivery targets depend on semantic readiness and required approvals.
-
-ROADMAP COLUMN 1
-Q1 FY27
-Nov–Jan
-Deposits readiness
-Scope, definitions and owners
-
-ROADMAP COLUMN 2
-Q2 FY27
-Feb–Apr
-Governed pilot
-Validated answers for approved users
-
-ROADMAP COLUMN 3
-Q3 FY27
-May–Jul
-Bounded production
-Monitoring, support and recovery
-
-ROADMAP COLUMN 4
-Q4 FY27
-Aug–Oct
-Approved domain scale
-Expand where benefits are demonstrated
-
-ROADMAP COLUMN 5
-FY28+
-Analytics with oversight
-Analyze, recommend and hand off
-
-LOWER SECTION TITLE
-Leadership decisions
-
-NOVEMBER 2026
-Confirm semantic ownership and funding
-Approve metrics, rules and mappings
-
-DECEMBER 2026
-Confirm secure platform, access and environments
-
-JANUARY 2027
-Agree pilot scope, references and acceptance
-Commit SMEs and delivery capacity
-Confirm model-risk and control approval path
-
-Typography and spacing
-
-Use approximately:
-
-* 30–32 pt for the title
-* 20 pt for milestone headings
-* 18 pt for supporting text and leadership requests
-* 16 pt for dates and phase labels
-
-Use left-aligned text within each column. Align corresponding elements across all five roadmap columns.
-
-Give every text box sufficient height. Disable shrinking text to fit. Keep milestone headings to two lines at most and supporting phrases to two lines at most.
-
-Use a white body, dark-green headings and subtle dividers. Keep the amber indicator small. Avoid heavy boxes around every item.
-
-Only the supplied copy and mandatory template markings should remain visible. Move the success-measures line, detailed evidence conditions, approval history and risk explanations into speaker notes.
-
-Preserve in speaker notes
-
-Retain:
-
-* The source-reported PoC and PIA / ABP / ARB completion.
-* Deposits readiness in progress and DAC / MRM / ownership open.
-* The reported unavailable enterprise ontology and incomplete taxonomy.
-* Approved definitions, mappings and reference answers required for the pilot.
-* Required pilot approvals before pilot use.
-* Production acceptance, support and recovery requirements.
-* All six original leadership requests and their deadlines.
-* Success measures across all stages.
-* The distinction between agreeing an approval path and completing approvals.
-* The current FY28+ scope of analysis, recommendations and human hand-off.
-
-Keep all dates as conditional planning targets.
-
-Final check
-
-Inspect the edited slide at presentation size before returning it. Correct every overlap, clipped line and inconsistent alignment. Keep a clear gap between the roadmap and leadership decisions.
-
-Apply the edit and show the revised slide.
+Do not implement application code, change permissions, assign a coding
+agent, merge, deploy or dispatch workflows.
