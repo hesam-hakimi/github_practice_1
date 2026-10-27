@@ -1,180 +1,222 @@
-Continue the existing AskTD leadership-roadmap review. Turn the gap analysis into a verified reconciliation and concrete corrections to the presentation and its supporting planning material.
+Edit the selected “ROADMAP · ASKTD” slide now using the replacement content and layout below. Produce an executive-ready version of this same slide.
 
-Work in English. Preserve the current presentation’s visual style and keep the leadership slide concise.
+The audience is senior leadership. The slide must clearly communicate the delivery sequence, the conditions for proceeding, and the decisions leadership needs to make.
 
-1. Establish the actual sources and their authority
+Keep this as ONE slide. Preserve the existing slide dimensions, TD green branding, theme font and “Internal planning document” designation. Use editable PowerPoint text and shapes.
 
-Inspect the current presentation, including the roadmap slide and the slide you previously identified as Slide 3. Record their actual titles and positions.
+1. Replace the title and headline
 
-Identify the exact HTML attachment you reviewed. Where accessible, also inspect the current canonical planning package, normally under docs/roadmap/, particularly:
+Title:
+AskTD delivery roadmap
 
-* README.md and PACKAGE_MANIFEST.md
-* ASKTD_INTERACTIVE_ARCHITECTURE.html
-* ASKTD_PLAN_AND_LINEAGE_REFERENCE.md
-* AskTD_Delivery_Plans_and_Dependencies.md
-* QUARTERLY_PRODUCT_ROADMAP_EN.md
-* Roadmap-onepager.md
-* PRODUCT_DEFINITION_EN.md
-* The operative Master Plan and relevant accepted decisions
-* ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md
-* ASKTD_SOURCE_CONNECTION_HEALTH_UI.md
+Headline:
+Q2 FY27 pilot target, subject to semantic readiness and required approvals
 
-Use the operative application records and accepted decisions to establish authority. A newer document date or a recent slide does not automatically supersede an accepted decision.
+Keep the headline prominent and readable. It should communicate the central delivery message immediately.
 
-State which sources you can actually read or edit. If repository access is unavailable, complete the supported presentation work and provide exact proposed document changes. Do not claim that inaccessible files were updated.
+2. Simplify the current-status strip
 
-Treat your previous gap report as findings to validate, not as automatically established defects.
+Retain the AMBER status.
 
-2. Correct the HTML completeness assessment
+Use these three short status statements:
 
-A separate inspection of documentation commit
-dadff5d91a97f6473b0064eebf57b131e2d0d90d
-found populated data in ASKTD_INTERACTIVE_ARCHITECTURE.html:
+Reported complete: PoC validation and PIA / ABP / ARB
+In progress: Deposits readiness
+Open: DAC / MRM / ownership
 
-* 15 delivery Plans, P01–P15
-* 46 named outputs
-* 25 portfolio dependency records
-* 10 acceptance gates, A01–A10
-* 8 migration task candidates
-* 5 connection-health task candidates
+Present these in a compact, clearly aligned status strip. “Reported complete” preserves the source slide’s status without implying that all approvals cover pilot or production use.
 
-That HTML declares an embedded source snapshot at
-461d7f85006502bb4fdf0fd31574300ce61b7357.
+3. Rebuild the roadmap around outcomes and acceptance evidence
 
-Verify whether your attachment is the same artifact. Inspect embedded data and scripts, including AskTDPlanData. Inspect the rendered views when your tools support them.
+Remove the separate ASK / UNDERSTAND / EXPLAIN / RECOMMEND / ACT progression chevrons. The milestone sequence below communicates the progression.
 
-Distinguish among:
+Replace the four dense operational workstream rows with two rows:
 
-* A genuinely missing record
-* An outdated or different attachment
-* A reader that did not extract JavaScript-rendered content
-* An intentionally unresolved implementation or approval field
+* Business outcome
+* Required evidence
 
-Correct the earlier “placeholders only” statement if it does not apply to the actual artifact. Identify specific missing records instead of describing the entire portfolio as absent.
+Keep five equal-width milestone columns and the three phase bands:
 
-The presence of planning records does not establish implemented features, passed gates or production readiness.
+PHASE 1 — EARN TRUST
+Spans Q1 and Q2 FY27.
 
-3. Reconcile fiscal milestones, delivery releases and engineering phases
+PHASE 2 — PROVE REPEATABLE VALUE
+Spans Q3 and Q4 FY27.
 
-The leadership roadmap currently shows:
+PHASE 3 — ENABLE BOUNDED ACTION
+Spans FY28+.
 
-* Q1 FY27, Nov–Jan: Deposits readiness
-* Q2 FY27, Feb–Apr: Governed Deposits pilot
-* Q3 FY27, May–Jul: Bounded production use
-* Q4 FY27, Aug–Oct: Approved domain scale
-* FY28+: Bounded agentic analytics
+Label the timeline “Planning targets”.
 
-It groups Q1–Q2 under Executive Phase 1, Q3–Q4 under Executive Phase 2, and FY28+ under Executive Phase 3.
+Use this exact milestone content:
 
-Reconcile these with:
+Column 1
 
-1. The relative delivery quarters and R1–R4 releases in QUARTERLY_PRODUCT_ROADMAP_EN.md.
-2. The older proposed calendar in Roadmap-onepager.md.
-3. The existing engineering phases and slices in the operative Master Plan.
+Period:
+Q1 FY27
+Nov–Jan
 
-Keep these namespaces explicit. Do not assume that R1 means Q1 FY27, that P04 means Engineering Phase 4, or that identically numbered executive phases have identical scope across documents.
+Milestone:
+Deposits readiness
 
-Build a compact crosswalk containing:
+Business outcome:
+Agree pilot questions, users and reference answers.
 
-Executive milestone | Intended outcome | Delivery release or slice | Relevant Plan outputs | Required dependencies and acceptance evidence | Accountable role | Timing basis and unresolved decisions
+Required evidence:
+Named owners, approved definitions and source readiness.
 
-Map specific outputs and delivery slices. A Plan can contribute to several milestones.
+Column 2
 
-Preserve the documented capability scope. Do not silently move reporting, exports, scheduling or other features to FY28+ merely to make phase labels match. Identify discrepancies and propose the necessary mapping or scheduling decision.
+Period:
+Q2 FY27
+Feb–Apr
 
-Retain fiscal labels until the fiscal-year convention is confirmed. Distinguish planning targets from approved commitments. Record the agreed start date and capacity assumptions where available.
+Milestone:
+Governed Deposits pilot
 
-4. Make semantic readiness an explicit, scoped dependency
+Business outcome:
+Validated answers, tables and charts for approved users.
 
-Maintain separate status for:
+Required evidence:
+Correctness, access controls and required pilot approvals.
 
-* Enterprise ontology, taxonomy and semantic-layer availability
-* The application Registry’s technical capability
-* Approved semantic content required for the selected Deposits pilot
+Column 3
 
-Treat the slide’s statements about unavailable ontology and incomplete taxonomy as reported status until their current scope and evidence are confirmed.
+Period:
+Q3 FY27
+May–Jul
 
-Identify the minimum approved semantic package required for the pilot: business definitions, calculations, units, grain, reporting periods, physical mappings, permitted relationships, ownership, reference answers and version/publication evidence.
+Milestone:
+Bounded production
 
-Map this work to the existing outputs, especially P01.scope, P01.reference_cases, P04.semantic_bundle, P04.bindings, P04.relationship_evidence and the relevant P02/P05/P07 outputs.
+Business outcome:
+Launch approved use cases with monitoring and support.
 
-Show which missing input blocks which activity or acceptance decision. Continue independent framework, contract and synthetic-validation work where permitted. Synthetic content must remain clearly labelled and cannot satisfy business acceptance.
+Required evidence:
+Production approval, support ownership and recovery readiness.
 
-Do not invent an exemption from enterprise requirements. If a limited approved semantic scope could support the pilot, present that route with its required approval and evidence.
+Column 4
 
-5. Resolve the reported Slide 3 versus roadmap timing ambiguity
+Period:
+Q4 FY27
+Aug–Oct
 
-Read both slides before declaring a contradiction.
+Milestone:
+Approved domain scale
 
-Determine whether they refer to the same scope or different activities, such as:
+Business outcome:
+Expand where adoption and benefits are demonstrated.
 
-* A limited Deposits pilot
-* Enterprise semantic-layer delivery
-* Broader semantic integration
-* Production qualification
+Required evidence:
+Domain approval and demonstrated reliability and value.
 
-A Q2 pilot using a limited approved semantic scope, followed by broader integration in Q3, is a possible interpretation. Adopt it only if supported by an accepted decision.
+Column 5
 
-Otherwise, label it as a proposal and identify the precise decision, accountable role and affected milestone. Complete unrelated corrections while that decision remains open.
+Period:
+FY28+
 
-6. Reconcile readiness claims, approvals and success measures
+Milestone:
+Analytics with oversight
 
-Keep documented design, verified implementation and business/control acceptance separate.
+Business outcome:
+Analyze, recommend and hand off within approved limits.
 
-Review the status strip’s claims for PoC validation, PIA, ABP, ARB, DAC, MRM and ownership individually. Record the source, date, applicable version/environment, approved scope and remaining conditions.
+Required evidence:
+Approved oversight, escalation and boundaries for any action.
 
-Preserve valid prior evidence. “Not verified by this reviewer” must not become “not implemented” or “failed.”
+Treat “Required evidence” as conditions to be satisfied, not as completed gates. Required pilot approvals must precede pilot use.
 
-Use the existing A01–A10 gates and applicable production criteria. Connect each milestone to the evidence and approval required for that scope. Creating or closing a task does not pass a gate.
+4. Make success measures apply across the roadmap
 
-Clarify that an agreed model-risk approval path is different from completed model-risk approval.
+Replace the current arrangement that places a different success measure under each quarter with one shared horizontal line beneath the timeline.
 
-Correct any implication that control readiness begins only in Q3. The Q2 governed pilot needs its applicable controls and approvals before use.
+Label:
+Success measures across all stages
 
-For answer quality, adoption, control readiness, reliability/latency and cost/value, identify the relevant stage, measurement definition, baseline, target, owner and evidence. Use “TBD — owner decision required” where targets are not approved. Do not invent numbers.
+Text:
+Answer quality • Adoption • Control readiness • Reliability and latency • Cost and value
 
-Do not change Amber to Green without supporting evidence and the appropriate decision.
+Use simple spacing or subtle separators consistent with the presentation theme. This line must make clear that controls, quality and operational performance are assessed throughout delivery.
 
-7. Define the boundary of future action
+Do not add numerical targets that are absent from the source material.
 
-Clearly distinguish:
+5. Replace the six small leadership-ask boxes with three deadline groups
 
-* Governed, bounded analytical planning and read-only execution
-* Recommendations and human hand-off
-* Actions that write to systems or change business state
+Heading:
+Leadership decisions and commitments
 
-LangGraph orchestration and LangSmith telemetry do not themselves authorize business actions.
+Use three clean, aligned groups. Preserve all six underlying requests.
 
-The FY28+ wording “analyze, recommend, hand off with oversight” does not establish approval for autonomous transactions or system writes. Clarify the intended boundary and keep any further action capability conditional on its own scope, controls and approval.
+By November 2026
 
-Retain the accepted LangGraph/LangSmith and Sources & Connection Health amendments when reconciling the plan.
+* Confirm semantic ownership and funding.
+* Approve metrics, calculation rules and data mappings.
 
-8. Make leadership asks actionable
+By December 2026
 
-For each existing leadership ask, record:
+* Confirm secure platform, source access and environment readiness.
 
-Decision or deliverable | Accountable role/person if verified | Requested date | Affected milestone | Consequence of delay | Evidence or decision needed
+By January 2027
 
-Preserve the requested dates shown in the presentation unless an accepted change supports an update. Distinguish requested dates from commitments.
+* Agree pilot scope, reference answers and acceptance criteria.
+* Commit business SMEs and delivery capacity.
+* Confirm the model-risk and control approval path.
 
-Separate funding/ownership, semantic approval, platform/source readiness, pilot scope/reference answers, SME/delivery capacity and the model-risk approval path. Do not make every ask a blocker for every activity.
+Emphasize the dates and action verbs. These remain requested decisions and commitments.
 
-9. Apply supported corrections and deliver a reviewable result
+“Confirm the approval path” must not be rewritten as “complete all approvals”.
 
-Apply evidence-supported editorial corrections to the presentation and accessible canonical documents. Keep changes to scope, commitments or approval status explicitly proposed until resolved.
+6. Keep the critical dependency visible
 
-Keep detailed mappings and evidence in speaker notes or supporting documentation so the leadership slide remains readable.
+Use one concise risk statement near the bottom:
 
-If the HTML needs updating, use its maintained source or generation workflow. Refresh embedded source content and provenance together. If regeneration is unavailable, provide an exact patch or change specification and report the HTML as pending; do not claim it was refreshed.
+Reported semantic risk: enterprise ontology unavailable and taxonomy incomplete for many products.
 
-Reuse existing Plan, output, dependency, task and Project identities. Record any planning changes needed for the existing synchronization workflow without creating duplicate work. This review does not initiate application implementation or authorize new business-action scope.
+Add a short timing qualification:
 
-Return:
+Delivery dates remain conditional on readiness, approvals and capacity.
 
-1. A corrected assessment of the previous gap report: confirmed, partially supported, contradicted or unverifiable, with exact sources.
-2. The revised leadership-slide wording and concise speaker notes.
-3. The milestone-to-deliverable crosswalk.
-4. Changes actually applied, with read-back evidence, separately from proposed patches.
-5. The remaining decisions, each with an accountable role and affected scope.
+Keep these readable. Avoid a dense paragraph in the footer.
 
-Complete all supported corrections before asking questions. Ask only for missing evidence or decisions that materially prevent the remaining work. Do not stop at another generic list of gaps.
+7. Add concise speaker notes
+
+Move the supporting detail from the existing operational rows into speaker notes. Retain the following explanations:
+
+* Semantic ownership and funding cover ontology, taxonomy and the enterprise semantic layer.
+* The pilot requires approved definitions, calculations, mappings and reference answers for its selected Deposits scope.
+* Enterprise-wide semantic completeness and an approved pilot semantic subset are separate questions. The permitted pilot scope needs an explicit business and control decision.
+* PIA, ABP and ARB completion is reported in the source slide. Applicable scope and conditions must be confirmed for each release. PoC completion does not establish production approval.
+* Control readiness applies before pilot use and continues through production and expansion.
+* Production acceptance includes monitoring, support, recovery and accountable operational ownership.
+* FY28+ currently describes analysis, recommendations and human hand-off within approved limits. Actions that change systems or business state require separately defined scope and approval.
+* Success measures apply throughout delivery. Their definitions, baselines and targets require agreement.
+* All fiscal dates remain planning targets subject to dependencies and committed delivery capacity.
+
+Keep notes useful for presenting the slide. Exclude editing instructions and technical implementation inventories.
+
+8. Apply an executive visual treatment
+
+Use a clear hierarchy:
+
+1. Title and delivery headline
+2. AMBER status and current position
+3. Five milestone columns with outcomes and required evidence
+4. Leadership decisions and deadlines
+
+Use dark green for the title and phase bands, restrained lighter green accents, and white or very light backgrounds for the roadmap body. Keep amber specific to the status indicator.
+
+Use a flat, aligned layout with thin dividers and generous spacing. Replace the heavy collection of small boxes with a coherent roadmap and three simple leadership-decision groups.
+
+Aim for approximately 250–280 visible words. Use a title around 30–34 pt and readable body text around 17–18 pt where the existing slide dimensions permit. Keep supporting labels visually subordinate.
+
+If the slide is crowded, shorten repeated labels and move supporting explanation into notes while preserving the specified decisions, dates, conditions and risks.
+
+Keep fiscal labels exactly as supplied. Preserve the distinction between planned delivery, reported completion and required approvals. Do not introduce new features, named owners, budgets or delivery commitments.
+
+9. Finish the edit
+
+Apply these changes to the selected slide and show the revised slide.
+
+Inspect it at presentation size for text wrapping, alignment, contrast and spacing. Ensure the five columns align, the phase bands span the correct periods, and the January decisions remain readable.
+
+The finished slide should let an executive identify the Q2 pilot target, the open dependencies and the leadership decisions within a few seconds.
