@@ -1,26 +1,3 @@
-Continue the CLUE investigation using the newly available 1.1.9 package comparison. Do not restart the full investigation.
-
-The two local trees are:
-A. The repository’s Deliverables directory.
-B. C:\Users\tag5916\Downloads\clue-code-1.1.9.tar 2
-
-The comparison reports 11 changed files, 75 additional generated cache files in A, and one additional release-notes file in B. The displayed diffs explicitly run A → B and show B changing versions to 1.1.9. Your initial summary appears to reverse that direction; verify and correct it.
-
-Production reports version 1.1.9. The operator also confirmed that /app/clue/RELEASE_REVISION.json does not exist at that exact path. Neither fact alone establishes the running source identity.
-
-Please complete this focused, read-only pass:
-
-1. Compare the actual application source in A and B by relative path and SHA-256. Explicitly check app.py, zip_delivery.py, batch.py, state.py, control.py, domain.py, and retrieval.py. Report added or removed source files too. For retrieval.py, verify the claimed whitespace-only change using a parsed AST comparison without importing or running CLUE. Clearly distinguish byte equality from AST equality.
-2. Using B, revalidate only the existing findings relevant to this incident:
-    * Held work falling through to misleading failure-reporting defaults.
-    * Staged versus single-pass attempt ledgers.
-    * Unchanged held deliveries generating fresh timestamped artifacts.
-    * Existing digest checks preventing redundant external byte copies.
-    * Unknown outcomes remaining held without automatic resubmission.
-
-Give current file/function references and a compact verdict for each: unchanged, changed, or not established. Preserve the corrections: 0/0 does not establish failure origin, and members_published_this_run does not prove files were copied.
-
-3. Inspect B’s release builder, installer, and launcher to determine where release metadata and application source are expected to be installed. Explain whether the missing receipt at /app/clue is consistent with that layout. Do not infer a defective installation from this missing path alone. Provide only the next short, read-only operator command needed to verify the actual installation location; avoid another large SQL or diagnostic script.
-4. If the relevant processing logic matches, carry the applicable findings forward to package B and propose the smallest artifact-reuse correction against that source. Keep reporting corrections separate from reconciliation of the five existing held items. Production identity remains unverified until server evidence matches; it should not prevent analysis of the available package.
-
-Do not edit source, rebuild or install packages, change databases, resubmit provider work, or rename/delete ZIPs. Keep the result concise enough to share in screenshots.
+for f in __init__ app zip_delivery batch state control domain retrieval; do
+  sha256sum "/app/clue/src/clue/$f.py"
+done
