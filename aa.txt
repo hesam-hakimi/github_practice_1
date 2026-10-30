@@ -1,15 +1,24 @@
-/app/clue/.venv/bin/python -I -S -B - <<'PY'
-import ast
-import hashlib
-import sys
-from pathlib import Path
+Important correction: the earlier 7/8 hash comparison came from DEV, not PROD. The newly supplied PROD results match package B for all eight inspected files, including control.py.
 
-source = Path("/app/clue/src/clue/control.py").read_text(
-    encoding="utf-8-sig"
-)
-tree = ast.dump(ast.parse(source), include_attributes=False)
+Update the evidence record accordingly. Close the control.py mismatch investigation for PROD. Do not repeat hash comparisons, AST checks, or the UI change-counter investigation.
 
-print("PYTHON:", sys.version.split()[0])
-print("UTF8_LF_SHA256:", hashlib.sha256(source.encode("utf-8")).hexdigest())
-print("AST_SHA256:", hashlib.sha256(tree.encode("utf-8")).hexdigest())
-PY
+Continue toward the five held deliveries:
+
+1. Use the production run summary’s recorded configuration source and the inspected configuration precedence to resolve the relevant workspace. Clearly distinguish a configured path from a verified effective path; do not guess.
+2. Prepare one bounded, read-only operator diagnostic block that:
+    * Opens existing databases in read-only mode without importing application startup code or running migrations.
+    * Inspects the actual schema and then queries only columns that exist.
+    * Reports the total held-work count and up to 20 blocking records.
+    * Includes opaque work/item IDs, operation, persisted state, failure_class, failure_code, staged-mode attempt count, and available provider/result correlation-reference presence.
+    * Reports missing fields as unavailable, without substituting reporting defaults.
+    * Avoids customer names, payloads, credentials, and broad database dumps.
+
+Use the existing read-only diagnostic tooling if it already supplies this evidence. Associate the records with the five deliveries where the available identifiers permit it; do not assume every held record belongs to this incident.
+
+3. Explain briefly what the resulting records can establish and what would still require the original transition log or provider outcome evidence. Do not treat updated_at or hold_observed_at as the original hold time.
+
+A directory listing of site-packages does not prove import precedence. Keep any remaining launch-path uncertainty explicit without restarting the source audit.
+
+No code changes, database writes, recovery actions, provider submissions, ZIP changes, or deployment. Keep artifact-reuse changes separate from determining the outcome of existing held work.
+
+Return only the corrected PROD conclusion and the next diagnostic block, ready for the owner to execute on PROD.
