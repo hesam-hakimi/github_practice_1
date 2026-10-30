@@ -1,17 +1,15 @@
-Continue from the completed A/B comparison. Do not repeat the full investigation.
+/app/clue/.venv/bin/python -I -S -B - <<'PY'
+import ast
+import hashlib
+import sys
+from pathlib import Path
 
-1. Compare the supplied server SHA-256 values against the corresponding files in package B:
-    C:\Users\tag5916\Downloads\clue-code-1.1.9.tar 2
+source = Path("/app/clue/src/clue/control.py").read_text(
+    encoding="utf-8-sig"
+)
+tree = ast.dump(ast.parse(source), include_attributes=False)
 
-Compare all 64 hexadecimal characters, not abbreviated hashes. Report a compact match/mismatch table. Distinguish matching installed files from proof that the production launcher actually uses that location.
-
-2. Resolve the discrepancy between “nothing edited” and the UI showing “4 files changed +166 -2.” Inspect git status, staged/unstaged diffs, and available session edit history. Identify the affected files and distinguish pre-existing changes from changes made during this investigation where evidence permits. Do not reset, revert, or overwrite anything.
-3. Move the investigation toward the five existing held items. We need their persisted work IDs, operations, failure classes/codes, actual attempt counts from the correct ledger, and available provider correlation evidence.
-
-Prepare the next SHORT read-only operator command using the inspected 1.1.9 launcher/configuration and database schema. If the active workspace or production schema remains unverified, make the next command establish those facts first; do not issue SQL against assumed paths or columns. Avoid customer names, payloads, secrets, and broad database dumps.
-
-Do not interpret reporting defaults as persisted failures, zero fallback counts as proof of no provider call, or updated_at/hold_observed_at as the original hold timestamp.
-
-Keep the artifact-reuse proposal separate from recovery of existing held work. No source edits, database changes, provider resubmission, ZIP removal/renaming, or deployment in this pass.
-
-Return only: hash comparison, explanation of the four changed files, and the next short operator command with what its output will establish.
+print("PYTHON:", sys.version.split()[0])
+print("UTF8_LF_SHA256:", hashlib.sha256(source.encode("utf-8")).hexdigest())
+print("AST_SHA256:", hashlib.sha256(tree.encode("utf-8")).hexdigest())
+PY
