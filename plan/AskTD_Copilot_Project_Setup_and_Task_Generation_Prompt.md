@@ -1,6 +1,7 @@
 # AskTD — Copilot task, issue and Project setup prompt
 
-Prepared: 23 October 2026 (UTC)  
+Prepared: 23 October 2026 (UTC)
+Amended: 26 October 2026 (America/Toronto), scoped LangGraph/LangSmith planning direction.\
 Purpose: turn the reconciled delivery plan into assignable GitHub work and maintainable project visibility. This is the canonical execution prompt for planning synchronization in this package. Reading it does not execute it.
 
 ## How to use
@@ -39,6 +40,9 @@ Read the current local versions below. Resolve these paths relative to this pack
 6. The maintained `MASTER_PLAN_V1(2).md` revision 2.1 proposed, `AskTD_Delivery_Plans_and_Dependencies.md` v0.2, and their available successors.
 7. `AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md`, or an accepted successor, as a review containing proposed corrections—not an adopted replacement Master.
 8. `AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md` for the English product and delivery explanation.
+9. `ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md` for the accepted technology selection, required telemetry and proposed task-level migration decomposition.
+
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
 
 Also inspect repository instructions, the operative application Master, ADRs, task/status indexes, newer Master candidates, relevant source/CI/deployment evidence, open and closed issues/PRs, Project fields/views, labels/milestones and earlier generation/sync reports. Do not assume a prior generation prompt was never run.
 
@@ -54,6 +58,14 @@ If a source or target is unavailable, complete independent portable planning wor
 - SQL and Databricks Registry bindings, compatible application authorization, execution contracts and readiness are baseline scope across P01/P02/P04/P05/P07. P15 covers further expansion.
 - Retain App Service SQL system-assigned managed identity and application-enforced end-user authorization. Qualify actual Databricks identity/connector and each provider/environment separately.
 - Preserve historical successful login and SQL identity validation. Reopen only where current regression evidence warrants it. Missing access or a 404 does not establish failure.
+
+### 3.1 Include the owner-selected migration
+
+The owner selected LangGraph primarily for future complex analytical graphs and made LangSmith telemetry mandatory. Carry the scoped amendment into P05/P06/P07 and relevant task acceptance; it supersedes earlier preserve-framework-only/exclusion wording only for this migration. Preserve the full proposed-Master adoption boundary.
+
+Match the migration plan's MIG-01–MIG-08 candidates against existing team Tasks/PRs before allocating canonical IDs. They are local reconciliation keys, not existing issues or new outputs. Retain one accountable Plan per Task, exact existing named outputs, H/C/G dependencies, owner/reviewer roles and evidence. Separate the early P07 event/adapter contract from later integrated qualification. Do not make P05 and P07 whole-Plan mutual blockers or mark unqualified Tasks Ready.
+
+Required acceptance includes a behavior-preserving path, bounded complex-graph proof, state/isolation/resume checks, payload-safe telemetry and actual LangSmith ingestion/read-back for environment qualification. An alternate sink or mocked exporter cannot mark mandatory LangSmith complete. This remains a planning task; do not implement, transmit telemetry, change credentials/settings, assign a coding agent or deploy.
 
 ### 4. Resolve the product-coverage findings
 

@@ -1,5 +1,6 @@
 # AskTD framework development continuation
 Prepared: 22 October 2026 (America/Toronto)
+Amended: 26 October 2026 for the owner-selected LangGraph migration and mandatory LangSmith telemetry.
 Status: Prepared implementation brief; no application implementation or test result is claimed by this file.
 Audience: The coding agent in the existing connected AskTD application session.
 Activation: This implementation task applies only when explicitly submitted. Reading it from the planning package does not authorize code changes. Planning synchronization uses [AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md).
@@ -37,6 +38,9 @@ Read the current repository-local documentation package beside this file. Its in
 7. MASTER_PLAN_V1(2).md and AskTD_Delivery_Plans_and_Dependencies.md
 8. AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md
 9. AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md.
+10. ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md, including current team-work reconciliation, staged migration and task-level dependencies.
+
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
 
 The maintained MASTER_PLAN_V1(2).md revision 2.1 is proposed until reconciled with the operative Master and any newer candidate. The portfolio v0.2 and English guide v0.3 are supporting references. Coverage recommendations remain proposed; they do not authorize new outputs, business policy or implementation scope without the applicable decision. The package does not establish the current application revision or deployment.
 
@@ -46,7 +50,8 @@ Reading saved prompts does not execute them. This continuation brief supplies an
 
 ## 2. Preserve accepted behavior
 
-- Retain the existing framework, hosting boundary, source organization and supported APIs. Do not migrate orchestration or add infrastructure solely because a diagram names it.
+- Apply the owner-selected LangGraph migration within ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md. Preserve the hosting boundary, supported APIs, working behavior, controls and reusable application services. Reconcile the team's current migration before implementing only remaining work. Diagram labels do not authorize unrelated infrastructure or framework changes.
+- LangSmith telemetry collection is mandatory for the migrated scope. Establish the permitted event/export contract early; mock/synthetic evidence supports development but does not replace actual qualified ingestion. Keep audit and metering obligations distinct. This implementation template still does not authorize live telemetry transmission or environment changes.
 - Preserve successful historical login and SQL identity validation. Reopen only when current evidence shows a relevant gap or regression.
 - Preserve App Service SQL system-assigned managed identity and application-enforced end-user authorization. Native workload grants remain required. Qualify Databricks identity and connector separately.
 - SQL and Databricks Registry bindings, compatible authorization, execution contracts and readiness are baseline P01/P02/P04/P05/P07 scope. P15 is further expansion.
@@ -82,6 +87,8 @@ These are contributing outputs, not whole-Plan completion claims. Keep P03.polic
 
 The first integrated slice is owned by P05, contributing to P05.analysis_contract, P05.adapter_behavior, P05.result_contract, P05.curated_templates and P05.correctness_evidence. Link contributing P02/P04/P06/P07 outputs to their existing canonical tasks; do not assign several accountable Plans to one task or mark the whole of P05 complete from this slice.
 
+Use the migration plan's staged sequence and existing canonical Tasks. A node may be deterministic; retain selective approved model assistance. Define graph/state versions, node input/output contracts, conditional edges, explicit validation and safe termination. Include bounded synthetic complex-graph and interruption/resume evidence before claiming the migration supports future complexity.
+
 Start with a representative synthetic comparison of two reporting periods. Use fictional data and neutral names; label the dataset and displayed results as synthetic. Keep an independently calculated expected answer.
 
 Reuse existing intake and storage patterns. Do not invent a new configuration format when an adequate contract already exists. At minimum, support the required fields for logical metric/dataset/field IDs, units, grain, periods/time semantics, dimensions, recipe references, versions, provenance, provider bindings and output context. Represent unavailable business decisions as pending, not as fake approvals or permissive defaults.
@@ -94,7 +101,8 @@ Demonstrate:
 - Normalize and validate returned data.
 - Render a deterministic answer/table with metric, units, periods, filters, source, data-as-of and versions.
 - Handle one compatible follow-up with current access rechecked.
-- Emit safe correlation and usage/failure evidence.
+- Emit safe correlation and usage/failure evidence through the required LangSmith adapter using a test double unless real transmission is separately authorized and qualified.
+- Prove conditional routing, independent branch/join behavior, bounded recovery and access-checked resume using synthetic fixtures as specified by the migration plan; this does not activate new business scope.
 
 Exercise the real application boundaries with test doubles where needed. Preserve production authentication; test principals belong only in the existing test harness or an explicit local-only demonstration configuration. Do not introduce an unauthenticated production demo route.
 
@@ -152,5 +160,5 @@ Report:
 
 If application access is unavailable, return a compact current-session report instead: repository URL, root, branch/HEAD, worktree summary, operative Master revision/path, newer Master candidate if any, current task and relevant PR states, existing implementation/test evidence, and exact inaccessible sources. Do not include credentials, tokens or banking data.
 
-Do not claim the framework, pilot or production is complete unless its corresponding evidence exists.
+For migrated scope also report graph/state version, existing team Task/PR reuse, parity/complex-graph evidence, LangSmith adapter versus real-ingestion status, pending environment decisions and rollback readiness. Do not claim the framework, migration, LangSmith qualification, pilot or production is complete unless its corresponding evidence exists.
 

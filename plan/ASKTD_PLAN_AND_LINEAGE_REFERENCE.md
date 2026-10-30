@@ -4,10 +4,14 @@
 **Version:** 0.4  
 **Prepared:** 21 October 2026, America/Toronto  
 **Updated:** 22 October 2026, America/Toronto  
-**Package edition:** 23 October 2026; portable references only. The proposed mapping, version and substantive decisions are unchanged.  
+**Package edition:** 26 October 2026; v0.4 baseline plus the scoped LangGraph/LangSmith owner amendment. The 46-output register and existing 25 portfolio dependencies are unchanged.\
 **Language:** English  
 **Purpose:** Give GitHub Copilot a self-contained reference for generating coherent planning artifacts, with traceability from the Master Plan to engineering phases, delivery plans, named outputs, tasks, evidence and releases.  
 **Status:** Owner-requested planning reference. The delivery crosswalk is proposed until reconciled with the operative repository records. This file does not establish implementation, merge, deployment, approval or release status.
+
+## 26 October 2026 technology amendment
+
+Apply the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md): LangGraph is selected for future complex graphs, and LangSmith telemetry is mandatory for migrated scope. Its task-level dependency candidates use existing P05/P06/P07 outputs and supplement the portfolio dependency register. Reconcile current team Tasks/ADRs before creating work; the amendment neither adopts the full proposed Master nor creates new Plan/output IDs.
 
 ## 1. How to use this reference
 
@@ -324,13 +328,15 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P02.scope_contract, P02.sql_route, P02.databricks_route, P02.enforcement_evidence.
 
-**Work:** Define logical resources, actions, row/dimension scope and column restrictions. Map these to qualified provider behavior. Record identity, native grants, network, connection and denial evidence separately. Preserve current login and proven guards.
+**Work:** Define logical resources, actions, row/dimension scope and column restrictions. Map these to qualified provider behavior. Record identity, native grants, network, connection and denial evidence separately. Supply protected, scope-safe diagnostic contracts for the P07 Sources & Connection Health UI, using the actual provider/runtime route. Preserve current login and proven guards.
 
 **Inputs:** P01.scope/provider_coverage; approved grant authority and source treatment. Agree the logical resource/binding contract jointly with P04; this is not a circular completion dependency.
 
-**Acceptance:** Allowed and denied paths, unresolved scope, revocation, missing workload grants and concurrent-user isolation have appropriate evidence. Changing provider cannot widen access or substitute an unqualified route.
+**Acceptance:** Allowed and denied paths, unresolved scope, revocation, missing workload grants and concurrent-user isolation have appropriate evidence. Changing provider cannot widen access or substitute an unqualified route. Diagnostic viewing/probing is server-authorized; denied or unresolved probe permission produces zero protected source attempts. Distinguish configured identity from observed authentication and native grants.
 
 **Lead:** Backend/integrations with IAM, platform/data owners and QA. Provider-user ACL replication and unrelated identity migration are excluded.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §§3–7 defines the requested P07 interface and P02 contracts. Reconcile actual components before generating CONN candidates; these aliases create no new Plan/output IDs.
 
 ### 6.3 P03 — Recipe policy and lifecycle disposition
 
@@ -364,6 +370,9 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Lead:** Product/semantics and engineering with business/data owners and QA. A competing enterprise catalog or mass onboarding is outside the first slice.
 
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §6 uses selected P04.bindings for safe source/environment/probe references; full Registry completion is not required.
+
+
 ### 6.5 P05 — Validated answers through both execution routes
 
 **Outcome:** An authorized question produces a correct, bounded, contextualized answer or a supported safe failure.
@@ -372,13 +381,16 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P05.analysis_contract, P05.result_contract, P05.adapter_behavior, P05.curated_templates, P05.correctness_evidence.
 
-**Work:** Integrate approved semantics/recipes, current permissions, provider-aware validation, bounded execution and explicit presentation. Preserve established frameworks and relevant model-helper boundaries.
+**Work:** Integrate approved semantics/recipes, current permissions, provider-aware validation, bounded execution and explicit presentation. Implement the owner-selected LangGraph migration through versioned node/state/edge contracts while preserving existing controls, provider contracts and relevant model-helper boundaries. Use the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for staged parity and complex-graph evidence; framework selection does not authorize unrelated product expansion.
 
 **Inputs:** Selected P04 bundle/bindings, P02 scope/source contracts, P01 reference cases and P07 event contract. New P03 enforcement applies only to a route that adopts it.
 
 **Acceptance:** Verify provider dialect/parameters/types/null/date behavior and execution bounds against comparable cases. The result preserves values, signs, units, periods, grain, user scope, warnings, versions, source/binding and freshness. Model-assisted presentation requires its own approved payload/behavior. Unsupported operations fail safely.
 
 **Lead:** Backend and UX with semantics, QA and relevant model/security owners. Full authoring UI, scheduling and a new cache platform are outside this Plan.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) §6 reuses selected P05.adapter_behavior for bounded read-only probes, safe errors, cancellation and timeout; no full graph cutover prerequisite.
+
 
 ### 6.6 P06 — Clarification and bounded session follow-ups
 
@@ -388,7 +400,7 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P06.context_contract, P06.followup_behavior, P06.context_evidence.
 
-**Work:** Keep application-owned metric/recipe versions, periods, filters, units, grouping, source/binding references and clarification state. Handle topic changes and concurrent sessions.
+**Work:** Keep application-owned metric/recipe versions, periods, filters, units, grouping, source/binding references and clarification state. Handle topic changes and concurrent sessions. For the selected LangGraph route, specify interruption/resume, reauthorization, state-version compatibility and checkpoint isolation/retention; execution checkpoints do not create P08 saved-history scope.
 
 **Inputs:** P04 identities, P05 analysis/result contracts, P02 current-access behavior and P07 event contract.
 
@@ -404,11 +416,15 @@ All Plans below define intended outcomes. Their current implementation status is
 
 **Named outputs:** P07.event_contract, P07.metering, P07.support_contract, P07.feedback, P07.provider_readiness, P07.acceptance_bundle.
 
-**Work:** Define safe audit, trace and usage events early. Reuse the actual model-call inventory and qualified evidence. Record actual attempts and available costs, failure categories, support references, runbooks and accountable acceptance owners. Provide a safe way to report an inaccurate answer, with permitted answer/run correlation, controlled access and a clear review/support route; P07.feedback supplies that bounded feedback contract and evidence.
+**Work:** Define safe audit, trace and usage events early. Reuse the actual model-call inventory and qualified evidence. Record actual attempts and available costs, failure categories, support references, runbooks and accountable acceptance owners. Provide a safe way to report an inaccurate answer, with permitted answer/run correlation, controlled access and a clear review/support route; P07.feedback supplies that bounded feedback contract and evidence. P07.support_contract also owns the authorized Sources & Connection Health UI, with safe observations under P07.event_contract and separate provider/environment qualification under P07.provider_readiness.
 
 **Inputs:** P01 scope/acceptance owners and P02 access design for early contracts. Actual observations from P02/P05/P06 for integrated evidence. Applicable enterprise decisions remain explicit.
 
-**Acceptance:** Distinguish design, implementation, adapter verification and environment qualification per provider. Missing metering is unknown, not zero. Targets come from the agreed workload. Record scope, exceptions and decision evidence.
+**Acceptance:** Distinguish design, implementation, adapter verification and environment qualification per provider. Missing metering is unknown, not zero. Targets come from the agreed workload. Record scope, exceptions and decision evidence. An authorized operator can inspect source/runtime/authentication details and run an approved diagnostic through the UI; distinguish denial, outage, stale/unknown observations and checker failure without promoting evidence maturity.
+
+**LangSmith requirement:** Required collection covers eligible migrated graph/node/model/tool transitions and actual attempts. Follow the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) §5 for payload minimization, trace read-back, collection health, failure behavior and environment qualification. Keep audit and authoritative usage records distinct. An SDK, mock exporter or alternate sink does not complete this requirement.
+
+**Connection diagnostics:** [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) owns the detailed acceptance matrix and CONN task candidates under existing P02/P07 outputs. Minimum visibility is R1 scope; advanced P10 administration is not a prerequisite. LangSmith collection health remains a separate signal.
 
 **Lead:** QA/operations with engineering and relevant decision owners. Synthetic demonstration, pilot, Broad Beta and production are separate acceptance scopes.
 
@@ -666,7 +682,7 @@ This is proposed Plan coverage of the Master's Appendix B. Preserve the existing
 | D12 MRM/call inventory | §8.2 | P07 inventory/evidence and P05 model boundaries; external decision owner remains explicit |
 | D13 Conditional integrations | §§3.2, 4.2, 9.1 | P15; preserve neutral P02/P04/P05 baseline interfaces |
 | D14 Operating ownership/economics | §§8.4–8.5, 11, 13 | P07/P10 and feature-specific operations such as P12 |
-| D15 Framework/gateway | §§4.2, 8.2 | P05 preserves established framework and qualifies relevant helpers; no implied migration |
+| D15 Framework/gateway | §§4.2, 8.2; 26 October amendment | P05 owns the explicitly selected LangGraph migration; P07 owns required LangSmith telemetry. Preserve current controls and qualify relevant helpers; no unrelated migration is implied |
 | D16 Streaming/optional ingestion | §§3.2, 4.2 | P05 complete-response contract; P15 only for explicitly selected optional ingestion |
 | D17 Protected API/storage roles | §§4.2–4.3, 8.1 | P02/P05 protected backend; P07 evidence stores; P08/P12 stores when enabled |
 | D18 Payload/history qualification | §§3.5, 8.2–8.3, 14.2 | P05 input/error/result/output/renderer, P06 context, P08 history and P07 traces |
@@ -881,6 +897,7 @@ The platform constraints above retain the 21 October planning assumptions. Verif
 | 0.2 guide | Added beginner explanation and explicit SQL/Databricks Registry/access baseline |
 | 0.3 reference | Adds full original-phase and detailed-2F crosswalk, mapping classifications, named output lineage, delta/gate coverage, task contract and Copilot/GitHub artifact contract |
 | 0.4 continuity | Adds source/repository roles, continuation entry point, historical login evidence, executive namespace and legacy-alias transition; aligns current Master, portfolio, guides and product-document revisions |
+| 26 October 2026 scoped amendment | Records LangGraph and mandatory LangSmith under existing P05/P06/P07 outputs; keeps the output and portfolio dependency registers intact and adds linked task-level migration dependencies |
 
 This version is a handoff reference. Adoption, exact repository anchors and current implementation evidence must be recorded by the connected engineering session.
 

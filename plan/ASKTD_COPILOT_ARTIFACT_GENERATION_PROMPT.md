@@ -2,7 +2,7 @@
 
 **Version:** 0.4  
 **Prepared:** 21 October 2026  
-**Updated:** 22 October 2026  
+**Updated:** 26 October 2026; v0.4 baseline plus scoped migration amendment\
 **Companion:** [ASKTD_PLAN_AND_LINEAGE_REFERENCE.md](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md), document ID ASKTD-PLAN-LINEAGE-REF, version 0.4.
 **Package role:** Detailed generation specification. For the current task, issue and Project setup workflow, submit [AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md). Read this specification as a supporting reference; do not run both prompts as separate synchronization jobs.
 
@@ -52,6 +52,10 @@ Classify each requirement/output as satisfied, partially satisfied, missing, unk
 
 Use the repository selected for this session if it is clearly the application target. If the repository or Project remains ambiguous, finish the portable artifact package and exact pending operations, then ask only for the unresolved target. Do not publish into a guessed repository or create a second competing Project. Reuse the relevant Project when available; if none exists, prepare its proposed configuration and report the missing target/capability.
 
+Read ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md as the 26 October owner direction: LangGraph is selected for future complex graphs and LangSmith telemetry is mandatory. Reconcile current migration Tasks/ADRs/PRs and use its task-level candidates only after duplicate matching. They add no Plan/output IDs. Preserve current controls and the proposed Master's adoption status.
+
+Also read ASKTD_SOURCE_CONNECTION_HEALTH_UI.md as the 26 October owner-requested UI capability. Preserve existing P02/P07 ownership, scoped P04/P05 inputs, R1 visibility and the 46-output register. Reconcile CONN-01–CONN-05 against current components/Tasks/PRs before allocating canonical work. Probe success, operational health, evidence maturity and required LangSmith collection remain separate. This reference does not expand this template’s activation/authorization scope or authorize live probes, credential changes or production actions.
+
 ### Step 2 — Preserve the planning and architecture decisions
 
 Apply these rules from the reference:
@@ -64,6 +68,7 @@ Apply these rules from the reference:
 - Every actionable Task has one canonical identity and accountable Plan parent. Additional phases, Plans, requirements and releases are links, not duplicate Task issues.
 - Use required-output, shared-contract, acceptance-gate and conditional relationships as defined in Section 7. Create a native blocker only for a genuine unmet prerequisite of the specific consumer activity. Preserve conditions and scope.
 - Keep P07's early event/support contracts separate from later integrated acceptance evidence. Include its safe answer-feedback output. Do not invent whole-Plan circular dependencies.
+- Include the scoped LangGraph migration under P05, context/resume under P06 and required LangSmith collection under P07. Carry parity, bounded complex-graph, isolation/replay, safe export and actual ingestion/read-back acceptance into matched Tasks. Mock or alternative telemetry cannot close LangSmith qualification. This planning prompt does not authorize application implementation or live transmission.
 
 ### Step 3 — Generate the complete artifact package
 

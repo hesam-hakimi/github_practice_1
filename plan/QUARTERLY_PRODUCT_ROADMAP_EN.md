@@ -43,6 +43,8 @@ End-user access remains enforced in the application. Preserve the App Service SQ
 
 From the pilot’s first day, operations can see request volume, response times, failures, model and query usage where measurable, and estimated operating cost.
 
+The 26 October owner amendment adds the minimum Sources & Connection Health interface in R1. An authorized operator can inspect permitted sources/environments and authentication mode, run a bounded protected diagnostic, and distinguish connectivity, native-grant, user-access and stale/unknown outcomes without manual backend checks. Follow [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md); full P10 administration and complete graph migration are not prerequisites. A successful probe is not source/business/release qualification.
+
 Users can report an incorrect or unhelpful answer. Support receives a correlation reference rather than relying on screenshots of internal errors.
 
 ### End-of-quarter demonstration
@@ -52,6 +54,8 @@ A manager asks for September’s deposit balance compared with August, then requ
 The same request from a user without the required access is denied without disclosing protected information.
 
 An administrator can find the request, its outcome, elapsed time, and available cost information.
+
+The administrator also demonstrates a permitted source check and safe denied/unavailable cases through the UI, with observation time and support reference. Use labelled synthetic fixtures until the actual environment can supply live evidence.
 
 ### Release acceptance
 
