@@ -1,82 +1,57 @@
-Continue the same CLUE investigation using your latest validation report, the two newly supplied run logs (18:31 and 21:47), and the earlier firstrun.txt / lastrun.txt.
+Continue from your latest report. Preserve the corrections you made: zero-attempt fallback fields do not establish failure origin, and members_published_this_run does not prove external byte copies.
 
-Reuse your completed analysis. The previous proposed prompt was not executed; this prompt replaces it.
+The next task is to close the specific evidence gaps before selecting the implementation base. Reuse the completed investigation; do not repeat a broad audit.
 
-This is a focused investigation and correction-plan task. Preserve the worktree and operational data. Do not modify application code/configuration, reset databases, move input/output files, run recovery, contact providers, or change AutoSys settings. Do not run a broad test suite.
+Keep application source, configuration, operational databases, input/output files, and scheduler settings unchanged. No live provider calls, recovery execution, deployment, or full-suite run.
 
-First record the inspected branch/HEAD and relevant local changes. Identify which deployed version produced the logs where evidence permits. Mark any source/deployment mismatch or unknown explicitly.
+1. Establish the running source identity.
 
-1. Trace the zero-attempt failure records to their actual origin.
+The logs report 1.1.9 and the inspected checkout is 61314d2 with 1.1.8-era documentation. Version labels alone do not prove a source mismatch.
 
-Investigate:
-failure_class=“unclassified”
-code=“PROCESSING_FAILED”
-attempts_used=0
-max_attempts=0
-
-Trace these fields from the original exception or persisted work record through classification and report serialization.
-
-Determine whether zero means:
-
-* a confirmed failure before any provider attempt;
-* missing/defaulted reporting metadata;
-* attempts recorded elsewhere;
-* historical state lacking those fields;
-* or another demonstrated cause.
-
-Start with one representative failure and then determine which other failures share that exact path. Keep run-level counters separate from delivery/work-item counters.
-
-Do not conclude “internal CLUE defect” merely from zero counters. Likewise, successful HTTP 200 responses for other requests do not establish the cause of the failed items. HTTP status alone does not establish a terminal business outcome.
-
-2. Establish why the five deliveries are held.
-
-Distinguish actual persisted HELD_UNKNOWN work from a generic unresolved label produced by aggregation or reporting.
-
-For each delivery, use a short alias and identify:
-
-* Blocking work-item ID, operation/stage, and persisted state.
-* Original transition into that state, with timestamp and exception/cause if available.
-* Recorded attempts, provider job references, and evidence paths.
-* Whether existing reconciliation applies and whether it was attempted.
-* What remains unknown.
-
-Inspect retained state and existing evidence read-only using the existing supported inspection method. Do not initialize/migrate a database through application startup.
-
-If the original cause was never persisted, state that explicitly. Identify the smallest diagnostic addition needed to capture it in an isolated future reproduction. Do not invent historical causes or automatically resubmit held work.
-
-3. Verify the lifecycle effects without restoring withdrawn claims.
-
-Trace why unchanged held deliveries remain claimable and re-ingest rows or rebuild workbooks.
+Use available release/build metadata, deployment receipts, launcher/interpreter paths, and installed source hashes to identify the actual executed artifact. Compare the relevant installed modules with the inspected source: app, zip_delivery, retrieval, state, control, and domain.
 
 Separate:
 
-* Input rereading.
-* Internal package/manifest acknowledgement.
-* Artifact regeneration.
-* External output copying.
-* New provider requests.
+* Proven code differences.
+* Metadata-only version differences.
+* Unverified correspondence.
 
-The internal output.published ACK is not proof of external publication. Treat “30 outputs republished” as unverified unless the actual publication path and available execution evidence support it.
+Inspect existing repository history and release references as needed. Do not switch/reset the worktree or silently select main. Do not execute application startup to discover its identity.
 
-Check whether repeated artifact creation and external copying have separate causes. Explain the ZIP-name collision using delivery identity and retained bytes, without proposing deletion or renaming as a shortcut.
+2. Obtain the actual blocking state.
 
-For backlog_oldest, distinguish original first-held time from last-observed time. If original age cannot be recovered, report it as unknown.
+If existing authorized host access is available, inspect the effective application and ZIP-inventory databases read-only. Resolve their paths from the actual launcher/configuration; do not assume a default directory is active.
 
-4. Return the smallest justified correction plan.
+Verify recovery_census.py is genuinely read-only before using it; its filename or a proposed flag is insufficient.
 
-Separate:
+For each blocked delivery, report a short alias and:
 
-* Confirmed code defects.
-* Missing diagnostics.
-* Reconciliation of existing operational items.
+* Blocking work-item ID, operation, and persisted state.
+* Persisted failure class/code and available original error.
+* Attempts from the ledger actually used by that execution mode.
+* Existing provider job reference and available evidence.
+* Earliest reliable transition evidence, or UNKNOWN.
+* Whether a supported reconciliation route exists.
 
-Preserve the distinction between confirmed exhausted provider-content failures and genuinely ambiguous submissions. Never turn unresolved technical work into success or repeat a possibly accepted submission.
+Inspect available earlier logs around the original transition. Do not infer the cause from an absent event, generic unresolved label, or zero reporting default. Do not fabricate historical first-held timestamps.
 
-List only the focused tests necessary for the proposed fixes, including unchanged rerun/restart, no duplicate submission/publication, stable artifact reuse, and continued ability to reconcile held work.
+3. If host access is unavailable, provide the owner handoff now.
 
-Return three compact sections suitable for screenshots:
-A. What is proven, corrected, and still unknown.
-B. Actual failure/state-transition paths, with file:line and short log/state evidence.
-C. Minimal corrective plan and any specific missing evidence.
+Return one minimal, complete copy/paste block of read-only commands for the normal CLUE runtime account. It should collect source identity and the blocking-state evidence above.
 
-Use short numbered items, no wide tables or diagrams, and no customer names. Clearly separate direct evidence from inference. Do not claim any fix or deployment has been completed.
+Derive paths and SQL from inspected configuration/schema where possible. Where a path or schema cannot be established safely, stop that specific check with a clear message rather than guessing. Do not request a database upload or expose credentials, customer names, or payload contents.
+
+4. Complete the corrective plan.
+
+Your proposed rerun test requires no new artifacts, but the plan does not yet identify the production change that prevents unconditional build_package calls for unchanged held work.
+
+Identify the smallest correction for that path, preserving legitimate progress, supported reconciliation, stable artifact reuse, and publication/archive protections. Do not simply exclude every HELD member from all processing.
+
+Keep reporting corrections separate: accurate held status, mode-correct attempt counts, explicit missing metadata, and first-held versus last-observed timestamps. These changes alone do not resolve existing held work.
+
+Return:
+A. Running-source correspondence and remaining uncertainty.
+B. Blocking-state evidence, or the exact owner command block.
+C. Minimal proposed code changes, including artifact regeneration.
+
+Use short screenshot-friendly sections. Clearly label local-code findings versus production-confirmed facts. No fixes or operational reconciliation are authorized in this pass.
