@@ -1,14 +1,19 @@
 # AskTD — Continue planning synchronization and team allocation
 
-**Version:** 1.0\
+**Version:** 1.1\
 **Prepared:** 27 October 2026 (America/Toronto)\
+**Updated:** 30 October 2026; tracker synchronization paused\
 **Purpose:** resume the existing planning run, reconcile the latest owner amendments and populate actionable team work without duplicating the Project or accepted work.
 
 This is a continuation wrapper for [the canonical Project setup and task-generation prompt](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md), not a second generator or planning authority. Reading this file does not execute it. Submit it explicitly in the connected application-repository session.
 
+## Current pause and authorization boundary
+
+GitHub Projects and Jira synchronization are paused by the owner. This wrapper remains a reference; reading it, the launcher or its embedded authorization wording does not resume either destination. The [handoff](ASKTD_SESSION_HANDOFF.md), [new-session prompt](ASKTD_NEW_SESSION_PROMPT.md) and [Excel reference](ASKTD_EXCEL_DELIVERY_CONTROL_REFERENCE.md) govern current continuity. Finish authorized local planning independently. Remote mutations require a new live owner instruction explicitly resuming the affected synchronization scope.
+
 ## Before submitting
 
-Install or reconcile the current English package from the reviewed documentation branch into the detected application package directory, normally `docs/roadmap/`. Preserve existing files, application-generated reports, local changes and newer Master candidates; do not replace the directory blindly.
+Install or reconcile the current English package from the reviewed documentation branch into the detected existing application package directory, last reported as `docs/plans/roadmap/`. Earlier `docs/roadmap/` references do not justify a second copy. Preserve existing files, application-generated reports, local changes and newer Master candidates; do not replace the directory blindly.
 
 At preparation, the documentation checkpoint was `cf716fbb5c402d001d84c3e4e54e0d9a41b748dc` on `docs/asktd-langgraph-langsmith-plan-20261026`; its documentation PR was open and unmerged. This is a documentation revision, not an application revision. Resolve the current source and later accepted changes before relying on the checkpoint. The default branch may not contain the amendments.
 
@@ -16,9 +21,9 @@ The required additions are [LangGraph and mandatory LangSmith](ASKTD_LANGGRAPH_A
 
 ## Begin prompt
 
-Continue the existing AskTD planning reconciliation and GitHub synchronization. Work in English. Execute the canonical `AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md` as part of this single task, with the continuation constraints below. Read `ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md` as supporting specification, not a second synchronization job.
+First apply the current handoff and the pause notice above. Continue local AskTD planning reconciliation in English. Execute the canonical `AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md` for remote synchronization only when the live owner has explicitly resumed that destination, within the current authorized scope. Read `ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md` as supporting specification, not a second synchronization job.
 
-I authorize the canonical prompt's additive planning/documentation operations and non-conflicting GitHub planning writes in the verified existing targets, including human assignment where an owner-approved mapping and eligible GitHub login are available. Prepare the exact reviewable operation manifest before writes, then complete authorized supported operations without another routine confirmation stop. Platform approvals and repository controls still apply.
+This saved template does not grant or renew permission. If the live owner has authorized remote operations, prepare the exact reviewable operation manifest and complete supported non-conflicting operations in the verified existing targets within that scope. Human assignment requires an owner-approved mapping and eligible identity. Platform approvals and repository controls still apply; local planning or Excel instructions do not authorize remote writes.
 
 Do not implement application features, assign a coding agent, change credentials or repository/organization permissions, enable Issues yourself, merge, deploy or dispatch workflows. Preserve all worktrees and staged/unstaged/untracked changes. Do not reset, clean, stash, stage or commit unrelated work.
 
@@ -55,11 +60,11 @@ Read the current handoff, Product Definition, Quarterly Product Roadmap, maintai
 - Reconcile the earlier P03 lifecycle, P07 acceptance, P10 administration-ownership and P12 frequency/cost-preview candidates. New output proposals remain proposals until accepted.
 - Do not promote the entire proposed Master or reopen completed historical work merely because these amendments exist.
 
-Produce a concise delta register: source clause/change, existing match/evidence, affected Plan/output/Task, required amendment, dependency impact and disposition. Classify each output as satisfied, partial, missing, unknown or superseded.
+Produce a concise delta register: source clause/change, existing match/evidence, affected Plan/output/Task, required amendment, dependency impact and disposition. Classify each active output as satisfied, partial, missing or unknown; record actual supersession separately with its accepted successor. Conditional and scoped-decision flags are separate, not additional primary buckets.
 
 ### 4. Produce a practical, dependency-aware backlog
 
-Cover all 15 Plans and all 46 outputs. Reuse or create canonical Plan parents and match open/closed Tasks by stable identity, aliases and evidence before allocating IDs. Do not create one Issue per output automatically.
+Cover all 15 Plans and all 46 outputs. MIG/CONN are only an amendment subset; two full prepared payloads remain part of the 13 identities, not extra tasks. Use the Excel reference's coverage distinction: accounted-for decisions/evidence gaps do not prove implementation or delivery acceptance. Reuse or create canonical Plan parents and match open/closed Tasks by stable identity, aliases and evidence before allocating IDs. Do not create one Issue per output automatically.
 
 Decompose justified remaining work for the selected near-term end-to-end workflow into bounded developer Tasks. Keep later or undecided work at outcome/contract/decision depth. Missing Deposits input blocks its affected business acceptance; clearly labelled synthetic contract/framework work may proceed independently.
 

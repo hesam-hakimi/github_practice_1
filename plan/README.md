@@ -1,27 +1,23 @@
 # AskTD / AskAlpha — Product and Delivery Roadmap
 
-This directory contains the English product, architecture-to-delivery mapping and execution-planning reference package. It is designed to reside at `docs/roadmap/` in the application repository. All document links are relative to this directory.
+This directory contains the English product, architecture-to-delivery mapping and execution-planning reference package. The last connected application report places it at `docs/plans/roadmap/`; the portable staging directory is `plan/`. Earlier `docs/roadmap/` references are an intended/legacy location, not a reason to create another copy. All document links are relative to this directory.
 
-**Package edition:** 27 October 2026\
+**Package edition:** 30 October 2026\
 **Planning baseline:** Master revision 2.1 proposed; delivery portfolio v0.2; lineage reference v0.4; product and quarterly roadmap v1.2, with scoped 26 October LangGraph/LangSmith and Sources & Connection Health owner amendments.\
 **Adoption status:** Reconcile with the operative application Master, ADRs, existing tasks and any later accepted changes before adopting proposed mappings.
 
 ## Start here
 
-1. Read the [Product Definition](PRODUCT_DEFINITION_EN.md) for the intended capabilities and boundaries.
-2. Read the [Quarterly Product Roadmap](QUARTERLY_PRODUCT_ROADMAP_EN.md) for the release sequence and acceptance outcomes.
-3. Use the [English Product Guide](AskTD_Product_Guide_and_Delivery_Plan_EN_v0_3.md) for a practical explanation of the system and planning model.
-4. Read the [Master Plan](<MASTER_PLAN_V1(2).md>), [Delivery Portfolio](AskTD_Delivery_Plans_and_Dependencies.md) and [Plan and Lineage Reference](ASKTD_PLAN_AND_LINEAGE_REFERENCE.md) together for engineering scope, output ownership and dependencies.
-5. Review the [Planning Handoff](ASKTD_SESSION_HANDOFF.md) and [Product-to-Plan Coverage Review](AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md) before generating new work.
-6. Read the [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) for the selected orchestration migration, mandatory telemetry, staged scope and task-level dependencies. Reconcile current team implementation before generating duplicate work.
-
-7. Read the [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) for the R1 diagnostic interface, P02/P07 ownership, five local task candidates and live-versus-synthetic acceptance.
-8. Open the [Interactive Architecture Walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) for the clickable question-to-answer flow, agent interactions, all P01–P15 Plans and the synthetic connection-health interface.
-9. To resume the established planning run, explicitly submit the [Planning Synchronization Continuation](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) in the connected application session. It reuses the existing Project and canonical setup prompt, reconciles the latest amendments and assigns only verified human owners.
+1. Read the [current handoff](ASKTD_SESSION_HANDOFF.md), starting at the 30 October checkpoint. GitHub Projects and Jira synchronization are paused; current planning work concerns the Excel operational view.
+2. Use the [new-session prompt](ASKTD_NEW_SESSION_PROMPT.md) for the complete ordered reading protocol. It resolves the current revision, requires full/partial/unavailable read receipts with extracted decisions and creates a working-context checkpoint. It does not promise permanent model memory.
+3. Read the product, roadmap, lineage, proposed Master, portfolio, guide, coverage review, executive roadmap and both amendments in that protocol. Reconcile operative application decisions and maintained reports independently.
+4. For workbook continuation, read [Excel Delivery Control and Coverage Reconciliation](ASKTD_EXCEL_DELIVERY_CONTROL_REFERENCE.md). Preserve all 15 Plans and 46 outputs; the 13 MIG/CONN candidates are a subset. Obtain the actual XLSX before claiming formula, mapping or repair validation.
+5. Open the [interactive walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) as optional teaching material, with its declared snapshot and simulations preserved.
+6. Treat all setup, synchronization and implementation prompts as inactive references unless the live owner activates that specific scope. The plain-text [launcher](prompt) now starts read-only context restoration. The [sync wrapper](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) stays paused until explicit resumption for the affected destination.
 
 ## Interactive architecture walkthrough
 
-Download `ASKTD_INTERACTIVE_ARCHITECTURE.html` and open it in a browser. It is one self-contained English HTML file with embedded styles, scripts and reference snapshots; no server, installation or external request is required. Keep it beside these documents when copying this package into `docs/roadmap/`.
+Download `ASKTD_INTERACTIVE_ARCHITECTURE.html` and open it in a browser. It is one self-contained English HTML file with embedded styles, scripts and reference snapshots; no server, installation or external request is required. Keep it beside these documents when reconciling this package into the actual application documentation directory.
 
 The walkthrough includes the 22-node flowchart and 15 predefined question routes, agent call/return and shared-state explanations, the complete 15-Plan/46-output/25-dependency portfolio, eight LangGraph/LangSmith migration candidates, six complex-graph scenarios and ten connection-health fixtures. Select **Architecture & plan → All Plans** for the portfolio and **Connection health** for the diagnostic prototype.
 
@@ -42,12 +38,13 @@ All examples, graph executions, source attempts and connection checks are simula
 | [Executive Roadmap](Roadmap-onepager.md) | Executive Phases 1–3 and proposed calendar presentation; separate from engineering numbering. |
 | [Planning Handoff](ASKTD_SESSION_HANDOFF.md) | Preserved decisions, historical evidence, current unknowns and next bounded activity. |
 | [Coverage Review](AskTD_Product_to_Plan_Coverage_Review_2026-10-23.md) | 35 grouped coverage checks and proposed acceptance/ownership refinements. |
-| [New-session Prompt](ASKTD_NEW_SESSION_PROMPT.md) | Read-only restoration of application and planning context. |
+| [New-session Prompt](ASKTD_NEW_SESSION_PROMPT.md) | Current-revision resolution, ordered full reads, source-read receipt and context checkpoint; read-only by default. |
+| [Excel Delivery Control](ASKTD_EXCEL_DELIVERY_CONTROL_REFERENCE.md) | Full-portfolio workbook requirements, 30 October screenshot findings, mapping corrections and validation criteria. |
 | [Project Setup and Task Generation Prompt](AskTD_Copilot_Project_Setup_and_Task_Generation_Prompt.md) | Canonical template for creating/reconciling Plan and Task issues, dependencies, labels and Project views. |
 | [Planning Synchronization Continuation](ASKTD_PLANNING_SYNC_CONTINUATION_PROMPT.md) | Continuation wrapper preserving the reported Project/checkpoint, amendment reconciliation, scoped blockers and verified team allocation. |
 | [Artifact-generation Specification](ASKTD_COPILOT_ARTIFACT_GENERATION_PROMPT.md) | Supporting artifact, lineage and synchronization requirements. |
 | [Framework Development Continuation](AskTD_Framework_Development_Continuation_2026-10-22.md) | Separate template for explicitly requested bounded framework implementation. |
-| [Planning Launcher](prompt) | Short instruction for explicitly starting the Project setup task. |
+| [Planning Launcher](prompt) | Starts the new-session read-only restoration protocol; does not start tracker synchronization. |
 | [LangGraph and LangSmith migration plan](ASKTD_LANGGRAPH_AND_LANGSMITH_PLAN.md) | Owner-selected LangGraph for future complex graphs, required LangSmith collection, existing-output ownership, staged Tasks and acceptance. |
 | [Sources & Connection Health specification](ASKTD_SOURCE_CONNECTION_HEALTH_UI.md) | Required source/authentication/health UI, protected diagnostics, scoped dependencies and acceptance. |
 | [Interactive Architecture Walkthrough](ASKTD_INTERACTIVE_ARCHITECTURE.html) | Self-contained English teaching page with the complete portfolio, request flow, agent interactions, migration and diagnostic simulations. |
@@ -67,7 +64,7 @@ The current documented baseline contains 15 Plans and 46 outputs. Coverage-revie
 
 ## Repository integration
 
-Copy the directory contents intact into `docs/roadmap/`. Compare any existing files and newer Master candidates before replacing them. Preserve active worktrees, staged/unstaged/untracked changes and established task identifiers.
+Locate the existing application package, last reported at `docs/plans/roadmap/`. Compare source revisions, digests, existing files and newer Master candidates before reconciling changes. Preserve destination-only reports and accepted local edits; do not blindly replace the directory or create a second copy at the earlier `docs/roadmap/` path. Preserve active worktrees, staged/unstaged/untracked changes and established task identifiers.
 
 Use the containing application repository and its approved project records to resolve the actual issue repository and GitHub Project. Do not infer an issue destination merely from the location of this documentation. Historical ADRs, runtime records and acceptance evidence identified in the source registers must be reconciled against the application workspace; they are not fabricated by this package.
 
@@ -76,7 +73,9 @@ No document requires an external web link or a personal repository to understand
 ## Execution and evidence boundaries
 
 - Reading or copying a prompt does not execute it. Submit the appropriate task template explicitly.
-- The new-session prompt is read-only. Planning generation and framework implementation have separate scopes.
+- The new-session prompt is read-only by default; a concurrent explicit task may proceed after its read/reconciliation gate. No permanent-memory claim is supported.
+- GitHub Projects and Jira synchronization are paused. Old saved permission sentences do not resume them. Local planning/Excel work and separately authorized code/PR reviews have their own scopes.
+- Workbook photographs establish visible defects only. The actual XLSX, mappings, formulas and repair results remain unverified until inspected.
 - Preserve SQL and Databricks baseline scope across P01/P02/P04/P05/P07; P15 covers further expansion.
 - Preserve App Service SQL system-assigned managed identity and application-enforced end-user authorization. Qualify Databricks identity/connector and each provider/environment separately.
 - Retain historical successful login/SQL validation. Investigate a current regression only when current evidence supports it.
