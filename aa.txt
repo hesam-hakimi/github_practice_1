@@ -1,280 +1,82 @@
-Create a populated, operational Excel workbook for managing AskTD
-delivery using the planning work already prepared in this repository.
+Continue the same CLUE investigation using your latest validation report, the two newly supplied run logs (18:31 and 21:47), and the earlier firstrun.txt / lastrun.txt.
 
-Deliver AskTD_Delivery_Control.xlsx in English.
+Reuse your completed analysis. The previous proposed prompt was not executed; this prompt replaces it.
 
-The owner wants an Excel working version of the team planning,
-dependencies, assignments, acceptance tracking and project visibility
-previously intended for GitHub Projects and Jira.
+This is a focused investigation and correction-plan task. Preserve the worktree and operational data. Do not modify application code/configuration, reset databases, move input/output files, run recovery, contact providers, or change AutoSys settings. Do not run a broad test suite.
 
-Jira and GitHub Project synchronization remain paused. This task does
-not authorize remote issue creation, assignment changes, project
-configuration, application implementation, merges or deployment.
+First record the inspected branch/HEAD and relevant local changes. Identify which deployed version produced the logs where evidence permits. Mark any source/deployment mismatch or unknown explicitly.
 
-1. Recover the existing planning baseline
+1. Trace the zero-attempt failure records to their actual origin.
 
-Read repository instructions and the maintained package at
-docs/plans/roadmap/, or its verified accepted successor.
+Investigate:
+failure_class=“unclassified”
+code=“PROCESSING_FAILED”
+attempts_used=0
+max_attempts=0
 
-Resolve current repository revisions and the status/content of
-planning PR #19 or its successor. Do not assume the active working
-branch contains the latest planning package.
+Trace these fields from the original exception or persisted work record through classification and report serialization.
 
-Read the current:
-- Planning handoff, product definition and roadmap.
-- Operative Master, relevant ADRs and QUALITY_GATES.
-- Delivery portfolio and Plan/lineage reference.
-- Synchronization manifest and generation report.
-- Prepared task definitions and coverage records.
-- LangGraph/LangSmith amendment.
-- Sources & Connection Health specification.
+Determine whether zero means:
 
-Preserve existing work, local changes and newer Master candidates.
-Distinguish accepted requirements, proposals, historical reports,
-current observations and unresolved evidence.
+* a confirmed failure before any provider attempt;
+* missing/defaulted reporting metadata;
+* attempts recorded elsewhere;
+* historical state lacking those fields;
+* or another demonstrated cause.
 
-Read saved generation prompts as reference material only. Do not
-execute their GitHub/Jira synchronization instructions.
+Start with one representative failure and then determine which other failures share that exact path. Keep run-level counters separate from delivery/work-item counters.
 
-Populate the workbook from real records. Do not deliver an empty
-template or fill gaps with invented project data.
+Do not conclude “internal CLUE defect” merely from zero counters. Likewise, successful HTTP 200 responses for other requests do not establish the cause of the failed items. HTTP status alone does not establish a terminal business outcome.
 
-2. Preserve the accepted structure
+2. Establish why the five deliveries are held.
 
-The last established register contained:
-- P01–P15: 15 delivery Plans.
-- 46 canonical named outputs.
-- DEP01–DEP25: 25 portfolio dependency records.
-- Releases R1–R4, acceptance gates A01–A10 and deltas D01–D18.
-- MIG-01–08 and CONN-01–05: 13 amendment candidates.
+Distinguish actual persisted HELD_UNKNOWN work from a generic unresolved label produced by aggregation or reporting.
 
-Verify these against current accepted sources. Document justified
-changes rather than forcing historical counts.
+For each delivery, use a short alias and identify:
 
-Keep Master engineering phases, detailed slices, executive phases,
-delivery Plans, releases and Priority P0–P3 as separate namespaces.
+* Blocking work-item ID, operation/stage, and persisted state.
+* Original transition into that state, with timestamp and exception/cause if available.
+* Recorded attempts, provider job references, and evidence paths.
+* Whether existing reconciliation applies and whether it was attempted.
+* What remains unknown.
 
-The two previously prepared full task payloads are a subset of the
-13 candidates, not additional tasks. Those candidates are not the
-entire product backlog.
+Inspect retained state and existing evidence read-only using the existing supported inspection method. Do not initialize/migrate a database through application startup.
 
-Preserve SQL/Databricks baseline scope, provider-specific qualification,
-SQL managed identity and application-enforced authorization.
-Preserve mandatory LangSmith evidence and the connection-health UI
-amendment. Keep D-M3 holds limited to their affected requirements.
+If the original cause was never persisted, state that explicitly. Identify the smallest diagnostic addition needed to capture it in an isolated future reproduction. Do not invent historical causes or automatically resubmit held work.
 
-Inspect the requested PR-review agent framework's actual state.
-Record implemented work only when supported by evidence. If its Plan
-mapping is unresolved, retain it as requested engineering enablement
-with a mapping decision; do not invent a new Plan or named output.
+3. Verify the lifecycle effects without restoring withdrawn claims.
 
-3. Build a usable workbook
+Trace why unchanged held deliveries remain claimable and re-ingest rows or rebuild workbooks.
 
-Use these functional areas. Combine small supporting tables when
-appropriate, but keep each editable fact authoritative in one place.
-Do not create a separate copy of the task table for every Plan/person.
+Separate:
 
-Dashboard
-- Formula-driven summary by Plan, release and owner/role.
-- Work-state counts, unassigned work, blocked activities, review queue,
-  unresolved decisions and acceptance gaps.
-- Clear distinction between eligible-to-draft and formally Ready.
-- Source snapshot date and internal navigation to supporting records.
-- Counts must use unique identities, not duplicated relationship rows.
-- Do not present task completion as product or release acceptance.
+* Input rereading.
+* Internal package/manifest acknowledgement.
+* Artifact regeneration.
+* External output copying.
+* New provider requests.
 
-Plans
-- One row per canonical Plan.
-- Outcome, scope, accountable role, source/engineering references,
-  release contributions and calculated task/output summaries.
+The internal output.published ACK is not proof of external publication. Treat “30 outputs republished” as unverified unless the actual publication path and available execution evidence support it.
 
-Outputs
-- One row per canonical output.
-- Owning Plan, requirement/source reference, primary disposition,
-  supporting evidence, remaining work and associated task references.
-- Separate conditional/scoped-decision flags from primary disposition.
-- Primary counts must reconcile to the unique output population.
-  Overlapping flags must not inflate that total.
+Check whether repeated artifact creation and external copying have separate causes. Explain the ZIP-name collision using delivery identity and retained bytes, without proposing deletion or renaming as a shortcut.
 
-Tasks
-- The main editable daily-work table.
-- Stable identity, title, accountable Plan, task/candidate classification,
-  role, assignee, reviewer, priority, work state, next activity,
-  readiness assessment, blocker/next action, release and dates.
-- Include existing work across all Plans and justified remaining work.
-  Keep later work at outcome/contract depth where appropriate.
-- Reuse canonical IDs. Clearly distinguish provisional local keys and
-  candidate aliases from real Jira/GitHub identifiers.
-- Do not create one task per output automatically.
+For backlog_oldest, distinguish original first-held time from last-observed time. If original age cannot be recovered, report it as unknown.
 
-Task details and mappings
-- Keep bounded scope, Master revision/section, engineering anchor,
-  acceptance criteria, DoR/DoD references, existing-work disposition,
-  provider/environment and evidence references accessible.
-- If these make Tasks excessively wide, use a keyed Task_Details table.
-- Use a normalized Task-to-Output mapping for many-to-many reporting;
-  do not calculate relationships by searching comma-separated text.
+4. Return the smallest justified correction plan.
 
-Dependencies
-- Preserve the portfolio dependency register separately from its
-  task/activity-level instances, even if both share one worksheet.
-- Record stable dependency ID, portfolio reference, producer/output,
-  consumer/activity, H/C/G/O type, applicability, satisfaction evidence,
-  blocker owner and next action.
-- Explicitly identify external decisions and inputs.
-- Do not confuse 25 portfolio records with the number of instantiated
-  task dependencies.
+Separate:
 
-Acceptance
-- Track release gates and scoped evidence requirements.
-- Keep separate records for capability/output, provider or service,
-  environment, evidence maturity, reference, observation date,
-  acceptance owner and remaining gap.
-- SQL readiness, Databricks readiness and LangSmith collection are
-  separate claims.
-- This is evidence tracking, not a live monitoring dashboard.
+* Confirmed code defects.
+* Missing diagnostics.
+* Reconciliation of existing operational items.
 
-Decisions
-- Decision/risk ID, affected scope, status, accountable role/person,
-  required input, next action and resolution evidence.
-- Include business-input gaps and scoped D-M3 decisions.
-- Record unresolved ownership or requirement mappings explicitly.
+Preserve the distinction between confirmed exhausted provider-content failures and genuinely ambiguous submissions. Never turn unresolved technical work into success or repeat a possibly accepted submission.
 
-Team
-- Approved people, roles, responsibility mapping and reviewer coverage.
-- Leave personal assignments blank where no approved mapping exists.
-- Allow the owner to enter the roster and allocate work later.
-- Keep optional future Jira/GitHub account mappings separate.
+List only the focused tests necessary for the proposed fixes, including unchanged rerun/restart, no duplicate submission/publication, stable artifact reuse, and continued ability to reconcile held work.
 
-Reference and checks
-- Source paths/revisions, as-of dates, controlled vocabularies and
-  concise usage/refresh instructions.
-- Validation of identities, relationships, coverage and consistency.
-- Keep checks independent; operational calculations must live in their
-  owning tables rather than depend on a global PASS/FAIL switch.
+Return three compact sections suitable for screenshots:
+A. What is proven, corrected, and still unknown.
+B. Actual failure/state-transition paths, with file:line and short log/state evidence.
+C. Minimal corrective plan and any specific missing evidence.
 
-4. Implement correct planning behavior
-
-Preserve separate fields for:
-- Artifact state: draft / reviewed / adopted / superseded.
-- Work state: Backlog / Ready / In progress / Review / Done,
-  reconciled with the actual maintained workflow.
-- Evidence maturity: unknown / designed / implemented / verified /
-  qualified, for a named scope.
-
-Track blocking as a separate condition. Do not replace the accepted
-workflow with an invented set of statuses.
-
-H blocks only the specified activity while its required output is unmet.
-C represents coordination and must not create reciprocal whole-Plan
-blocking. G applies to the relevant acceptance/activation gate.
-O applies only under its stated condition and retains its H/C/G effect.
-
-Unknown applicability or satisfaction must not silently count as met.
-Avoid whole-Plan P05/P07 cycles by preserving contract versus integrated
-acceptance distinctions.
-
-An unmet prerequisite does not prevent defining a backlog task.
-Assess drafting, implementation, qualification and release separately.
-
-Calculate readiness indicators from applicable prerequisites, required
-inputs, ownership and existing DoR. Keep work-state changes explicit.
-Do not automatically mark a task Ready merely because blockers reach
-zero, or Done because a PR merged.
-
-Flag Done claims inconsistent with the task's actual acceptance.
-Do not require qualified maturity where verified is sufficient.
-
-Do not invent dates, estimates, capacity, deadlines or sprint commitments.
-Provide editable fields for later approved inputs. Show overdue work
-only where an actual due date exists. Unknown is not zero.
-
-5. Make it practical in Excel
-
-Produce a genuine, macro-free .xlsx using available approved tooling.
-
-Use Excel Tables, filters, frozen headers/key columns, dropdowns,
-readable widths, wrapped descriptions and clear conditional formatting.
-Distinguish editable cells, imported facts and calculated fields.
-
-Put the most-used task columns first. Keep long evidence and contract
-text accessible without making the daily view unreadable.
-
-Use transparent formulas and structured references. Dashboard values
-must update from the owning tables. Avoid hardcoded summary counts,
-fragile row-position joins and hidden calculation logic.
-
-Support table growth and sorting without breaking mappings or moving
-owners/notes onto different tasks.
-
-Use real date values with an unambiguous display format.
-Use concise English labels and a restrained professional design.
-Keep personal-repository links out of the workbook. Use internal
-navigation, source paths/revisions and relevant verified organizational
-references where necessary.
-
-Do not require macros, external data connections, live Jira access or
-GitHub Project permissions to use the workbook.
-
-6. Preserve refreshability and ownership
-
-If a workbook already exists, preserve manual assignments, status
-updates, approved dates and notes using stable keys.
-
-On refresh, distinguish source changes from manual operational edits.
-Expose conflicts rather than silently overwriting either side.
-Document what refreshes automatically and what requires a rebuild.
-
-Excel is the temporary operational working copy. Repository documents
-remain the source for versioned requirements and architecture.
-Workbook edits must not silently change accepted scope or synchronize
-back to Jira/GitHub.
-
-Retain optional external-key fields for a future reconciled migration.
-Do not fabricate remote IDs or claim that spreadsheet assignments
-changed an external system.
-
-7. Validate before delivery
-
-Verify:
-- Unique Plan/output/task identities and valid references.
-- Reconciliation of primary dispositions without overlapping flags.
-- All output coverage and the actual MIG/CONN identity count.
-- Correct ownership and Task-to-Output relationships.
-- Applicable hard-dependency cycles at activity level.
-- Formula correctness, dropdowns, filters and table extension.
-
-In a disposable copy, test:
-- Removing an owner.
-- Satisfying one prerequisite while another remains open.
-- An inactive conditional dependency and a coordination relationship.
-- A task marked Done without its required evidence.
-- Blank dates, duplicate/missing keys, sorting and an added task row.
-- Dashboard/readiness changes after relevant input edits.
-
-Recalculate using an available engine and inspect the saved workbook.
-Visually inspect all sheets for clipped text, broken charts and errors.
-
-If graph validation is performed only during generation, label its
-validation revision and require revalidation after dependency edits.
-Do not present a stale validation result as a live guarantee.
-
-Report any engine or feature checks that could not be performed.
-Do not claim Microsoft Excel behavior was tested unless it was.
-
-8. Deliver
-
-Return the populated AskTD_Delivery_Control.xlsx, its source snapshot,
-validation results and a brief guide explaining:
-- Where the team updates daily work.
-- How to add owners, tasks, dependencies and evidence.
-- How management reads readiness, blockers and acceptance.
-- How to refresh without losing manual changes.
-
-Include the reproducible builder/update instructions if one was used.
-Keep only necessary supporting artifacts.
-
-Do not stop at a workbook design, empty template or CSV renamed as XLSX.
-Preserve application code and unrelated files. Do not automatically
-commit, push, merge, publish to external services or resume paused
-synchronization.
+Use short numbered items, no wide tables or diagrams, and no customer names. Clearly separate direct evidence from inference. Do not claim any fix or deployment has been completed.
