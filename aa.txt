@@ -1,3 +1,57 @@
-We also investigated a manual database update as a temporary workaround. Isolated testing found no supported state change that resolves the issue while preserving the unknown provider outcome. Marking the records as failed still produces a non-success exit, while marking them as done incorrectly reports success and archives incomplete deliveries. Changing them to pending technical recovery can also allow resubmission.
+The owner has clarified the business decision:
 
-The proposed code fix separates historical held work from the result of a later healthy run. Local testing has shown the intended behavior while preserving the held records and preventing duplicate submissions. This has not yet been verified in production.
+Business accepts abandoning the previously identified seven historical
+held items across five deliveries. Completing or recovering those old
+items is no longer required. The priority is allowing subsequent healthy
+production runs to complete normally.
+
+This changes the previous investigation constraint. Do not repeat the
+conclusion that no repair can preserve an active unknown outcome while
+allowing completion. We are now evaluating a one-time administrative
+closure of explicitly identified historical work.
+
+Prepare an operator-executable procedure using the DEPLOYED, UNPATCHED
+version. Reuse the completed investigation and preserve local hotfix work.
+
+The tested `done` transition produced exit 0. Evaluate it as a documented
+administrative exception if no existing administrative-close mechanism
+is available. Do not describe this as successful Tungsten extraction or
+provider-confirmed completion.
+
+Required work:
+
+1. Revalidate the exact target work IDs and parent deliveries against
+   current records. Do not select by count, age, or failure code alone.
+   Do not include unrelated failures or new work.
+
+2. Preserve a consistent database backup and a before-change record of
+   the original states, failure details, attempts, relationships, and
+   affected files. Record the reason as business-authorized abandonment.
+   Do not reset attempts, set provider_settled, or rewrite attempt history.
+
+3. On an isolated copy with real provider calls disabled, demonstrate:
+   - Subsequent healthy work completes with the expected successful exit.
+   - None of the abandoned items is resubmitted on ordinary runs, restart,
+     or the existing recovery command.
+   - New unknown outcomes and genuine application failures still produce
+     the existing non-success behavior.
+   - Unrelated successful data and outputs remain intact.
+   - Old incomplete outputs are not published or represented to downstream
+     consumers as valid completed results.
+   Archiving the explicitly abandoned old inputs is acceptable; retain
+   traceability and disclose every affected file.
+
+4. Prepare exact commands using verified schema and paths:
+   pause scheduling and confirm no active writers, take the consistent
+   backup, apply narrowly targeted transactional updates with expected
+   state/row-count checks, verify, and resume normal scheduling.
+   Include rollback limitations, especially after files move or new work
+   commits. Do not restore an old full database over newer processed work.
+
+5. Report the tested side effects and verify the actual launcher/AutoSys
+   success mapping. Do not globally accept PARTIAL or suppress errors.
+
+Prepare and test the concrete procedure now. Give the owner the exact
+production commands to review and execute; do not execute them yourself.
+If this route fails, identify the specific failed test or invariant,
+rather than restating the superseded preservation requirement.
