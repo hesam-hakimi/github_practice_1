@@ -1,5 +1,34 @@
-Thanks, Sharath. We found several separate issues. The seven old unresolved items have now been closed as agreed.
+Continue from the latest production evidence. Perform the prepared ZIP quarantine and one controlled cleanup-validation run. Keep AutoSys ON_HOLD throughout.
 
-The current recurring blocker is a conflicting ZIP in the input folder. It appears to contain CLUE’s previous outputs under an existing input filename. I’m verifying its contents and recorded status before determining the next action.
+Established facts:
 
-We also found misleading messages in the output reports and historical HTTP 404 errors. The backup-endpoint configuration still needs verification. No new provider calls were made in the latest run.
+* The seven-item administrative closure is complete and verified.
+* All three members of the conflicting ZIP are byte-identical to published CLUE outputs. Do not repeat that comparison.
+* The original admitted ZIP is preserved in the archive.
+* Inventory shows DELETE_SOURCE_INTENT, with all four original members PUBLISHED.
+* Quarantine and a successful cleanup run have not yet been demonstrated.
+
+Proceed within this scope:
+
+1. Confirm no CLUE application run is active and the target file and inventory state still match the recorded evidence. If they have changed materially, stop and report the difference.
+2. Quarantine this exact file:
+    /clue/data/input/RIP_SYMCOR_20261029204723_62e5937d987d.zip
+    Use the prepared directory:
+    /data/clue/data_unencrypted/log/quarantine_20261031/
+    Record its full SHA-256 and metadata, then move it without overwriting an existing file. Preserve the ZIP as evidence with restricted directory permissions. Verify that the source is absent and the quarantined file’s full SHA-256 equals the recorded pre-move hash.
+    Leave the original archive, published outputs, and database records untouched. Never return this output bundle to intake or admit it as a new delivery.
+3. Once the move is verified and the input directory is empty, run the application once using the previously established production invocation and effective configuration. Keep AutoSys held. Use no force, replay, recovery, or resubmission options. If the invocation cannot be established, report the missing information instead of guessing.
+4. Capture the actual process exit code, run ID, and fresh run_summary.json. Check whether:
+    * The ZIP delivery reaches COMPLETE.
+    * Both ZIP admission and finalization errors are absent.
+    * The outcome is NOTHING_READY with process exit 0.
+    * Provider request counts remain zero.
+    * Previously published deliveries are not republished.
+
+These are expected results, not established facts. If the results differ, report the evidence without automatically retrying or expanding the changes.
+
+Do not reapply the seven-item closure, restore old databases, change endpoint configuration, deploy reporting fixes, or release AutoSys.
+
+Report what actually executed, the hash verification, the observed run results, and any remaining blocker. An empty-input exit-0 run validates cleanup only; it does not establish provider readiness.
+
+The mechanism that returned outputs to intake remains a separate investigation. Do not infer the writer’s identity or intent from matching content, ownership, or timestamps.
