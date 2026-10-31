@@ -1,32 +1,34 @@
-The C1–C3 corrections are acknowledged. Keep the approved administrative
-closure and existing scope. Finish only the remaining execution gaps.
+Continue from the supplied production evidence. Treat the seven-item
+administrative closure as completed; reopen it only if new contradictory
+evidence appears.
 
-1. Fix the operator command runner.
-   The displayed Python commands pipe through tee without explicit
-   pipeline-status handling. Provide a Bash runner that checks the Python
-   and logging exit statuses and stops before any dependent step.
-   Handle verifier codes 0/3/4 explicitly.
-   Demonstrate that a failing backup followed by successful tee cannot
-   reach the mutation step.
-   Distinguish “no process found” from inspection-tool errors, and cover
-   both databases when confirming writer absence.
+Focus on the remaining causes of exit code 3. Use the latest run summary,
+logs, and the deployed version's code. Distinguish historical failures
+carried into run status from failures that actually occurred in this run.
 
-2. Repeat the artifact check on the deployed, unpatched build using
-   output_profile=business-template and the production ZIP intake shape,
-   with fixture providers and no external calls.
-   Inspect the actual published DAT/workbook, including a delivery with
-   both abandoned and successful rows.
-   Verify the abandoned rows cannot appear as completed extraction and
-   successful rows remain intact.
-   Do this before production execution, not after external publication.
+1. ZIP collision: RIP_SYMCOR_20261029204723
+Compare the recorded admission identity/hash with the current file and
+available delivery metadata. Determine what evidence supports a new
+delivery, producer re-push, or in-place modification. Do not assume which
+occurred. Identify the smallest supported resolution and its effect on
+previously published members.
 
-Deliver one final operator bundle containing all four helpers
-(clue_targets.py, clue_backup.py, clue_abandon.py, clue_verify.py),
-the corrected runner, and concise test results.
+2. HTTP_404
+Correlate the affected work items with actual request logs and the
+effective endpoint configuration. Verify the required endpoint path
+against an authoritative configuration or service contract. Do not
+infer the endpoint from failure_code alone or test by submitting new
+OCR jobs. Explain whether correcting the configuration alone would
+remove the remaining PARTIAL status.
 
-Keep actual PROD AutoSys acceptance explicitly unverified until its real
-job definition is read. List the exact read-only checks for the operator;
-do not change scheduler settings or broaden the investigation.
+3. Resume criteria
+Inspect the real wrapper and AutoSys job definition. State the evidence
+needed to resume scheduling. Keep the reporting-text fixes separate
+from the causes of exit code 3.
 
-Preserve the rollback limitations and all existing local hotfix work.
-Do not execute production changes.
+Use existing evidence first. Where PROD evidence is missing, give me
+only the minimal read-only commands needed, and I will return results.
+
+Return confirmed findings, unresolved questions, and the smallest next
+action for each blocker. Keep PROD unchanged during this investigation;
+do not rerun the batch, restore databases, or release the AutoSys hold.
