@@ -1,3 +1,18 @@
-I mean the latest run finalized the outputs using results already saved from earlier processing. The run summary shows zero new requests to Symcor or Tungsten.
+The cleanup run disproved the previous prediction. Keep AutoSys ON_HOLD and preserve the quarantined output bundle.
 
-The HTTP 404 errors came from earlier attempts. This run therefore did not test whether those services are working correctly now.
+Before restoring anything to production, validate the proposed recovery through a targeted isolated rehearsal.
+
+1. Use the deployed 1.1.9 implementation, or demonstrate that the tested code matches it. Trace the complete call order through admission, publication, archiving, and finalization. Confirm where DELETE_SOURCE_INTENT is overwritten and whether re-admission preserves existing PUBLISHED member states.
+2. Reproduce the failed cleanup and then test restoring a COPY of the original admitted ZIP, whose full SHA-256 matches the ledger. Use consistent database snapshots and required artifact copies. Redirect all filesystem paths, including paths stored in the copied databases, into the isolated workspace. Block provider access and live publication. Do not invoke the production wrapper against copied databases with production paths still present.
+3. Exercise the complete relevant execution sequence, not only the finalization function. Verify:
+    * Existing published members are not reset or reprocessed.
+    * No provider requests occur.
+    * No new workbook generation or external publication occurs.
+    * The delivery reaches COMPLETE and source_deleted_at is recorded.
+    * The original archive remains intact.
+    * A subsequent empty-input rehearsal exits successfully without repeating work.
+4. Review the completed production run’s publication evidence. Neither members_published_this_run=4 nor outputs=[] establishes whether files were physically republished. A filename-only directory comparison is insufficient. Use available logs and filesystem evidence, and state any remaining uncertainty.
+
+If the rehearsal succeeds, provide its actual results and a minimal operator-ready recovery script. The script must assert full hash equality, refuse an occupied intake destination, preserve the archive, and capture the real application exit code and fresh run summary.
+
+Do not restore files to production, rerun the production batch, edit production databases, or release AutoSys during this validation step. Keep the seven-item administrative closure unchanged.
