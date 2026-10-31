@@ -1,29 +1,3 @@
-Investigate a bounded manual database repair as a temporary CLUE workaround.
+We also investigated a manual database update as a temporary workaround. Isolated testing found no supported state change that resolves the issue while preserving the unknown provider outcome. Marking the records as failed still produces a non-success exit, while marking them as done incorrectly reports success and archives incomplete deliveries. Changing them to pending technical recovery can also allow resubmission.
 
-Scope: the previously identified seven historical held work items, revalidated
-against current records. Do not select records by count or failure code alone.
-
-Inspect the deployed version's schema, state transitions, completion guards,
-run-status calculation, retry eligibility, and archive/publication rules.
-
-Determine whether an EXISTING supported administrative closure or exclusion
-mechanism can stop these historical items from failing later healthy runs,
-while preserving their unknown provider outcome and preventing resubmission.
-
-Do not assume HELD -> FAILED is sufficient. Do not invent a new state value,
-mark items COMPLETE/INVALID without justification, set provider_settled,
-reset attempts, or rewrite historical attempt evidence.
-
-If a supported repair exists:
-- Prepare exact narrowly targeted SQL or the existing repair command.
-- Include a consistent database backup, concurrency controls, expected
-  preconditions/row counts, transaction boundaries, and rollback.
-- Test on an isolated database copy with provider calls disabled.
-- Verify a later healthy invocation succeeds, the seven items are not
-  resubmitted, and incomplete deliveries are not falsely completed/archived.
-- Report any consequence for recovery, outputs, and later reconciliation.
-
-If no supported database-only repair exists, explain the exact blocking
-invariant rather than manufacturing a terminal outcome.
-
-Prepare and test the repair only. Do not mutate production.
+The proposed code fix separates historical held work from the result of a later healthy run. Local testing has shown the intended behavior while preserving the held records and preventing duplicate submissions. This has not yet been verified in production.
