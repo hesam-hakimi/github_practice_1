@@ -1,27 +1,16 @@
-The synthetic rehearsal supports the proposed recovery. Keep its scope explicit: production recovery has not yet executed.
+Complete the operator handoff now. You confirmed that neither helper is installed on PROD, so the supplied execution commands are not yet usable.
 
-Prepare the final operator-ready sequence for restoring the original admitted ZIP and running the application once.
+Provide:
 
-Correct an execution conflict first: the previous /tmp/clue_cleanup_run.sh requires an empty input directory. After restoring the original ZIP, that condition is invalid. Replace it with a check that intake contains exactly the expected original ZIP, with its full SHA-256 matching the exact ledger record and archived original.
+1. Complete, quoted heredoc blocks for the exact tested versions of:
+    * clue_zip_restore.sh
+    * clue_zip_complete_run.sh
+    Include every line, with no placeholders or omitted sections. Creating these files must not stage the ZIP or start the application.
+2. The full SHA-256 of each actual local helper, plus server-side commands to verify the transferred files and check their shell syntax. Preserve any existing files rather than silently overwriting them.
+3. The final ordered operator commands: capture evidence, validate prerequisites, stage the original ZIP, run once, and verify the result. Any failed prerequisite or staging failure must prevent the application run.
 
-Before staging, verify:
+Keep the exact evidence-directory path throughout the sequence rather than rediscovering it using the newest matching directory. Verify that the final run summary belongs to this invocation.
 
-* AutoSys remains held and no CLUE run is active.
-* The exact delivery is still ARCHIVED, source_deleted_at is empty, and all four members remain PUBLISHED.
-* The destination is unoccupied.
-* The archive’s current full hash matches both the admitted and recorded archive hashes.
-* The quarantined output bundle remains untouched.
+Retain the corrected input check: exactly the restored original ZIP with the expected full hash, rather than an empty directory.
 
-Confirm whether the exact clue_zip_restore.sh helper was exercised in the rehearsal. If only bash -n was run, test the helper itself in the isolated fixture. Also distinguish its local repository location from its installation on PROD; provide transfer instructions if it is not installed.
-
-Provide one ordered command sequence that:
-
-1. Preserves the current run evidence and records output-file hashes and metadata.
-2. Stages a copy of the original archive without overwriting anything.
-3. Executes the previously verified PROD 1.1.9 wrapper once.
-4. Captures the actual exit code and fresh run summary.
-5. Checks COMPLETE, source_deleted_at, zero provider requests, publication activity, and preservation of both archive and quarantine.
-
-Treat output hashes and timestamps as supporting evidence; do not claim they alone prove that no republication occurred.
-
-Do not execute production actions yourself, edit database records, reopen the seven closed items, deploy unrelated changes, or release AutoSys. Return the ready-to-run sequence with expected results clearly separated from observed results.
+Use the existing tested recovery approach. No production execution by you, database edits, changes to the seven closed items, or AutoSys release. Keep the quarantined output bundle untouched.
