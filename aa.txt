@@ -1,18 +1,27 @@
-The cleanup run disproved the previous prediction. Keep AutoSys ON_HOLD and preserve the quarantined output bundle.
+The synthetic rehearsal supports the proposed recovery. Keep its scope explicit: production recovery has not yet executed.
 
-Before restoring anything to production, validate the proposed recovery through a targeted isolated rehearsal.
+Prepare the final operator-ready sequence for restoring the original admitted ZIP and running the application once.
 
-1. Use the deployed 1.1.9 implementation, or demonstrate that the tested code matches it. Trace the complete call order through admission, publication, archiving, and finalization. Confirm where DELETE_SOURCE_INTENT is overwritten and whether re-admission preserves existing PUBLISHED member states.
-2. Reproduce the failed cleanup and then test restoring a COPY of the original admitted ZIP, whose full SHA-256 matches the ledger. Use consistent database snapshots and required artifact copies. Redirect all filesystem paths, including paths stored in the copied databases, into the isolated workspace. Block provider access and live publication. Do not invoke the production wrapper against copied databases with production paths still present.
-3. Exercise the complete relevant execution sequence, not only the finalization function. Verify:
-    * Existing published members are not reset or reprocessed.
-    * No provider requests occur.
-    * No new workbook generation or external publication occurs.
-    * The delivery reaches COMPLETE and source_deleted_at is recorded.
-    * The original archive remains intact.
-    * A subsequent empty-input rehearsal exits successfully without repeating work.
-4. Review the completed production run’s publication evidence. Neither members_published_this_run=4 nor outputs=[] establishes whether files were physically republished. A filename-only directory comparison is insufficient. Use available logs and filesystem evidence, and state any remaining uncertainty.
+Correct an execution conflict first: the previous /tmp/clue_cleanup_run.sh requires an empty input directory. After restoring the original ZIP, that condition is invalid. Replace it with a check that intake contains exactly the expected original ZIP, with its full SHA-256 matching the exact ledger record and archived original.
 
-If the rehearsal succeeds, provide its actual results and a minimal operator-ready recovery script. The script must assert full hash equality, refuse an occupied intake destination, preserve the archive, and capture the real application exit code and fresh run summary.
+Before staging, verify:
 
-Do not restore files to production, rerun the production batch, edit production databases, or release AutoSys during this validation step. Keep the seven-item administrative closure unchanged.
+* AutoSys remains held and no CLUE run is active.
+* The exact delivery is still ARCHIVED, source_deleted_at is empty, and all four members remain PUBLISHED.
+* The destination is unoccupied.
+* The archive’s current full hash matches both the admitted and recorded archive hashes.
+* The quarantined output bundle remains untouched.
+
+Confirm whether the exact clue_zip_restore.sh helper was exercised in the rehearsal. If only bash -n was run, test the helper itself in the isolated fixture. Also distinguish its local repository location from its installation on PROD; provide transfer instructions if it is not installed.
+
+Provide one ordered command sequence that:
+
+1. Preserves the current run evidence and records output-file hashes and metadata.
+2. Stages a copy of the original archive without overwriting anything.
+3. Executes the previously verified PROD 1.1.9 wrapper once.
+4. Captures the actual exit code and fresh run summary.
+5. Checks COMPLETE, source_deleted_at, zero provider requests, publication activity, and preservation of both archive and quarantine.
+
+Treat output hashes and timestamps as supporting evidence; do not claim they alone prove that no republication occurred.
+
+Do not execute production actions yourself, edit database records, reopen the seven closed items, deploy unrelated changes, or release AutoSys. Return the ready-to-run sequence with expected results clearly separated from observed results.
