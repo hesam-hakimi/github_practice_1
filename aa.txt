@@ -1,24 +1,76 @@
-Important correction: the earlier 7/8 hash comparison came from DEV, not PROD. The newly supplied PROD results match package B for all eight inspected files, including control.py.
+Continue the existing CLUE investigation using the corrected findings.
+This pass is read-only: complete the evidence and prepare a bounded
+remediation proposal. Do not implement or operate recovery yet.
 
-Update the evidence record accordingly. Close the control.py mismatch investigation for PROD. Do not repeat hash comparisons, AST checks, or the UI change-counter investigation.
+Reuse the established evidence and source-identity investigation.
+Confirm that code references correspond to the deployed PROD 1.1.9
+artifact; recheck only missing or changed identity details. Read the
+current relevant project instructions and provider/recovery/reporting
+contracts. Preserve all existing local changes.
 
-Continue toward the five held deliveries:
+Keep these populations separate:
+- Seven held/unknown extraction items across five deliveries.
+- Sixty-three failed items recorded as HTTP_404.
+- One failed item recorded as RESPONSE_NOT_JSON.
+- The separate Symcor-attributed zero-attempt reporting population.
+Exclude the unrelated October 7 event.
 
-1. Use the production run summary’s recorded configuration source and the inspected configuration precedence to resolve the relevant workspace. Clearly distinguish a configured path from a verified effective path; do not guess.
-2. Prepare one bounded, read-only operator diagnostic block that:
-    * Opens existing databases in read-only mode without importing application startup code or running migrations.
-    * Inspects the actual schema and then queries only columns that exist.
-    * Reports the total held-work count and up to 20 blocking records.
-    * Includes opaque work/item IDs, operation, persisted state, failure_class, failure_code, staged-mode attempt count, and available provider/result correlation-reference presence.
-    * Reports missing fields as unavailable, without substituting reporting defaults.
-    * Avoids customer names, payloads, credentials, and broad database dumps.
+1. Verify the backup endpoint contract
+Trace the effective PROD configuration through URL construction,
+HTTP method, authentication and request/response handling.
+Compare it with an authoritative backup API specification or an
+existing verified configuration.
 
-Use the existing read-only diagnostic tooling if it already supplies this evidence. Associate the records with the five deliveries where the available identifiers permit it; do not assume every held record belongs to this incident.
+Do not assume the backup uses the primary endpoint's service suffix.
+Do not guess a replacement URL or call a job-creation endpoint to test it.
+If the contract is unavailable, identify the exact missing information.
 
-3. Explain briefly what the resulting records can establish and what would still require the original transition log or provider outcome evidence. Do not treat updated_at or hold_observed_at as the original hold time.
+2. Finish bounded correlation
+Use delivery/item/work identity and provider_call_id to correlate each
+held item with its request, exception/response and terminal decision.
+Distinguish observed exception types from timing-based hypotheses.
 
-A directory listing of site-packages does not prove import precedence. Keep any remaining launch-path uncertainty explicit without restarting the source audit.
+Do not infer all seven causes from the three inspected calls.
+Verify how many of the 63 HTTP_404 records actually correlate with the
+reported backup failures. Investigate the non-JSON case separately.
 
-No code changes, database writes, recovery actions, provider submissions, ZIP changes, or deployment. Keep artifact-reuse changes separate from determining the outcome of existing held work.
+Label circuit-breaker activation as inferred unless supported by an
+explicit transition or a sufficiently evidenced execution path.
 
-Return only the corrected PROD conclusion and the next diagnostic block, ready for the owner to execute on PROD.
+3. Verify the reporting defects
+Trace why unresolved extraction can produce a COMPLETED row.
+Define the expected status when images exist but required extraction
+remains unresolved. Check row labels, sheets and delivery summaries.
+
+Investigate the Symcor zero-attempt issue separately. Do not treat an
+unavailable attempt count as zero or infer provider identity from
+free-text messages where structured provenance exists.
+
+4. Return a minimal remediation proposal
+Separate:
+A. Endpoint/configuration correction.
+B. Error classification and operator reporting.
+C. Reconciliation of existing unknown submissions.
+
+For each, provide exact affected files, supporting evidence, proposed
+behavior, focused regression tests and acceptance criteria.
+
+Preserve protection against duplicate submission across restart,
+resume and endpoint failover. Do not globally make HTTP_404 retryable
+or assume every HTTP_404 is a configuration error.
+
+For the seven unknown items, describe the supported provider lookup
+and reconciliation procedure without executing it. Distinguish
+"lookup returned no usable answer" from "provider confirms no job exists."
+
+No code/configuration/database changes, provider calls, resubmission,
+archive changes, deployment or commits in this pass.
+
+Return:
+- A concise verified / inferred / unresolved findings table.
+- The minimal proposed changes and tests.
+- The exact missing evidence, if any.
+- The next smallest executable action.
+
+Use sanitized identifiers; omit document/account data and credentials.
+Do not repeat broad investigation already completed.
