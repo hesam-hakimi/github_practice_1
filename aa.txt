@@ -1,34 +1,5 @@
-Continue from the supplied production evidence. Treat the seven-item
-administrative closure as completed; reopen it only if new contradictory
-evidence appears.
+Thanks, Sharath. We found several separate issues. The seven old unresolved items have now been closed as agreed.
 
-Focus on the remaining causes of exit code 3. Use the latest run summary,
-logs, and the deployed version's code. Distinguish historical failures
-carried into run status from failures that actually occurred in this run.
+The current recurring blocker is a conflicting ZIP in the input folder. It appears to contain CLUE’s previous outputs under an existing input filename. I’m verifying its contents and recorded status before determining the next action.
 
-1. ZIP collision: RIP_SYMCOR_20261029204723
-Compare the recorded admission identity/hash with the current file and
-available delivery metadata. Determine what evidence supports a new
-delivery, producer re-push, or in-place modification. Do not assume which
-occurred. Identify the smallest supported resolution and its effect on
-previously published members.
-
-2. HTTP_404
-Correlate the affected work items with actual request logs and the
-effective endpoint configuration. Verify the required endpoint path
-against an authoritative configuration or service contract. Do not
-infer the endpoint from failure_code alone or test by submitting new
-OCR jobs. Explain whether correcting the configuration alone would
-remove the remaining PARTIAL status.
-
-3. Resume criteria
-Inspect the real wrapper and AutoSys job definition. State the evidence
-needed to resume scheduling. Keep the reporting-text fixes separate
-from the causes of exit code 3.
-
-Use existing evidence first. Where PROD evidence is missing, give me
-only the minimal read-only commands needed, and I will return results.
-
-Return confirmed findings, unresolved questions, and the smallest next
-action for each blocker. Keep PROD unchanged during this investigation;
-do not rerun the batch, restore databases, or release the AutoSys hold.
+We also found misleading messages in the output reports and historical HTTP 404 errors. The backup-endpoint configuration still needs verification. No new provider calls were made in the latest run.
