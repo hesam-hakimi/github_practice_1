@@ -1,43 +1,32 @@
-Keep the approved business abandonment decision and the tested
-done + eligible=0 approach. Finalize this operator procedure without
-reopening the broad investigation or changing application code.
+The C1–C3 corrections are acknowledged. Keep the approved administrative
+closure and existing scope. Finish only the remaining execution gaps.
 
-Correct these specific issues:
+1. Fix the operator command runner.
+   The displayed Python commands pipe through tee without explicit
+   pipeline-status handling. Provide a Bash runner that checks the Python
+   and logging exit statuses and stops before any dependent step.
+   Handle verifier codes 0/3/4 explicitly.
+   Demonstrate that a failing backup followed by successful tee cannot
+   reach the mutation step.
+   Distinguish “no process found” from inspection-tool errors, and cover
+   both databases when confirming writer absence.
 
-1. Backup:
-   Abort if either required database is missing or any integrity check
-   fails. Verify both backup files. Keep all writers stopped across
-   target validation, both backups, mutation, and verification.
-   Do not silently treat unavailable process/file checks as proof that
-   no writers exist.
+2. Repeat the artifact check on the deployed, unpatched build using
+   output_profile=business-template and the production ZIP intake shape,
+   with fixture providers and no external calls.
+   Inspect the actual published DAT/workbook, including a delivery with
+   both abandoned and successful rows.
+   Verify the abandoned rows cannot appear as completed extraction and
+   successful rows remain intact.
+   Do this before production execution, not after external publication.
 
-2. Exact scope:
-   Bind the operation to the approved seven unique work IDs and five
-   delivery identities. Validate their current preconditions inside
-   the transaction, including unchanged attempts.
-   Verify source_item key uniqueness; use the full relationship key
-   where needed so no unrelated item can become ineligible.
+Deliver one final operator bundle containing all four helpers
+(clue_targets.py, clue_backup.py, clue_abandon.py, clue_verify.py),
+the corrected runner, and concise test results.
 
-3. Commit and verification:
-   Remove “any other output means nothing changed.”
-   A missing success message leaves the commit outcome unconfirmed.
-   Provide read-only verification before any retry or restore.
-   Verify the exact selected work/source rows: done, eligible=0,
-   administrative reason, and unchanged provider/attempt evidence.
-   Preserve the original reason text in the change record.
+Keep actual PROD AutoSys acceptance explicitly unverified until its real
+job definition is read. List the exact read-only checks for the operator;
+do not change scheduler settings or broaden the investigation.
 
-4. Published artifacts:
-   Show the actual resulting DAT/output representation, not only
-   outcome_counts. Confirm abandoned rows are distinguishable from
-   successful extraction and unrelated rows remain unchanged.
-   Clearly list republication and archive effects.
-
-5. Scheduler:
-   Show the actual AutoSys success/failure configuration if available.
-   Wrapper exit-code propagation alone is not scheduler verification.
-   Do not change global exit-code handling.
-
-Return the corrected runnable scripts, short operator commands, and
-results of targeted isolated checks for these corrections.
-Preserve the existing rollback limitations.
-Do not execute production changes yourself.
+Preserve the rollback limitations and all existing local hotfix work.
+Do not execute production changes.
