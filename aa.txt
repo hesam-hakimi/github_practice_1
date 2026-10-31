@@ -1,73 +1,144 @@
-Continue from the latest corrected report. Implement only the bounded
-local reporting fixes B1 and B2. Keep endpoint changes, error-policy
-changes and production recovery outside this implementation.
+Continue from the completed B1/B2 reporting changes. Preserve those
+changes, their tests, and all pre-existing local work.
 
-Reuse the verified source-identity findings. Confirm how the working
-checkout relates to the inspected PROD artifact. Follow applicable
-repository instructions and preserve all existing local changes.
-Do not repeat the broad investigation.
+Implement and test the following bounded change locally, and update
+the relevant project documentation.
 
-1. Implement B1: truthful operator status
-Use structured processing outcome, not workbook sheet name, to derive
-the existing operator status.
+OWNER DECISION
 
-An item with retrieved images but unresolved required extraction must
-display "HELD — awaiting provider reconciliation", not COMPLETED.
+New files are being processed, but unchanged historical HELD items
+cause later invocations to report PARTIAL, and the AutoSys job is
+reported as failed.
 
-Preserve legitimate completed and terminal-invalid behavior.
-Keep held items outside terminal INVALIDS handling.
-Do not change persisted workflow states, retry rules, archive eligibility,
-sheet placement or the workbook column contract.
+An otherwise healthy invocation must not fail solely because it
+encounters unresolved HELD items carried over from previous runs.
 
-If the workbook itself lacks a place to display this status, report that
-limitation explicitly rather than claiming the entire output is fixed.
+This changes the invocation-completion contract only. It does not
+resolve those items or make their deliveries complete.
 
-2. Implement B2: truthful provider and attempt reporting
-Resolve provider/stage from authoritative structured provenance.
-Do not guess from error-message text or assume operation alone is enough.
+This instruction supersedes only the earlier requirement that
+unchanged historical HOLD automatically makes every later invocation
+non-successful. Preserve the remaining unknown-outcome protections.
 
-Use the correct authoritative attempt source for that provider/stage.
-Represent unavailable evidence as unknown/not recorded, not zero.
-Preserve real recorded zero and positive counts.
-Keep numeric/internal fields typed; format "not recorded" at presentation.
+1. Trace the actual status path
 
-3. Run focused regression tests
-Cover:
-- Images present + extraction unresolved never displays COMPLETED.
-- Existing successful and terminal-invalid cases remain correct.
-- Missing attempt evidence is distinct from a recorded zero.
-- Provider attribution does not depend on wording in error messages.
-- These reporting changes introduce no submission, failover, retry,
-  recovery or archive side effects.
+Read the current relevant instructions and contracts. Reuse the
+established PROD/source identity evidence.
 
-Report actual commands/results and any untested behavior.
+Trace:
+persisted work state → invocation result → CLI exit code → launcher
+or wrapper → AutoSys interpretation.
 
-4. Correct the remaining investigation proposal
-Do not implement B3's identical-body-hash classification rule.
-Repeated identical 404 responses are evidence for a suspected shared
-fault, not proof of a configuration error.
+Identify the exact branch where historical unresolved work affects
+the current invocation's result.
 
-Replace the proposed aggregate grep with a bounded read-only extraction
-that preserves run identity and available correlation identifiers.
-Distinguish response-event counts from unique affected work items.
-Correlate the 63 persisted HTTP_404 failures where evidence permits.
-Locate RESPONSE_NOT_JSON through its actual failure/outcome event and
-related response; HTTP status alone cannot identify it.
-Explicitly list records that cannot be correlated.
+Inspect available AutoSys definitions and wrappers read-only.
+Do not assume the numeric PARTIAL code or the configured success codes.
+If operational definitions are unavailable, continue local work and
+state that end-to-end AutoSys verification remains outstanding.
 
-Do not print raw documents, payloads, credentials or account identifiers.
+2. Implement the smallest justified correction
 
-Leave endpoint configuration unchanged until the authoritative PROD
-prefix and operation path are confirmed. Do not copy the primary SDK
-suffix or treat a health/HEAD/OPTIONS response as proof that extraction
-works.
+Keep these meanings distinct:
+- Outcome of this invocation's execution.
+- Outstanding business work across deliveries.
 
-Do not execute production commands, contact providers, resubmit work,
-change databases/configuration, deploy, commit or push.
+Required behavior:
+- Historical HELD items only, with successful discovery and no current
+  execution error: successful polling/no-new-work outcome using the
+  existing success exit convention; historical backlog remains visible.
+- Historical HELD items plus successfully completed eligible work:
+  successful invocation; historical items remain unresolved.
+- A newly ambiguous submission during this invocation: preserve the
+  existing non-success handling and no-resubmission protection.
+- A current technical, configuration, storage, publication or archive
+  failure: preserve the appropriate non-success result.
+- Confirmed terminal provider-content failures: preserve the existing
+  INVALIDS and durable completion contract.
+
+Do not implement a blanket PARTIAL-to-success conversion.
+
+Distinguish carried-over HELD items using reliable run/work identity
+and state observed at the invocation boundary. Do not rely only on
+timestamps, unchanged total counts, filename matching, or whether the
+delivery itself is old.
+
+Re-reading or rendering an old HELD item must not make it a newly
+failed item. Conversely, current failures on resumed old work must
+not be hidden because that work predates the invocation.
+
+Limit the exception to historical, non-executable unknown-outcome
+holds. Do not silently exempt PENDING_TECHNICAL, unfinished executable
+work, missing artifacts or failed delivery obligations.
+
+Failure to read the ledger or discover work must never become
+"no new work" success.
+
+3. Preserve item and delivery truth
+
+Do not:
+- Resubmit or fail over an ambiguous submission.
+- Reset attempts or retry budgets.
+- Mark HELD items INVALID, COMPLETE or provider_settled.
+- Archive an unresolved delivery or release incomplete outputs.
+- Remove unresolved items from monitoring.
+
+Preserve archive/publication eligibility and existing delivery gates.
+Invocation success must not imply that every historical delivery is
+complete.
+
+Keep the historical unresolved backlog visible through existing
+structured summaries and warnings. Report current-run failures
+separately. Preserve B1/B2's truthful status and attempt reporting.
+
+Leave endpoint configuration, HTTP error classification and the
+workbook column/sheet contract unchanged.
+
+4. Verify with focused, meaningful tests
+
+Use temporary state and mocked providers; no live calls.
+
+Include a sequential-run regression through the real application/CLI
+boundary:
+- Run 1 produces an ambiguous outcome and persists HELD.
+- Run 2 processes an independent valid delivery successfully.
+- Run 2 returns the success exit code despite the old HELD item.
+- The old item remains HELD, its attempt count is unchanged, and it
+  causes no additional submission.
+- The valid delivery completes normally; the held delivery does not
+  become archive-eligible.
+
+Also cover:
+- Historical HELD only with no eligible new work.
+- Historical HELD plus a newly ambiguous outcome.
+- Historical HELD plus a current technical/publication failure.
+- A real current failure while resuming older executable work.
+- Ledger/discovery failure.
+- Existing successful and terminal-INVALIDS behavior.
+- Preservation of B1/B2 reporting behavior.
+
+Update only test expectations intentionally superseded by this
+scoped policy change. Run affected tests and required repository
+checks; broaden testing when changes or failures justify it.
+
+5. Update documentation and report
+
+Update the canonical run-status/exit-code contract and relevant
+handoff or operational documentation. Record that this decision
+separates successful execution of a later invocation from resolution
+of historical unknown submissions.
 
 Return:
-- Exact local changes and focused test results.
-- Remaining gaps in endpoint and incident evidence.
-- A corrected read-only command or script for the owner to run.
-- Clear separation between reporting fixes and resolution of the
-  seven existing unknown submissions.
+- The demonstrated cause, with code references.
+- Exact changed files.
+- Before/after outcomes and numeric exit codes for the tested cases.
+- Actual test commands and results.
+- Any AutoSys/wrapper assumptions still unverified.
+- Remaining limitations, including the unchanged workbook visibility
+  issue and the unresolved historical submissions.
+
+Do not repeat the broad incident investigation.
+
+No production commands, live-provider calls, operational-data changes,
+endpoint edits, AutoSys configuration changes, deployment, commit
+or push. Complete the local implementation, tests and documentation.
