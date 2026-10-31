@@ -1,76 +1,73 @@
-Continue the existing CLUE investigation using the corrected findings.
-This pass is read-only: complete the evidence and prepare a bounded
-remediation proposal. Do not implement or operate recovery yet.
+Continue from the latest corrected report. Implement only the bounded
+local reporting fixes B1 and B2. Keep endpoint changes, error-policy
+changes and production recovery outside this implementation.
 
-Reuse the established evidence and source-identity investigation.
-Confirm that code references correspond to the deployed PROD 1.1.9
-artifact; recheck only missing or changed identity details. Read the
-current relevant project instructions and provider/recovery/reporting
-contracts. Preserve all existing local changes.
+Reuse the verified source-identity findings. Confirm how the working
+checkout relates to the inspected PROD artifact. Follow applicable
+repository instructions and preserve all existing local changes.
+Do not repeat the broad investigation.
 
-Keep these populations separate:
-- Seven held/unknown extraction items across five deliveries.
-- Sixty-three failed items recorded as HTTP_404.
-- One failed item recorded as RESPONSE_NOT_JSON.
-- The separate Symcor-attributed zero-attempt reporting population.
-Exclude the unrelated October 7 event.
+1. Implement B1: truthful operator status
+Use structured processing outcome, not workbook sheet name, to derive
+the existing operator status.
 
-1. Verify the backup endpoint contract
-Trace the effective PROD configuration through URL construction,
-HTTP method, authentication and request/response handling.
-Compare it with an authoritative backup API specification or an
-existing verified configuration.
+An item with retrieved images but unresolved required extraction must
+display "HELD — awaiting provider reconciliation", not COMPLETED.
 
-Do not assume the backup uses the primary endpoint's service suffix.
-Do not guess a replacement URL or call a job-creation endpoint to test it.
-If the contract is unavailable, identify the exact missing information.
+Preserve legitimate completed and terminal-invalid behavior.
+Keep held items outside terminal INVALIDS handling.
+Do not change persisted workflow states, retry rules, archive eligibility,
+sheet placement or the workbook column contract.
 
-2. Finish bounded correlation
-Use delivery/item/work identity and provider_call_id to correlate each
-held item with its request, exception/response and terminal decision.
-Distinguish observed exception types from timing-based hypotheses.
+If the workbook itself lacks a place to display this status, report that
+limitation explicitly rather than claiming the entire output is fixed.
 
-Do not infer all seven causes from the three inspected calls.
-Verify how many of the 63 HTTP_404 records actually correlate with the
-reported backup failures. Investigate the non-JSON case separately.
+2. Implement B2: truthful provider and attempt reporting
+Resolve provider/stage from authoritative structured provenance.
+Do not guess from error-message text or assume operation alone is enough.
 
-Label circuit-breaker activation as inferred unless supported by an
-explicit transition or a sufficiently evidenced execution path.
+Use the correct authoritative attempt source for that provider/stage.
+Represent unavailable evidence as unknown/not recorded, not zero.
+Preserve real recorded zero and positive counts.
+Keep numeric/internal fields typed; format "not recorded" at presentation.
 
-3. Verify the reporting defects
-Trace why unresolved extraction can produce a COMPLETED row.
-Define the expected status when images exist but required extraction
-remains unresolved. Check row labels, sheets and delivery summaries.
+3. Run focused regression tests
+Cover:
+- Images present + extraction unresolved never displays COMPLETED.
+- Existing successful and terminal-invalid cases remain correct.
+- Missing attempt evidence is distinct from a recorded zero.
+- Provider attribution does not depend on wording in error messages.
+- These reporting changes introduce no submission, failover, retry,
+  recovery or archive side effects.
 
-Investigate the Symcor zero-attempt issue separately. Do not treat an
-unavailable attempt count as zero or infer provider identity from
-free-text messages where structured provenance exists.
+Report actual commands/results and any untested behavior.
 
-4. Return a minimal remediation proposal
-Separate:
-A. Endpoint/configuration correction.
-B. Error classification and operator reporting.
-C. Reconciliation of existing unknown submissions.
+4. Correct the remaining investigation proposal
+Do not implement B3's identical-body-hash classification rule.
+Repeated identical 404 responses are evidence for a suspected shared
+fault, not proof of a configuration error.
 
-For each, provide exact affected files, supporting evidence, proposed
-behavior, focused regression tests and acceptance criteria.
+Replace the proposed aggregate grep with a bounded read-only extraction
+that preserves run identity and available correlation identifiers.
+Distinguish response-event counts from unique affected work items.
+Correlate the 63 persisted HTTP_404 failures where evidence permits.
+Locate RESPONSE_NOT_JSON through its actual failure/outcome event and
+related response; HTTP status alone cannot identify it.
+Explicitly list records that cannot be correlated.
 
-Preserve protection against duplicate submission across restart,
-resume and endpoint failover. Do not globally make HTTP_404 retryable
-or assume every HTTP_404 is a configuration error.
+Do not print raw documents, payloads, credentials or account identifiers.
 
-For the seven unknown items, describe the supported provider lookup
-and reconciliation procedure without executing it. Distinguish
-"lookup returned no usable answer" from "provider confirms no job exists."
+Leave endpoint configuration unchanged until the authoritative PROD
+prefix and operation path are confirmed. Do not copy the primary SDK
+suffix or treat a health/HEAD/OPTIONS response as proof that extraction
+works.
 
-No code/configuration/database changes, provider calls, resubmission,
-archive changes, deployment or commits in this pass.
+Do not execute production commands, contact providers, resubmit work,
+change databases/configuration, deploy, commit or push.
 
 Return:
-- A concise verified / inferred / unresolved findings table.
-- The minimal proposed changes and tests.
-- The exact missing evidence, if any.
-- The next smallest executable action.
-
-Use sanitized identifiers; omit document/account data and credentials.
-Do not repeat broad investigation already completed.
+- Exact local changes and focused test results.
+- Remaining gaps in endpoint and incident evidence.
+- A corrected read-only command or script for the owner to run.
+- Clear separation between reporting fixes and resolution of the
+  seven existing unknown submissions.
